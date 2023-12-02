@@ -1,6 +1,7 @@
 all:
-	rm -rf makelove-build
-	makelove
+	love ./
+	# rm -rf makelove-build
+	# makelove
 
 desktop:
 	love ./

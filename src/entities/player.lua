@@ -2,14 +2,12 @@ local Player = class('Player')
 
 function Player:init(props)
     print('player init')
-    if not props then props = {
-        x = 20, y = 20
-    } end
     self.pos = { x = props.x, y = props.y }
     self.speed = 10
     self.width = 4
     self.height = 8
     self.controllable = true
+    self.drawable = true
     self.color = { 1, 0, 1, 1 }
     self.grounded = true
     self.platforming = {
