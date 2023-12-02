@@ -5,6 +5,7 @@ PubSub = require('plugins.pubsub')
 ldtk = require('plugins.super-simple-ldtk')
 
 function love.load()
+  love.graphics.setDefaultFilter('nearest', 'nearest')
   PubSub.subscribe('keypress', function(k)
     if k ~= 'escape' then return end
     love.event.quit()
@@ -53,4 +54,7 @@ function love.keyreleased(k)
   PubSub.publish('keyrelease', k)
 end
 
+function love.resize(w, h)
+  PubSub.publish('love.resize', { w, h })
+end
 

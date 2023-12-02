@@ -7,6 +7,7 @@ function Player:init(props)
     self.width = 4
     self.height = 8
     self.controllable = true
+    self.camera_follow = false
     self.drawable = true
     self.color = { 1, 0, 1, 1 }
     self.grounded = true
