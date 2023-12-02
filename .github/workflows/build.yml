@@ -7,6 +7,8 @@ env:
   ARTIFACT_PATH_APPIMAGE: main/makelove-build/appimage/2023-fall-game-jam.AppImage
   ARTIFACT_PATH_WIN64: main/makelove-build/win64/2023-fall-game-jam-win64.zip
   ARTIFACT_PATH_MACOS: main/makelove-build/macos/2023-fall-game-jam-macos.zip
+  ITCH_USER: purdy
+  ITCH_GAME: 2023-fall-game-jam
 
 jobs:
   build:
@@ -16,39 +18,77 @@ jobs:
       with:
         path: main
         submodules: true
+
     - name: Update
       run: sudo apt-get update
+
     - name: Install Dependencies
       run: sudo apt-get install --assume-yes wine-stable wine64 python3-pip
+
     - name: Checkout makelove
       uses: actions/checkout@v2
       with:
         repository: pfirsich/makelove
         path: makelove
+
     - name: Install makelove
       run:
         pip3 install ./makelove
+
     - name: Build
       run: cd main && python3 -m makelove
+
     - name: list artifacts
       run: ls -ltraR main
-    - name: Artifact (love)
+
+    - name: Github Artifact (love)
       uses: actions/upload-artifact@v2
       with:
         name: ${{env.GAME_NAME}} - love
         path: ${{env.ARTIFACT_PATH_LOVE}}
-    - name: Artifact (AppImage)
+
+    - name: Github Artifact (AppImage)
       uses: actions/upload-artifact@v2
       with:
         name: ${{env.GAME_NAME}} - appimage
         path: ${{env.ARTIFACT_PATH_APPIMAGE}}
-    - name: Artifact (Win64)
+
+    - name: Github Artifact (Win64)
       uses: actions/upload-artifact@v2
       with:
         name: ${{env.GAME_NAME}} - win64
         path: ${{env.ARTIFACT_PATH_WIN64}}
-    - name: Artifact (MacOS)
+
+    - name: Github Artifact (MacOS)
       uses: actions/upload-artifact@v2
       with:
         name: ${{env.GAME_NAME}} - macos
         path: ${{env.ARTIFACT_PATH_MACOS}}
+
+    - name: Butler Push (AppImage)
+      uses: yeslayla/butler-publish-itchio-action@v1.0.3
+      env:
+        BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+        ITCH_USER: ${{env.ITCH_USER}}
+        ITCH_GAME: ${{env.ITCH_GAME}}
+        CHANNEL: linux 
+        PACKAGE: ${{env.ARTIFACT_PATH_APPIMAGE}}
+
+    - name: Butler Push (Win64)
+      uses: yeslayla/butler-publish-itchio-action@v1.0.3
+      env:
+        BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+        ITCH_USER: ${{env.ITCH_USER}}
+        ITCH_GAME: ${{env.ITCH_GAME}}
+        CHANNEL: windows
+        PACKAGE: ${{env.ARTIFACT_PATH_WIN64}}
+
+    - name: Butler Push (MacOS)
+      uses: yeslayla/butler-publish-itchio-action@v1.0.3
+      env:
+        BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+        ITCH_USER: ${{env.ITCH_USER}}
+        ITCH_GAME: ${{env.ITCH_GAME}}
+        CHANNEL: osx 
+        PACKAGE: ${{env.ARTIFACT_PATH_MACOS}}
+
