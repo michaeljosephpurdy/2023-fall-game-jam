@@ -1,0 +1,54 @@
+name: continuous-integration
+on: [push]
+env:
+  GAME_NAME: 2023-fall-game-jam
+  # unfortunately we need to also hardcode game name here in env since definitions in env can't reference eachother
+  ARTIFACT_PATH_LOVE: main/makelove-build/love/2023-fall-game-jam.love
+  ARTIFACT_PATH_APPIMAGE: main/makelove-build/appimage/2023-fall-game-jam.AppImage
+  ARTIFACT_PATH_WIN64: main/makelove-build/win64/2023-fall-game-jam-win64.zip
+  ARTIFACT_PATH_MACOS: main/makelove-build/macos/2023-fall-game-jam-macos.zip
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: main
+        submodules: true
+    - name: Update
+      run: sudo apt-get update
+    - name: Install Dependencies
+      run: sudo apt-get install --assume-yes wine-stable wine64 python3-pip
+    - name: Checkout makelove
+      uses: actions/checkout@v2
+      with:
+        repository: pfirsich/makelove
+        path: makelove
+    - name: Install makelove
+      run:
+        pip3 install ./makelove
+    - name: Build
+      run: cd main && python3 -m makelove
+    - name: list artifacts
+      run: ls -ltraR main
+    - name: Artifact (love)
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{env.GAME_NAME}} - love
+        path: ${{env.ARTIFACT_PATH_LOVE}}
+    - name: Artifact (AppImage)
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{env.GAME_NAME}} - appimage
+        path: ${{env.ARTIFACT_PATH_APPIMAGE}}
+    - name: Artifact (Win64)
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{env.GAME_NAME}} - win64
+        path: ${{env.ARTIFACT_PATH_WIN64}}
+    - name: Artifact (MacOS)
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{env.GAME_NAME}} - macos
+        path: ${{env.ARTIFACT_PATH_MACOS}}
