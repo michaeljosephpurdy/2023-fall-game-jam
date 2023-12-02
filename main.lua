@@ -20,6 +20,10 @@ function love.load()
 
   ldtk:init('world')
   ldtk.on_image_create = function(self, image)
+    if not image:find('AutoLayer.png') then return end
+    local props = { image = image }
+    local background_image = require('src.entities.background-image'):new(props)
+    world:addEntity(background_image)
   end
   -- all entities are loaded via LDtk, which will call on_entity_create
   ldtk.on_entity_create = function(self, e)

@@ -29,6 +29,13 @@ function SuperSimpleLdtk:load(level)
       self:on_entity_create(entity)
     end
   end
+  local files = love.filesystem.getDirectoryItems(level_path)
+  for _, file in ipairs(files) do
+    print(file)
+    if file:find('.png') then
+      self:on_image_create(string.format('%s/%s', level_path, file))
+    end
+  end
 end
 
 return SuperSimpleLdtk
