@@ -1,5 +1,5 @@
 name = "2023-fall-game-jam"
-default_targets = ["macos", "AppImage", "win64", "lovejs"]
+default_targets = ["macos", "appimage", "win64", "lovejs"]
 build_directory = "makelove-build"
 
 love_files = [
