@@ -24,6 +24,12 @@ function SuperSimpleLdtk:load(level)
   local level_path = string.format('%s/Level_%s', self.path, level)
   local data_path = string.format('%s/data.json', level_path)
   local data = load_and_parse_json(data_path)
+  PubSub.publish('level.load', {
+    x = data.x,
+    y = data.y,
+    xx = data.x + data.width,
+    yy = data.y + data.height,
+  })
   for _, types in pairs(data.entities) do
     for __, entity in pairs(types) do
       self:on_entity_create(entity)

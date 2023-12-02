@@ -11,6 +11,9 @@ function PlatformingSystem:process(e, dt)
 	    --flip left
         end
     end
+    if not e.on_ground then
+        e.pos.y = e.pos.y + e.gravity * dt
+    end
 end
 
 return PlatformingSystem

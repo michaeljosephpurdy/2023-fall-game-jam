@@ -4,10 +4,12 @@ require('plugins.30log')
 PubSub = require('plugins.pubsub')
 ldtk = require('plugins.super-simple-ldtk')
 
+GAME_WIDTH, GAME_HEIGHT = 250, 250
+
 function love.load()
   love.graphics.setDefaultFilter('nearest', 'nearest')
   PubSub.subscribe('keypress', function(k)
-    if k ~= 'escape' then return end
+    if k ~= 'escape' and k ~= 'q' then return end
     love.event.quit()
   end)
   world = tiny.world()
@@ -20,11 +22,13 @@ function love.load()
   end
 
   ldtk:init('world')
+  ldtk.on_tile_create = function(self, tile)
+  end
   ldtk.on_image_create = function(self, image)
     if not image:find('AutoLayer.png') then return end
     local props = { image = image }
-    local background_image = require('src.entities.background-image'):new(props)
-    world:addEntity(background_image)
+    local tilemap = require('src.entities.tilemap'):new(props)
+    world:addEntity(tilemap)
   end
   -- all entities are loaded via LDtk, which will call on_entity_create
   ldtk.on_entity_create = function(self, e)
