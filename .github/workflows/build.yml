@@ -7,6 +7,7 @@ env:
   ARTIFACT_PATH_APPIMAGE: main/makelove-build/appimage/2023-fall-game-jam.AppImage
   ARTIFACT_PATH_WIN64: main/makelove-build/win64/2023-fall-game-jam-win64.zip
   ARTIFACT_PATH_MACOS: main/makelove-build/macos/2023-fall-game-jam-macos.zip
+  ARTIFACT_PATH_LOVEJS: main/makelove-build/lovejs/2023-fall-game-jam-lovejs.zip
   ITCH_USER: purdy
   ITCH_GAME: 2023-fall-game-jam
 
@@ -41,31 +42,46 @@ jobs:
     - name: list artifacts
       run: ls -ltraR main
 
-    - name: Github Artifact (love)
+    - name: Upload to Github (love)
       uses: actions/upload-artifact@v2
       with:
         name: ${{env.GAME_NAME}} - love
         path: ${{env.ARTIFACT_PATH_LOVE}}
 
-    - name: Github Artifact (AppImage)
+    - name: Upload to Github (web)
       uses: actions/upload-artifact@v2
       with:
-        name: ${{env.GAME_NAME}} - appimage
+        name: ${{env.GAME_NAME}} - web 
+        path: ${{env.ARTIFACT_PATH_LOVEJS}}
+
+    - name: Upload to Github (Linux)
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{env.GAME_NAME}} - linux
         path: ${{env.ARTIFACT_PATH_APPIMAGE}}
 
-    - name: Github Artifact (Win64)
+    - name: Upload to Github (Win64)
       uses: actions/upload-artifact@v2
       with:
         name: ${{env.GAME_NAME}} - win64
         path: ${{env.ARTIFACT_PATH_WIN64}}
 
-    - name: Github Artifact (MacOS)
+    - name: Upload to Github (MacOS)
       uses: actions/upload-artifact@v2
       with:
         name: ${{env.GAME_NAME}} - macos
         path: ${{env.ARTIFACT_PATH_MACOS}}
 
-    - name: Butler Push (AppImage)
+    - name: Publish to Itch.io (Web)
+      uses: yeslayla/butler-publish-itchio-action@v1.0.3
+      env:
+        BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+        ITCH_USER: ${{env.ITCH_USER}}
+        ITCH_GAME: ${{env.ITCH_GAME}}
+        CHANNEL: html
+        PACKAGE: ${{env.ARTIFACT_PATH_LOVEJS}}
+
+    - name: Publish to Itch.io (Linux)
       uses: yeslayla/butler-publish-itchio-action@v1.0.3
       env:
         BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
@@ -74,7 +90,7 @@ jobs:
         CHANNEL: linux 
         PACKAGE: ${{env.ARTIFACT_PATH_APPIMAGE}}
 
-    - name: Butler Push (Win64)
+    - name: Publish to Itch.io (Win64)
       uses: yeslayla/butler-publish-itchio-action@v1.0.3
       env:
         BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
@@ -83,7 +99,7 @@ jobs:
         CHANNEL: windows
         PACKAGE: ${{env.ARTIFACT_PATH_WIN64}}
 
-    - name: Butler Push (MacOS)
+    - name: Publish to Itch.io (MacOS)
       uses: yeslayla/butler-publish-itchio-action@v1.0.3
       env:
         BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
