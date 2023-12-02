@@ -10,8 +10,6 @@ function PlatformingSystem:process(e, dt)
 	else
 	    --flip left
         end
-    elseif e.grounded then
-        e.pos.x = e.pos.x * 0.9
     end
 end
 

@@ -9,20 +9,25 @@ function love.load()
     if k ~= 'escape' then return end
     love.event.quit()
   end)
-  ldtk:init('world', on_entity_create)
-  world = tiny.world(
-    require('src.systems.player-controller-system'),
-    require('src.systems.platforming-system'),
-    require('src.systems.entity-drawing-system')
-  )
-  function on_entity_create(e)
-    print('on_entity_create')
-    print(e)
+  world = tiny.world()
+
+  -- load all systems and register them to the world
+  local systems = love.filesystem.getDirectoryItems('src/systems')
+  for _, system in ipairs(systems) do
+    local system_path = string.format('src.systems.%s', system)
+    world:addSystem(require(system_path:gsub('.lua','')))
+  end
+
+  ldtk:init('world')
+  ldtk.on_image_create = function(self, image)
+  end
+  -- all entities are loaded via LDtk, which will call on_entity_create
+  ldtk.on_entity_create = function(self, e)
     local props = { x = e.x, y = e.y }
     if e.id == 'Player' then
       print('player found')
       local player_entity = require('src.entities.player'):new(props)
-      world:add(player_entity)
+      world:addEntity(player_entity)
     end
   end
   ldtk:load(0)

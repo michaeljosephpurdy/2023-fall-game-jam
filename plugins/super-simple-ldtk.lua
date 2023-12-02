@@ -15,10 +15,9 @@ end
 
 local current_folder = (...):gsub('%.[^%.]+$', '')
 
-function SuperSimpleLdtk:init(world, on_entity_create)
+function SuperSimpleLdtk:init(world)
   self.path = string.format('data/%s/simplified', world)
   print(self.path)
-  self.on_entity_create = on_entity_create
 end
 
 function SuperSimpleLdtk:load(level)
@@ -27,7 +26,7 @@ function SuperSimpleLdtk:load(level)
   local data = load_and_parse_json(data_path)
   for _, types in pairs(data.entities) do
     for __, entity in pairs(types) do
-      on_entity_create(entity)
+      self:on_entity_create(entity)
     end
   end
 end
