@@ -1,8 +1,8 @@
 local Player = class('Player')
 
 function Player:init(props)
-    print('player init')
-    self.pos = { x = props.x, y = props.y }
+    self.x = props.x
+    self.y = props.y
     self.speed = 200
     self.width = 4
     self.height = 8
@@ -19,7 +19,7 @@ end
 
 function Player:draw()
     love.graphics.setColor(1, 0, 1, 1)
-    love.graphics.rectangle('fill', self.pos.x, self.pos.y, self.width, self.height)
+    love.graphics.rectangle('fill', self.x, self.y, self.width, self.height)
 end
 
 return Player

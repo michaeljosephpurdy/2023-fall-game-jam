@@ -12,7 +12,7 @@ function EntityDrawingSystem:process(e, dt)
   -- _G.camera:draw(function()
     -- e:draw()
   -- end)
-  love.graphics.print(e.pos.x, e.pos.x - 10, e.pos.y - 20)
+  love.graphics.print(e.x, e.x - 10, e.y - 20)
   e:draw()
 end
 

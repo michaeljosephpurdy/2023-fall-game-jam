@@ -43,8 +43,8 @@ function CameraSystem:onAdd(e)
 end
 
 function CameraSystem:process(e, dt)
-  self.x = e.pos.x - self.offset
-  if e.pos.x <= self.left_boundary + self.offset then
+  self.x = e.x - self.offset
+  if e.x <= self.left_boundary + self.offset then
     self.x = -self.left_boundary
   elseif self.x >= self.right_boundary then
     self.x = self.right_boundary + self.offset / 2

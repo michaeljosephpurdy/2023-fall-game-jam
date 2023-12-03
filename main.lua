@@ -33,7 +33,6 @@ function love.load(arg)
   PubSub.subscribe('ldtk.entity.create', function(e)
     local props = { x = e.x, y = e.y }
     if e.id == 'Player' then
-      print('player found')
       local player_entity = require('src.entities.player'):new(props)
       world:addEntity(player_entity)
     end
