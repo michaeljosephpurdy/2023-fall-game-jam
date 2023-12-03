@@ -11,7 +11,7 @@ function CameraSystem:init()
   self.x, self.y = 0, 0
   local windowWidth, windowHeight = 512, 512
   self.push:setupScreen(GAME_WIDTH, GAME_HEIGHT, windowWidth, windowHeight, { fullscreen = false, resizable = true })
-  self.calculate_boundaries = function(level)
+  self.calculate_boundaries = function(self, level)
     self.left_boundary = level.x
     self.right_boundary = level.xx
     self.top_boundary = level.y
