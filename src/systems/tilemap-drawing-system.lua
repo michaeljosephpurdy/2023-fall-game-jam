@@ -9,8 +9,6 @@ function TilemapDrawingSystem:init()
 end
 
 function TilemapDrawingSystem:onAddToWorld(world)
-  -- we need this to always be the first system
-  tiny.setSystemIndex(world, self, 2)
 end
 
 function TilemapDrawingSystem:process(e, dt)

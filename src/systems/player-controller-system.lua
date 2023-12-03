@@ -2,23 +2,23 @@ local PlayerControllerSystem = tiny.processingSystem()
 PlayerControllerSystem.filter = tiny.requireAll('controllable')
 
 function PlayerControllerSystem:process(e, dt)
-    e.platforming.moving = false
-    e.platforming.direction = 0
+  e.moving = false
+  e.direction = Vector.new(0, 0)
 
-    local left = love.keyboard.isDown('left')
-    local right = love.keyboard.isDown('right')
+  local left = love.keyboard.isDown('left')
+  local right = love.keyboard.isDown('right')
 
-    if left or right then
-        e.platforming.moving = true
-    end
-    if right then
-        e.platforming.direction = 1
-    end
-    if left then
-        e.platforming.direction = -1
-    end
+  if left or right then
+    e.moving = true
+  end
+  if right then
+    e.direction.x = 1
+  end
+  if left then
+    e.direction.x = -1
+  end
 
-    e.platforming.jumping = love.keyboard.isDown('space')
+  e.jumping = love.keyboard.isDown('space')
 end
 
 return PlayerControllerSystem

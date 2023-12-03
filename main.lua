@@ -1,10 +1,24 @@
 tiny = require('plugins.tiny-ecs')
 require('plugins.table-additions')
+require('plugins.vectors')
 require('plugins.30log')
 PubSub = require('plugins.pubsub')
 ldtk = require('plugins.super-simple-ldtk')
 
 GAME_WIDTH, GAME_HEIGHT = 250, 250
+
+-- load all systems and register them to the world
+-- we need to ensure they are registered in a specific order
+-- so let's define them in that order here
+local SYSTEMS_IN_ORDER = {
+  require('src.systems.camera-system'),
+  require('src.systems.tilemap-drawing-system'),
+  require('src.systems.player-controller-system'),
+  require('src.systems.platforming-system'),
+  require('src.systems.collision-detection-system'),
+  require('src.systems.collision-resolution-system'),
+  require('src.systems.entity-drawing-system'),
+}
 
 function love.load(arg)
   love.graphics.setDefaultFilter('nearest', 'nearest')
@@ -15,11 +29,8 @@ function love.load(arg)
   end)
   world = tiny.world()
 
-  -- load all systems and register them to the world
-  local system_modules = love.filesystem.getDirectoryItems('src/systems')
-  for _, system_module in ipairs(system_modules) do
-    local system_path = string.format('src.systems.%s', system_module)
-    local system = require(system_path:gsub('.lua',''))
+  local a = Vector.new(2, 2)
+  for _, system in ipairs(SYSTEMS_IN_ORDER) do
     if system.init then system:init() end
     world:addSystem(system)
   end
@@ -48,6 +59,7 @@ end
 function love.draw()
   local dt = love.timer.getDelta()
   world:update(dt)
+  love.graphics.print(string.format('FPS: %s', love.timer.getFPS()), 0, 20)
 end
 
 function love.keypressed(k)

@@ -8,7 +8,7 @@ end
 function CameraSystem:init()
   self.push = require('plugins.push')
   self.offset = GAME_WIDTH * .33
-  self.x, self.y = 0, 0
+  self.position = Vector.new(0, 0)
   local windowWidth, windowHeight = 512, 512
   self.push:setupScreen(GAME_WIDTH, GAME_HEIGHT, windowWidth, windowHeight, { fullscreen = false, resizable = true })
   self.calculate_boundaries = function(self, level)
@@ -26,7 +26,6 @@ function CameraSystem:init()
 end
 
 function CameraSystem:onAddToWorld(world)
-  tiny.setSystemIndex(world, self, 1)
   self:calculate_boundaries({ x = 0, xx = GAME_WIDTH, y = 0, yy = GAME_HEIGHT })
 end
 
@@ -36,20 +35,20 @@ end
 
 function CameraSystem:postWrap(dt)
   self.push:finish()
-  love.graphics.print(self.x)
+  love.graphics.print(self.position)
 end
 
 function CameraSystem:onAdd(e)
 end
 
 function CameraSystem:process(e, dt)
-  self.x = e.x - self.offset
-  if e.x <= self.left_boundary + self.offset then
-    self.x = -self.left_boundary
-  elseif self.x >= self.right_boundary then
-    self.x = self.right_boundary + self.offset / 2
+  self.position.x = e.position.x - self.offset
+  if e.position.x <= self.left_boundary + self.offset then
+    self.position.x = -self.left_boundary
+  elseif self.position.x >= self.right_boundary + self.offset / 2 then
+    self.position.x = self.right_boundary + self.offset / 2
   end
-  love.graphics.translate(-self.x, -self.y)
+  love.graphics.translate(-self.position.x, -self.position.y)
 end
 
 return CameraSystem

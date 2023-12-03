@@ -1,6 +1,10 @@
 json = require('plugins.json')
 csv = require('plugins.csv')
 
+local FILE_NAMES = {
+  SOLID_COLLIDERS = 'SolidColliders.csv',
+  DATA = 'data.json',
+}
 local SuperSimpleLdtk = {}
 
 local function load_and_parse_csv(file)
@@ -28,7 +32,7 @@ function SuperSimpleLdtk:load(level)
   -- there is some other goodies in there, too:
   --   the neighboring levels
   --   the background color
-  local data_file = string.format('%s/data.json', level_path)
+  local data_file = string.format('%s/%s', level_path, FILE_NAMES.DATA)
   local data = load_and_parse_json(data_file)
   PubSub.publish('ldtk.level.load', {
     x = data.x,
@@ -55,7 +59,7 @@ function SuperSimpleLdtk:load(level)
   -- end
 
   --
-  local collider_grid_file = string.format('%s/IntGrid.csv', level_path)
+  local collider_grid_file = string.format('%s/%s', level_path, FILE_NAMES.SOLID_COLLIDERS)
   local collider_grid = love.filesystem.read('string', collider_grid_file)
   local y = 0
   for rows in collider_grid:gmatch('[^\r\n]+') do

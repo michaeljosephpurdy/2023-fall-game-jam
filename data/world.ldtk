@@ -74,7 +74,7 @@
 		},
 		{
 			"__type": "AutoLayer",
-			"identifier": "AutoLayer",
+			"identifier": "Tilemap",
 			"type": "AutoLayer",
 			"uid": 1,
 			"doc": null,
@@ -881,7 +881,7 @@
 		},
 		{
 			"__type": "IntGrid",
-			"identifier": "IntGrid",
+			"identifier": "SolidColliders",
 			"type": "IntGrid",
 			"uid": 2,
 			"doc": null,
@@ -1039,24 +1039,24 @@
 					"entityInstances": [
 						{
 							"__identifier": "Player",
-							"__grid": [5,8],
+							"__grid": [7,3],
 							"__pivot": [0,0],
 							"__tags": [],
 							"__tile": { "tilesetUid": 17, "x": 80, "y": 240, "w": 16, "h": 16 },
 							"__smartColor": "#000000",
-							"__worldX": 80,
-							"__worldY": 128,
+							"__worldX": 112,
+							"__worldY": 48,
 							"iid": "1e9bf010-8990-11ee-942c-892a0083bdfa",
 							"width": 16,
 							"height": 16,
 							"defUid": 16,
-							"px": [80,128],
+							"px": [112,48],
 							"fieldInstances": []
 						}
 					]
 				},
 				{
-					"__identifier": "AutoLayer",
+					"__identifier": "Tilemap",
 					"__type": "AutoLayer",
 					"__cWid": 34,
 					"__cHei": 16,
@@ -1236,7 +1236,7 @@
 					"entityInstances": []
 				},
 				{
-					"__identifier": "IntGrid",
+					"__identifier": "SolidColliders",
 					"__type": "IntGrid",
 					"__cWid": 34,
 					"__cHei": 16,
@@ -1327,7 +1327,7 @@
 					"entityInstances": []
 				},
 				{
-					"__identifier": "AutoLayer",
+					"__identifier": "Tilemap",
 					"__type": "AutoLayer",
 					"__cWid": 27,
 					"__cHei": 23,
@@ -1421,7 +1421,7 @@
 					"entityInstances": []
 				},
 				{
-					"__identifier": "IntGrid",
+					"__identifier": "SolidColliders",
 					"__type": "IntGrid",
 					"__cWid": 27,
 					"__cHei": 23,
