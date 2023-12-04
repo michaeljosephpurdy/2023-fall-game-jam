@@ -39,6 +39,7 @@ function SuperSimpleLdtk:load(level)
     y = data.y,
     xx = data.x + data.width,
     yy = data.y + data.height,
+    tile_size = 16,
   })
   for _, types in pairs(data.entities) do
     for _, entity in pairs(types) do
@@ -65,10 +66,13 @@ function SuperSimpleLdtk:load(level)
   for rows in collider_grid:gmatch('[^\r\n]+') do
     local x = 0
     for cell in rows:gmatch('[^,]+') do
-      if cell == '1' then
-        local collider = { x = x * 16, y = y *16, width = 16, height = 16 }
-        PubSub.publish('ldtk.collider.create', collider)
-      end
+      PubSub.publish('ldtk.tile.create', {
+        x = x * 16,
+        y = y * 16,
+        width = 16,
+        height = 16,
+        value = cell
+      })
       x = x + 1
     end
     y = y + 1

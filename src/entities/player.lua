@@ -4,9 +4,11 @@ function Player:init(props)
   self.position = Vector.new(props.x, props.y)
   self.velocity = Vector.new(0, 0)
   self.direction = Vector.new(0, 0)
-  self.speed = 200
+  self.is_player = true
+  self.speed = 1000
   self.width = 4
   self.height = 8
+  self.acceleration = 4
   self.controllable = true
   self.camera_follow = false
   self.direction = 0
@@ -16,6 +18,8 @@ function Player:init(props)
   self.color = { 1, 0, 1, 1 }
   self.grounded = true
   self.gravity = 40
+  self.hitbox = { width = 4, height = 4 }
+  self.top_fall_speed = 1
   self.platforming = true
   self.can_collide = true
   self.collider_offsets = {
@@ -26,28 +30,13 @@ function Player:init(props)
   }
 end
 
-function Player:offset_colliders(dx, dy)
-  -- for _, colliders in pairs(self.colliders) do
-    -- colliders.x = colliders.x + dx
-    -- colliders.x = colliders.x + dy
-  -- end
-end
-
-local function draw_collider(col)
-  love.graphics.rectangle('line', col.position.x, col.position.y, col.width, col.height)
+function Player:on_collide()
+  assert(nil)
 end
 
 function Player:draw()
   love.graphics.setColor(1, 0, 1, 1)
   love.graphics.rectangle('fill', self.position.x, self.position.y, self.width, self.height)
-    for _, offset in pairs(self.collider_offsets) do
-      local collider = {
-        position = self.position + offset,
-        width = 2,
-        height = 2
-      }
-      draw_collider(collider)
-    end
 end
 
 return Player

@@ -5,25 +5,23 @@ function PlatformingSystem:onAddToWorld(world)
 end
 
 function PlatformingSystem:process(e, dt)
-  e.old_position = e.position:clone()
-  local dx, dy = 0, 0
   if e.moving then
-    e.velocity.x = e.speed * e.direction.x * dt
     if e.direction.x == 1 then
-      --flip right
+      e.velocity.x = math.min(e.speed, e.velocity.x + e.acceleration * dt)
     else
-      --flip left
+      e.velocity.x = math.max(-e.speed, e.velocity.x - e.acceleration * dt)
     end
-  else
-    e.velocity.x = e.velocity.x * 0.9
+  elseif e.on_ground then
+    if e.velocity.x > 0 then
+      e.velocity.x = math.max(0, e.velocity.x - e.friction * dt)
+    elseif e.velocity.x < 0 then
+      e.velocity.x = math.min(0, e.velocity.x + e.friction * dt)
+    end
   end
-  if e.on_ground and e.jumping and e.velocity.y <= 0 then
-    e.velocity.y = e.velocity.y - e.jump_force
+  if e.jumping and e.on_ground then
+    e.velocity.y = -e.jump
+    e.on_ground = false
   end
-  if not e.on_ground then
-    e.velocity.y = e.velocity.y + e.gravity * dt
-  end
-  e.position = e.position + e.velocity
 end
 
 return PlatformingSystem
