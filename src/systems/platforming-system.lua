@@ -9,7 +9,7 @@ function PlatformingSystem:process(e, dt)
 		e.jumped = false
 		e.coyote_timer = e.coyote_time
 	else
-		e.coyote_timer = e.coyote_timer - 1
+		e.coyote_timer = e.coyote_timer - dt
 	end
 	if e.moving then
 		if e.direction.x == 1 then

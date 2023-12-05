@@ -28,10 +28,10 @@ function Player:init(props)
 	self.acceleration = 340
 	self.top_speed = 800
 	self.gravity = 200
-	self.coyote_time = 40
+	self.coyote_time = 0.2
 	self.coyote_timer = self.coyote_time
 	self.top_fall_speed = 1
-	self.jump_force = 100
+	self.jump_force = 120
 
 	self.falling = true
 	self.color = { 1, 0, 1, 1 }
