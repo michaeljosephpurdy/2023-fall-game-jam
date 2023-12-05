@@ -22,12 +22,28 @@
 				"id": "Player",
 				"iid": "1e9bf010-8990-11ee-942c-892a0083bdfa",
 				"layer": "Entities",
-				"x": 64,
-				"y": 160,
+				"x": 32,
+				"y": 0,
 				"width": 16,
 				"height": 16,
 				"color": 0,
 				"customFields" : {}
+			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "2ac28480-8990-11ee-942c-63087e4bd247",
+				"layer": "Entities",
+				"x": 432,
+				"y": 96,
+				"width": 64,
+				"height": 96,
+				"color": 15839922,
+				"customFields": {
+					"Narrator_Text": [],
+					"Conditions": []
+				}
 			}
 		]
 	}
