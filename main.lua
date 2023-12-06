@@ -19,6 +19,7 @@ local SYSTEMS_IN_ORDER = {
 	require("src.systems.collision-system"),
 	require("src.systems.entity-drawing-system"),
 	require("src.systems.entity-spawning-system"),
+	require("src.systems.level-transition-system"),
 }
 
 function love.load(arg)
@@ -42,7 +43,8 @@ function love.load(arg)
 	end
 
 	ldtk:init("world")
-	ldtk:load(0)
+	ldtk:load_all()
+	-- ldtk:load("6b437db0-8990-11ee-8cf0-2d05cb81e2c1")
 	-- tiny.refresh(world)
 end
 

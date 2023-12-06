@@ -13,6 +13,8 @@ function Player:init(props)
 		end
 	end)
 
+	-- self.level_id = props.level_id
+
 	self.position = Vector.new(props.x, props.y)
 	self.velocity = Vector.new(0, 0)
 	self.direction = Vector.new(0, 0)
@@ -26,12 +28,13 @@ function Player:init(props)
 	self.camera_follow = false
 
 	self.acceleration = 340
-	self.top_speed = 800
-	self.gravity = 200
+	self.top_speed = 900
+	self.gravity = 215
 	self.coyote_time = 0.2
 	self.coyote_timer = self.coyote_time
 	self.top_fall_speed = 1
 	self.jump_force = 120
+	self.friction = 0.95
 
 	self.falling = true
 	self.color = { 1, 0, 1, 1 }

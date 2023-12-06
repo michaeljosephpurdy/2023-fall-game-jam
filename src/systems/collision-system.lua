@@ -2,15 +2,18 @@ local CollisionSystem = tiny.processingSystem()
 CollisionSystem.filter = tiny.requireAll("hitbox")
 
 function CollisionSystem:init()
-	PubSub.subscribe("ldtk.level.load", function(level)
-		self.bump_world = bump.newWorld(level.tile_size)
-	end)
+	self.bump_world = bump.newWorld(16)
 end
 
 function CollisionSystem:onAddToWorld(world) end
 
 local function collision_filter(e1, e2)
 	if e1.is_player then
+		if e2.is_tile_map then
+			e1.level_id = e2.level_id
+			e2.should_draw = true
+			return nil
+		end
 		if e2.is_solid then
 			return "slide"
 		end
@@ -20,6 +23,9 @@ end
 
 function CollisionSystem:process(e, dt)
 	local gravity = e.gravity or 0
+	if e.velocity.y > 0 then
+		gravity = gravity * e.friction
+	end
 	e.velocity.y = e.velocity.y + gravity * dt
 	local cols, len
 	local future_position = e.position + e.velocity * dt

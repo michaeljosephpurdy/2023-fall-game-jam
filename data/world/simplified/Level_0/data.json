@@ -2,14 +2,22 @@
 	"identifier": "Level_0",
 	"uniqueIdentifer": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
 	"x": 0,
-	"y": 0,
+	"y": -16,
 	"width": 544,
-	"height": 256,
+	"height": 272,
 	"bgColor": "#696A79",
 	"neighbourLevels": [
 		{
 			"levelIid": "bda369f0-8990-11ee-942c-f36b8d2f1ad6",
 			"dir": "e"
+		},
+		{
+			"levelIid": "8cf7e140-8990-11ee-942c-cb00bc33782c",
+			"dir": "w"
+		},
+		{
+			"levelIid": "907436c0-8990-11ee-942c-4dee73c23dcb",
+			"dir": "w"
 		}
 	],
 	"customFields" : {},
@@ -22,8 +30,8 @@
 				"id": "Player",
 				"iid": "1e9bf010-8990-11ee-942c-892a0083bdfa",
 				"layer": "Entities",
-				"x": 32,
-				"y": 0,
+				"x": 64,
+				"y": 48,
 				"width": 16,
 				"height": 16,
 				"color": 0,
@@ -36,7 +44,7 @@
 				"iid": "2ac28480-8990-11ee-942c-63087e4bd247",
 				"layer": "Entities",
 				"x": 432,
-				"y": 96,
+				"y": 112,
 				"width": 64,
 				"height": 96,
 				"color": 15839922,
