@@ -1,0 +1,20 @@
+{
+	"identifier": "Level_4",
+	"uniqueIdentifer": "2c29d630-8990-11ee-942c-b9c85e3bda57",
+	"x": 832,
+	"y": -896,
+	"width": 256,
+	"height": 256,
+	"bgColor": "#696A79",
+	"neighbourLevels": [
+		{
+			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Tilemap.png"
+	],
+	"entities" : {}
+}

@@ -2,7 +2,7 @@ local CollisionSystem = tiny.processingSystem()
 CollisionSystem.filter = tiny.requireAll("hitbox")
 
 function CollisionSystem:init()
-	self.bump_world = bump.newWorld(16)
+	self.bump_world = bump.newWorld(64)
 end
 
 function CollisionSystem:onAddToWorld(world) end
@@ -26,7 +26,7 @@ function CollisionSystem:process(e, dt)
 	if e.velocity.y > 0 then
 		gravity = gravity * e.friction
 	end
-	e.velocity.y = e.velocity.y + gravity * dt
+	e.velocity.y = e.velocity.y + gravity
 	local cols, len
 	local future_position = e.position + e.velocity * dt
 	e.position.x, e.position.y, cols, len =

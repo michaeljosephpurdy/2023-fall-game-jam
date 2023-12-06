@@ -64,6 +64,8 @@ function SuperSimpleLdtk:load(level_id)
 	for _, types in pairs(data.entities) do
 		for _, entity in pairs(types) do
 			entity.level_id = level_id
+			entity.x = data.x + entity.x
+			entity.y = data.y + entity.y
 			PubSub.publish("ldtk.entity.create", entity)
 		end
 	end

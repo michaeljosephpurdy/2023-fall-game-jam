@@ -6,7 +6,7 @@ PubSub = require("plugins.pubsub")
 ldtk = require("plugins.super-simple-ldtk")
 bump = require("plugins.bump")
 
-GAME_WIDTH, GAME_HEIGHT = 250, 250
+GAME_WIDTH, GAME_HEIGHT = 256, 256
 
 -- load all systems and register them to the world
 -- we need to ensure they are registered in a specific order
@@ -47,8 +47,6 @@ function love.load(arg)
 	-- ldtk:load("6b437db0-8990-11ee-8cf0-2d05cb81e2c1")
 	-- tiny.refresh(world)
 end
-
-function love.update(dt) end
 
 function love.draw()
 	local dt = love.timer.getDelta()

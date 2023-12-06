@@ -1,39 +1,15 @@
 {
 	"identifier": "Level_1",
 	"uniqueIdentifer": "bda369f0-8990-11ee-942c-f36b8d2f1ad6",
-	"x": 544,
+	"x": 832,
 	"y": 0,
-	"width": 560,
+	"width": 272,
 	"height": 368,
 	"bgColor": "#696A79",
-	"neighbourLevels": [
-		{
-			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
-			"dir": "w"
-		}
-	],
+	"neighbourLevels": [],
 	"customFields" : {},
 	"layers": [
 		"Tilemap.png"
 	],
-	"entities": {
-		"Narrator": [
-			{
-				"id": "Narrator",
-				"iid": "e30c4080-8990-11ee-942c-a99eebd9229c",
-				"layer": "Entities",
-				"x": 112,
-				"y": 112,
-				"width": 112,
-				"height": 96,
-				"color": 15839922,
-				"customFields": {
-					"Narrator_Text": [
-						"They knew they could make it to the other side if they timed it just right."
-					],
-					"Conditions": []
-				}
-			}
-		]
-	}
+	"entities" : {}
 }

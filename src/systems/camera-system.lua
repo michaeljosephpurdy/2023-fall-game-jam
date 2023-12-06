@@ -8,8 +8,8 @@ end
 function CameraSystem:init()
 	self.levels = {}
 	self.push = require("plugins.push")
-	self.offset = GAME_WIDTH * 0.33
 	self.position = Vector.new(0, 0)
+	self.offset_position = Vector.new(-GAME_WIDTH / 2, -GAME_HEIGHT / 2)
 	local windowWidth, windowHeight = 512, 512
 	self.push:setupScreen(GAME_WIDTH, GAME_HEIGHT, windowWidth, windowHeight, { fullscreen = false, resizable = true })
 	PubSub.subscribe("ldtk.level.load", function(level)
@@ -21,11 +21,6 @@ function CameraSystem:init()
 			width = level.width,
 			height = level.height,
 		}
-		print(level.level_id)
-		print("x: " .. level.x)
-		print("y: " .. level.y)
-		print("xx: " .. level.xx)
-		print("yy: " .. level.yy)
 	end)
 	PubSub.subscribe("love.resize", function(data)
 		self.push:resize(data[1], data[2])
@@ -49,18 +44,27 @@ function CameraSystem:process(e, dt)
 		return
 	end
 	local level = self.levels[e.level_id]
-	self.position.x = e.position.x - GAME_WIDTH / 2
+	self.position = e.position + self.offset_position
 	if e.position.x + GAME_WIDTH / 2 >= level.right_boundary then
 		self.position.x = level.right_boundary - GAME_WIDTH
-	end
-	if e.position.x - GAME_WIDTH / 2 <= level.left_boundary then
+	elseif e.position.x - GAME_WIDTH / 2 <= level.left_boundary then
 		self.position.x = level.left_boundary
 	end
-	love.graphics.translate(-self.position.x, 0)
-	-- love.graphics.print("left_boundary:" .. level.left_boundary, e.position.x, 80)
-	-- love.graphics.print("right_boundary:" .. level.right_boundary, e.position.x, 90)
-	-- love.graphics.print("position:" .. e.position.x, e.position.x, 100)
-	-- love.graphics.print("WIDTH:" .. GAME_WIDTH, e.position.x, 110)
+	if e.position.y >= level.bot_boundary - GAME_HEIGHT / 2 then
+		self.position.y = level.bot_boundary - GAME_HEIGHT
+	elseif e.position.y - GAME_HEIGHT / 2 <= level.top_boundary then
+		self.position.y = level.top_boundary
+	end
+	love.graphics.translate(-self.position.x, -self.position.y)
+	-- crazy logging to help build camera, keeping this in for now...
+	-- local y = e.position.y - GAME_HEIGHT / 2
+	-- local x = e.position.x - GAME_WIDTH / 2
+	-- love.graphics.print("left_boundary:" .. level.left_boundary, x, y)
+	-- love.graphics.print("right_boundary:" .. level.right_boundary, x, y + 10)
+	-- love.graphics.print("top_boundary:" .. level.top_boundary, x, y + 20)
+	-- love.graphics.print("bot_boundary:" .. level.bot_boundary, x, y + 30)
+	-- love.graphics.print("e.position:" .. tostring(e.position), x, y + 40)
+	-- love.graphics.print("self.position:" .. tostring(self.position), x, y + 50)
 end
 
 return CameraSystem

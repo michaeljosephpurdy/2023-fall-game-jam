@@ -13,15 +13,15 @@ function PlatformingSystem:process(e, dt)
 	end
 	if e.moving then
 		if e.direction.x == 1 then
-			e.velocity.x = math.min(e.top_speed, e.velocity.x + e.acceleration * dt)
+			e.velocity.x = math.min(e.top_speed, e.velocity.x + e.acceleration)
 		else
-			e.velocity.x = math.max(-e.top_speed, e.velocity.x - e.acceleration * dt)
+			e.velocity.x = math.max(-e.top_speed, e.velocity.x - e.acceleration)
 		end
 	elseif e.on_ground then
 		if e.velocity.x > 0 then
-			e.velocity.x = math.max(0, e.velocity.x - friction * dt)
+			e.velocity.x = math.max(0, (e.velocity.x - friction))
 		elseif e.velocity.x < 0 then
-			e.velocity.x = math.min(0, e.velocity.x + friction * dt)
+			e.velocity.x = math.min(0, (e.velocity.x + friction))
 		end
 	end
 	e.velocity.x = e.velocity.x * friction

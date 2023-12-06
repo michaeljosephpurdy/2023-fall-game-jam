@@ -1,18 +1,6 @@
 local Player = class("Player")
 
 function Player:init(props)
-	PubSub.subscribe("keypress", function(k)
-		if k == "1" then
-			self.gravity = self.gravity + 1
-		end
-		if k == "2" then
-			self.acceleration = self.acceleration + 1
-		end
-		if k == "3" then
-			self.jump_force = self.jump_force + 1
-		end
-	end)
-
 	-- self.level_id = props.level_id
 
 	self.position = Vector.new(props.x, props.y)
@@ -27,13 +15,13 @@ function Player:init(props)
 	self.controllable = true
 	self.camera_follow = false
 
-	self.acceleration = 340
-	self.top_speed = 900
-	self.gravity = 215
+	self.gravity = 5
+	self.acceleration = 10
+	self.top_speed = 100
+	self.jump_force = 265
 	self.coyote_time = 0.2
 	self.coyote_timer = self.coyote_time
 	self.top_fall_speed = 1
-	self.jump_force = 120
 	self.friction = 0.95
 
 	self.falling = true
@@ -48,11 +36,27 @@ function Player:on_collide()
 	assert(nil)
 end
 
+function Player:tune_field(field_name, button)
+	love.graphics.print(field_name .. self[field_name], self.position.x, self.position.y + 8 * tonumber(button))
+	if not love.keyboard.isDown(button) then
+		return
+	end
+	if love.keyboard.isDown("down") then
+		self[field_name] = self[field_name] - 5
+	end
+	if love.keyboard.isDown("up") then
+		self[field_name] = self[field_name] + 5
+	end
+end
+
 function Player:draw()
+	self:tune_field("gravity", "1")
+	self:tune_field("acceleration", "2")
+	self:tune_field("top_speed", "3")
+	self:tune_field("jump_force", "4")
+
 	love.graphics.setColor(1, 0, 1, 1)
 	love.graphics.rectangle("fill", self.position.x, self.position.y, self.width, self.height)
-	--love.graphics.print("gravity: " .. self.gravity, self.position.x, self.position.y + 8)
-	--love.graphics.print("acceleration: " .. self.acceleration, self.position.x, self.position.y + 16)
 end
 
 return Player
