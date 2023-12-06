@@ -51,8 +51,8 @@ end
 function Player:draw()
 	love.graphics.setColor(1, 0, 1, 1)
 	love.graphics.rectangle("fill", self.position.x, self.position.y, self.width, self.height)
-	love.graphics.print("gravity: " .. self.gravity, self.position.x, self.position.y + 8)
-	love.graphics.print("acceleration: " .. self.acceleration, self.position.x, self.position.y + 16)
+	--love.graphics.print("gravity: " .. self.gravity, self.position.x, self.position.y + 8)
+	--love.graphics.print("acceleration: " .. self.acceleration, self.position.x, self.position.y + 16)
 end
 
 return Player

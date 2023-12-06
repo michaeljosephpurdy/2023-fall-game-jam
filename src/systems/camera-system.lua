@@ -18,7 +18,14 @@ function CameraSystem:init()
 			right_boundary = level.xx,
 			top_boundary = level.y,
 			bot_boundary = level.yy,
+			width = level.width,
+			height = level.height,
 		}
+		print(level.level_id)
+		print("x: " .. level.x)
+		print("y: " .. level.y)
+		print("xx: " .. level.xx)
+		print("yy: " .. level.yy)
 	end)
 	PubSub.subscribe("love.resize", function(data)
 		self.push:resize(data[1], data[2])
@@ -41,15 +48,19 @@ function CameraSystem:process(e, dt)
 	if not e.level_id then
 		return
 	end
-	local left_boundary = self.levels[e.level_id].left_boundary
-	local right_boundary = self.levels[e.level_id].right_boundary
-	self.position.x = e.position.x - self.offset
-	if e.position.x <= left_boundary + self.offset then
-		self.position.x = -left_boundary
-	elseif self.position.x >= right_boundary + self.offset / 2 then
-		self.position.x = right_boundary + self.offset / 2
+	local level = self.levels[e.level_id]
+	self.position.x = e.position.x - GAME_WIDTH / 2
+	if e.position.x + GAME_WIDTH / 2 >= level.right_boundary then
+		self.position.x = level.right_boundary - GAME_WIDTH
 	end
-	love.graphics.translate(-self.position.x, -self.position.y)
+	if e.position.x - GAME_WIDTH / 2 <= level.left_boundary then
+		self.position.x = level.left_boundary
+	end
+	love.graphics.translate(-self.position.x, 0)
+	-- love.graphics.print("left_boundary:" .. level.left_boundary, e.position.x, 80)
+	-- love.graphics.print("right_boundary:" .. level.right_boundary, e.position.x, 90)
+	-- love.graphics.print("position:" .. e.position.x, e.position.x, 100)
+	-- love.graphics.print("WIDTH:" .. GAME_WIDTH, e.position.x, 110)
 end
 
 return CameraSystem
