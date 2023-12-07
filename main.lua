@@ -20,6 +20,7 @@ local SYSTEMS_IN_ORDER = {
 	require("src.systems.entity-drawing-system"),
 	require("src.systems.entity-spawning-system"),
 	require("src.systems.level-transition-system"),
+	require("src.systems.narrator-drawing-system"),
 }
 
 function love.load(arg)
@@ -51,7 +52,7 @@ end
 function love.draw()
 	local dt = love.timer.getDelta()
 	world:update(dt)
-	love.graphics.print(string.format("FPS: %s", love.timer.getFPS()), 0, 20)
+	-- love.graphics.print(string.format("FPS: %s", love.timer.getFPS()), 0, 20)
 end
 
 function love.keypressed(k)

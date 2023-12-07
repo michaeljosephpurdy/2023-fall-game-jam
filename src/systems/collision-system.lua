@@ -9,10 +9,13 @@ function CollisionSystem:onAddToWorld(world) end
 
 local function collision_filter(e1, e2)
 	if e1.is_player then
+		if e2.is_narrator_trigger then
+			return "cross"
+		end
 		if e2.is_tile_map then
-			e1.level_id = e2.level_id
-			e2.should_draw = true
-			return nil
+			--e1.level_id = e2.level_id
+			--e2.should_draw = true
+			return "cross"
 		end
 		if e2.is_solid then
 			return "slide"
@@ -71,6 +74,9 @@ function CollisionSystem:process(e, dt)
 
 		if e.on_collision and collided then
 			e:on_collision(col)
+		end
+		if col.other and col.other.on_collision and collided then
+			col.other:on_collision(e)
 		end
 	end
 end

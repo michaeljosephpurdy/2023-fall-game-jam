@@ -16,12 +16,4 @@ function TilemapSystem:process(e, dt)
 	e:draw_tilemap()
 end
 
-function TilemapSystem:postProcess(dt)
-	if not self.debug_rect then
-		return
-	end
-	local debug_rect = self.debug_rect
-	love.graphics.rectangle("line", debug_rect[1], debug_rect[2], debug_rect[3], debug_rect[4])
-end
-
 return TilemapSystem

@@ -1,0 +1,24 @@
+{
+	"identifier": "Level_8",
+	"uniqueIdentifer": "e0983020-8990-11ee-942c-a150814f0d8d",
+	"x": 832,
+	"y": -832,
+	"width": 256,
+	"height": 256,
+	"bgColor": "#696A79",
+	"neighbourLevels": [
+		{
+			"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
+			"dir": "w"
+		},
+		{
+			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
+			"dir": "n"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Tilemap.png"
+	],
+	"entities" : {}
+}

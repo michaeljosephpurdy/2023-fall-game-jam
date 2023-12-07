@@ -1,23 +1,19 @@
 {
-	"identifier": "Level_0",
-	"uniqueIdentifer": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
-	"x": 0,
-	"y": -2016,
-	"width": 576,
-	"height": 1376,
+	"identifier": "Level_7",
+	"uniqueIdentifer": "de7920b0-8990-11ee-942c-9f61e6f9909e",
+	"x": 832,
+	"y": -944,
+	"width": 480,
+	"height": 112,
 	"bgColor": "#696A79",
 	"neighbourLevels": [
 		{
 			"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
-			"dir": "e"
-		},
-		{
-			"levelIid": "5735bbf0-8990-11ee-942c-b9022d215f92",
 			"dir": "w"
 		},
 		{
-			"levelIid": "b907aaf0-8990-11ee-942c-1b5f9b6b41c0",
-			"dir": "w"
+			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
+			"dir": "s"
 		}
 	],
 	"customFields" : {},
@@ -28,16 +24,15 @@
 		"Narrator": [
 			{
 				"id": "Narrator",
-				"iid": "ca834050-8990-11ee-942c-1583a96b286e",
+				"iid": "1d4b47f0-8990-11ee-942c-239aeb5c2c6e",
 				"layer": "Entities",
-				"x": 368,
-				"y": 1184,
-				"width": 112,
-				"height": 128,
+				"x": 32,
+				"y": 48,
+				"width": 160,
+				"height": 48,
 				"color": 15839922,
 				"customFields": {
 					"narrator_text": [
-						"Oh, another one...",
 						"Implement me!"
 					],
 					"conditions": [],

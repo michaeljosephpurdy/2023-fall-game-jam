@@ -1,20 +1,42 @@
 {
 	"identifier": "Level_4",
 	"uniqueIdentifer": "2c29d630-8990-11ee-942c-b9c85e3bda57",
-	"x": 832,
-	"y": -896,
+	"x": 576,
+	"y": -944,
 	"width": 256,
-	"height": 256,
+	"height": 304,
 	"bgColor": "#696A79",
 	"neighbourLevels": [
 		{
 			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
 			"dir": "w"
+		},
+		{
+			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
+			"dir": "e"
+		},
+		{
+			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
+			"dir": "e"
 		}
 	],
 	"customFields" : {},
 	"layers": [
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"Player": [
+			{
+				"id": "Player",
+				"iid": "2f198370-8990-11ee-942c-118ce2528ea3",
+				"layer": "Entities",
+				"x": 64,
+				"y": 128,
+				"width": 16,
+				"height": 16,
+				"color": 0,
+				"customFields" : {}
+			}
+		]
+	}
 }

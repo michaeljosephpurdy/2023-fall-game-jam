@@ -50,13 +50,18 @@ function Player:tune_field(field_name, button)
 end
 
 function Player:draw()
-	self:tune_field("gravity", "1")
-	self:tune_field("acceleration", "2")
-	self:tune_field("top_speed", "3")
-	self:tune_field("jump_force", "4")
-
+	-- self:tune_field("gravity", "1")
+	-- self:tune_field("acceleration", "2")
+	-- self:tune_field("top_speed", "3")
+	-- self:tune_field("jump_force", "4")
 	love.graphics.setColor(1, 0, 1, 1)
-	love.graphics.rectangle("fill", self.position.x, self.position.y, self.width, self.height)
+	love.graphics.rectangle(
+		"fill",
+		self.position.x - self.width / 2,
+		self.position.y - self.height,
+		self.width * 2,
+		self.height * 2
+	)
 end
 
 return Player
