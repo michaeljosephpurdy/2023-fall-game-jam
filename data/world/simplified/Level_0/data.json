@@ -36,12 +36,30 @@
 				"height": 128,
 				"color": 15839922,
 				"customFields": {
-					"narrator_text": [
-						"Oh, another one...",
-						"Implement me!"
-					],
 					"conditions": [],
-					"one_shot": true
+					"one_shot": true,
+					"on_fulfilled": [
+						"yup"
+					],
+					"text": "Oh, another one..."
+				}
+			},
+			{
+				"id": "Narrator",
+				"iid": "f5a0c720-8990-11ee-942c-6baabf44f418",
+				"layer": "Entities",
+				"x": 496,
+				"y": 1264,
+				"width": 64,
+				"height": 48,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [
+						"yup"
+					],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "yup"
 				}
 			}
 		]

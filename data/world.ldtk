@@ -11,7 +11,7 @@
 	"iid": "6b4356a0-8990-11ee-8cf0-97de4f12c9ab",
 	"jsonVersion": "1.4.1",
 	"appBuildId": 471015,
-	"nextUid": 55,
+	"nextUid": 62,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -979,13 +979,13 @@
 			"pivotY": 0,
 			"fieldDefs": [
 				{
-					"identifier": "narrator_text",
-					"doc": null,
-					"__type": "Array<String>",
-					"uid": 45,
+					"identifier": "text",
+					"doc": "text to display to player",
+					"__type": "String",
+					"uid": 61,
 					"type": "F_String",
-					"isArray": true,
-					"canBeNull": true,
+					"isArray": false,
+					"canBeNull": false,
 					"arrayMinLength": null,
 					"arrayMaxLength": null,
 					"editorDisplayMode": "Hidden",
@@ -1003,10 +1003,7 @@
 					"max": null,
 					"regex": null,
 					"acceptFileTypes": null,
-					"defaultOverride": {
-						"id": "V_String",
-						"params": ["Implement me!"]
-					},
+					"defaultOverride": null,
 					"textLanguageMode": null,
 					"symmetricalRef": false,
 					"autoChainRef": true,
@@ -1018,7 +1015,7 @@
 				},
 				{
 					"identifier": "conditions",
-					"doc": null,
+					"doc": "Only trigger of player has met these conditions",
 					"__type": "Array<String>",
 					"uid": 46,
 					"type": "F_String",
@@ -1088,8 +1085,181 @@
 					"allowedRefsEntityUid": null,
 					"allowedRefTags": [],
 					"tilesetUid": null
+				},
+				{
+					"identifier": "on_fulfilled",
+					"doc": "Properties to set on player when they do trigger this narration",
+					"__type": "Array<String>",
+					"uid": 60,
+					"type": "F_String",
+					"isArray": true,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayScale": 1,
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "StraightArrow",
+					"editorDisplayColor": null,
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefsEntityUid": null,
+					"allowedRefTags": [],
+					"tilesetUid": null
 				}
 			]
+		},
+		{
+			"identifier": "Entity",
+			"uid": 55,
+			"tags": [],
+			"exportToToc": false,
+			"doc": null,
+			"width": 16,
+			"height": 16,
+			"resizableX": false,
+			"resizableY": false,
+			"minWidth": null,
+			"maxWidth": null,
+			"minHeight": null,
+			"maxHeight": null,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 1,
+			"lineOpacity": 1,
+			"hollow": false,
+			"color": "#252525",
+			"renderMode": "Rectangle",
+			"showName": true,
+			"tilesetId": null,
+			"tileRenderMode": "FitInside",
+			"tileRect": null,
+			"uiTileRect": { "tilesetUid": 17, "x": 0, "y": 0, "w": 0, "h": 0 },
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0,
+			"pivotY": 0,
+			"fieldDefs": []
+		},
+		{
+			"identifier": "Trigger",
+			"uid": 56,
+			"tags": [],
+			"exportToToc": false,
+			"doc": null,
+			"width": 16,
+			"height": 16,
+			"resizableX": false,
+			"resizableY": false,
+			"minWidth": null,
+			"maxWidth": null,
+			"minHeight": null,
+			"maxHeight": null,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 0.08,
+			"lineOpacity": 0,
+			"hollow": false,
+			"color": "#676767",
+			"renderMode": "Tile",
+			"showName": true,
+			"tilesetId": 17,
+			"tileRenderMode": "FitInside",
+			"tileRect": { "tilesetUid": 17, "x": 432, "y": 16, "w": 16, "h": 16 },
+			"uiTileRect": { "tilesetUid": 4, "x": 0, "y": 0, "w": 0, "h": 0 },
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0,
+			"pivotY": 0,
+			"fieldDefs": [
+				{
+					"identifier": "Entity_ref",
+					"doc": null,
+					"__type": "EntityRef",
+					"uid": 57,
+					"type": "F_EntityRef",
+					"isArray": false,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "RefLinkBetweenCenters",
+					"editorDisplayScale": 1,
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "CurvedArrow",
+					"editorDisplayColor": null,
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySpecificEntity",
+					"allowedRefsEntityUid": 58,
+					"allowedRefTags": [],
+					"tilesetUid": null
+				}
+			]
+		},
+		{
+			"identifier": "Trap",
+			"uid": 58,
+			"tags": [],
+			"exportToToc": false,
+			"doc": "Trap",
+			"width": 16,
+			"height": 16,
+			"resizableX": false,
+			"resizableY": false,
+			"minWidth": null,
+			"maxWidth": null,
+			"minHeight": null,
+			"maxHeight": null,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 0.08,
+			"lineOpacity": 0,
+			"hollow": false,
+			"color": "#FFFFFF",
+			"renderMode": "Tile",
+			"showName": true,
+			"tilesetId": 17,
+			"tileRenderMode": "FitInside",
+			"tileRect": { "tilesetUid": 17, "x": 96, "y": 224, "w": 16, "h": 16 },
+			"uiTileRect": null,
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0,
+			"pivotY": 0,
+			"fieldDefs": []
 		}
 	], "tilesets": [
 		{
@@ -1198,12 +1368,43 @@
 							"defUid": 44,
 							"px": [368,1184],
 							"fieldInstances": [
-								{ "__identifier": "narrator_text", "__type": "Array<String>", "__value": [ "Oh, another one...", "Implement me!" ], "__tile": null, "defUid": 45, "realEditorValues": [ {
+								{ "__identifier": "text", "__type": "String", "__value": "Oh, another one...", "__tile": null, "defUid": 61, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Oh, another one..."]
-								}, null ] },
+								}] },
 								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 46, "realEditorValues": [] },
-								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] }
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": ["yup"], "__tile": null, "defUid": 60, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["yup"]
+								}] }
+							]
+						},
+						{
+							"__identifier": "Narrator",
+							"__grid": [31,79],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#F1B2B2",
+							"__worldX": 496,
+							"__worldY": -752,
+							"iid": "f5a0c720-8990-11ee-942c-6baabf44f418",
+							"width": 64,
+							"height": 48,
+							"defUid": 44,
+							"px": [496,1264],
+							"fieldInstances": [
+								{ "__identifier": "text", "__type": "String", "__value": "yup", "__tile": null, "defUid": 61, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["yup"]
+								}] },
+								{ "__identifier": "conditions", "__type": "Array<String>", "__value": ["yup"], "__tile": null, "defUid": 46, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["yup"]
+								}] },
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 60, "realEditorValues": [] }
 							]
 						}
 					]
@@ -2150,6 +2351,46 @@
 							"defUid": 16,
 							"px": [64,128],
 							"fieldInstances": []
+						},
+						{
+							"__identifier": "Trap",
+							"__grid": [10,14],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": { "tilesetUid": 17, "x": 96, "y": 224, "w": 16, "h": 16 },
+							"__smartColor": "#FFFFFF",
+							"__worldX": 736,
+							"__worldY": -720,
+							"iid": "09c50360-8990-11ee-942c-b5eaa18f0372",
+							"width": 16,
+							"height": 16,
+							"defUid": 58,
+							"px": [160,224],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Trigger",
+							"__grid": [5,14],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": { "tilesetUid": 17, "x": 432, "y": 16, "w": 16, "h": 16 },
+							"__smartColor": "#676767",
+							"__worldX": 656,
+							"__worldY": -720,
+							"iid": "15368c50-8990-11ee-942c-8f9d210320c2",
+							"width": 16,
+							"height": 16,
+							"defUid": 56,
+							"px": [80,224],
+							"fieldInstances": [{ "__identifier": "Entity_ref", "__type": "EntityRef", "__value": {
+								"entityIid": "09c50360-8990-11ee-942c-b5eaa18f0372",
+								"layerIid": "2c29d631-8990-11ee-942c-8dbb7d6ec1a9",
+								"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
+								"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+							}, "__tile": null, "defUid": 57, "realEditorValues": [{
+								"id": "V_String",
+								"params": ["09c50360-8990-11ee-942c-b5eaa18f0372"]
+							}] }]
 						}
 					]
 				},
@@ -2556,9 +2797,10 @@
 							"defUid": 44,
 							"px": [32,48],
 							"fieldInstances": [
-								{ "__identifier": "narrator_text", "__type": "Array<String>", "__value": ["Implement me!"], "__tile": null, "defUid": 45, "realEditorValues": [null] },
+								{ "__identifier": "text", "__type": "String", "__value": "", "__tile": null, "defUid": 61, "realEditorValues": [] },
 								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 46, "realEditorValues": [] },
-								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] }
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 60, "realEditorValues": [] }
 							]
 						}
 					]

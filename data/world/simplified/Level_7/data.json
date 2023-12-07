@@ -32,11 +32,10 @@
 				"height": 48,
 				"color": 15839922,
 				"customFields": {
-					"narrator_text": [
-						"Implement me!"
-					],
 					"conditions": [],
-					"one_shot": true
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": ""
 				}
 			}
 		]

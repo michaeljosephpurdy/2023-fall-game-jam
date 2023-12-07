@@ -37,6 +37,39 @@
 				"color": 0,
 				"customFields" : {}
 			}
+		],
+		"Trap": [
+			{
+				"id": "Trap",
+				"iid": "09c50360-8990-11ee-942c-b5eaa18f0372",
+				"layer": "Entities",
+				"x": 160,
+				"y": 224,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			}
+		],
+		"Trigger": [
+			{
+				"id": "Trigger",
+				"iid": "15368c50-8990-11ee-942c-8f9d210320c2",
+				"layer": "Entities",
+				"x": 80,
+				"y": 224,
+				"width": 16,
+				"height": 16,
+				"color": 6776679,
+				"customFields": {
+					"Entity_ref": {
+						"entityIid": "09c50360-8990-11ee-942c-b5eaa18f0372",
+						"layerIid": "2c29d631-8990-11ee-942c-8dbb7d6ec1a9",
+						"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
+						"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+					}
+				}
+			}
 		]
 	}
 }

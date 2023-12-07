@@ -1,9 +1,10 @@
 local NarratorTrigger = class("NarratorTrigger")
 
 function NarratorTrigger:init(props)
-	if props.customFields and props.customFields.narrator_text then
-		self.text = props.customFields.narrator_text[1]
-		self.one_shot = props.customFields.one_shot
+	if props.customFields then
+		for k, v in pairs(props.customFields) do
+			self[k] = v
+		end
 	end
 	self.is_narrator_trigger = true
 	self.position = Vector.new(props.x, props.y)
@@ -28,8 +29,21 @@ function NarratorTrigger:update(dt)
 end
 
 function NarratorTrigger:on_collision(e)
+	-- check if player has satisfied conditions to display this narration
+	if self.conditions then
+		for _, condition in ipairs(self.conditions) do
+			-- if they haven't then just ignore the collision event
+			if not e[condition] then
+				return
+			end
+		end
+	end
 	self.triggered = true
-	-- pass
+	if self.on_fulfilled then
+		for _, property in ipairs(self.on_fulfilled) do
+			e[property] = true
+		end
+	end
 end
 
 function NarratorTrigger:draw()
