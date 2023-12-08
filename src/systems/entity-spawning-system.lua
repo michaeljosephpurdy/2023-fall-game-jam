@@ -5,6 +5,7 @@ local Player = require("src.entities.player")
 local NarratorTrigger = require("src.entities.narrator-trigger")
 local KillZone = require("src.entities.kill-zone")
 local Item = require("src.entities.item")
+local SpawnPoint = require("src.entities.spawn-point")
 
 function EntitySpawningSystem:init()
 	PubSub.subscribe("ldtk.image.create", function(props)
@@ -30,6 +31,9 @@ function EntitySpawningSystem:init()
 		elseif props.id == "Item" then
 			local item_entity = Item:new(props)
 			world:addEntity(item_entity)
+		elseif props.id == "SpawnPoint" then
+			local spawn_point_entity = SpawnPoint:new(props)
+			world:addEntity(spawn_point_entity)
 		end
 	end)
 end

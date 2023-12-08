@@ -5,7 +5,24 @@ function PlatformingSystem:onAddToWorld(world) end
 
 function PlatformingSystem:process(e, dt)
 	local friction = e.friction or 0.95
+	local top_speed = e.top_speed
+
+	if e.dashing then
+		-- dashing, we:
+		--  * don't want any gravity to be applied when dashing
+		--  * need to stop dashing after a period of time
+		--  * give ourselves a higher top_speed
+		e.gravity = 0
+		e.dashing = e.dashing - dt
+		top_speed = e.top_speed * 2
+		if e.dashing < 0 then
+			e.gravity = e.max_gravity
+			e.dashing = nil
+		end
+	end
+
 	if e.on_ground then
+		e.dashed = false
 		e.jumps = e.max_jumps
 		e.coyote_timer = e.coyote_time
 	else
@@ -13,9 +30,9 @@ function PlatformingSystem:process(e, dt)
 	end
 	if e.moving then
 		if e.direction.x == 1 then
-			e.velocity.x = math.min(e.top_speed, e.velocity.x + e.acceleration)
+			e.velocity.x = math.min(top_speed, e.velocity.x + e.acceleration)
 		else
-			e.velocity.x = math.max(-e.top_speed, e.velocity.x - e.acceleration)
+			e.velocity.x = math.max(-top_speed, e.velocity.x - e.acceleration)
 		end
 	elseif e.on_ground then
 		if e.velocity.x > 0 then
@@ -25,6 +42,7 @@ function PlatformingSystem:process(e, dt)
 		end
 	end
 	e.velocity.x = e.velocity.x * friction
+
 	-- single jump
 	if e.jump_requested and e.jumps >= 1 and (e.on_ground or e.coyote_timer > 0) then
 		e.jumps = e.jumps - 1
@@ -37,6 +55,12 @@ function PlatformingSystem:process(e, dt)
 		end
 		e.velocity.y = -e.jump_force
 		e.on_ground = false
+	end
+
+	if e.can_dash and e.dash_requested and not e.dashed then
+		e.dashed = true
+		e.velocity.x = e.velocity.x + (e.direction.x * e.dash_force)
+		e.dashing = e.dash_time
 	end
 end
 

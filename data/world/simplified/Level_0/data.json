@@ -22,6 +22,10 @@
 		{
 			"levelIid": "b5e99010-8990-11ee-942c-edeec0bd8881",
 			"dir": "n"
+		},
+		{
+			"levelIid": "5ee552a0-8990-11ee-942c-f17c0e82600c",
+			"dir": "e"
 		}
 	],
 	"customFields" : {},
@@ -80,6 +84,32 @@
 				"customFields": {
 					"type": "Double_jump"
 				}
+			},
+			{
+				"id": "Item",
+				"iid": "6d6bc740-8990-11ee-942c-1fc7dfad5333",
+				"layer": "Entities",
+				"x": 176,
+				"y": 2016,
+				"width": 16,
+				"height": 16,
+				"color": 18761,
+				"customFields": {
+					"type": "Dash"
+				}
+			}
+		],
+		"SpawnPoint": [
+			{
+				"id": "SpawnPoint",
+				"iid": "9d3275f0-8990-11ee-942c-e3138a794af0",
+				"layer": "Entities",
+				"x": 416,
+				"y": 2112,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
 			}
 		],
 		"Player": [
@@ -88,7 +118,7 @@
 				"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
 				"layer": "Entities",
 				"x": 288,
-				"y": 1952,
+				"y": 1968,
 				"width": 16,
 				"height": 16,
 				"color": 0,

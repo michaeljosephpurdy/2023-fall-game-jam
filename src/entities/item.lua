@@ -6,9 +6,6 @@ function Item:init(props)
 	self.velocity = Vector.new(0, 0)
 	self.hitbox = { width = props.width, height = props.width }
 	self.type = props.customFields.type
-	if self.type == "Double_jump" then
-		self.text = "dbl jmp"
-	end
 	-- pass
 end
 
@@ -20,6 +17,8 @@ function Item:on_collision(player)
 	if self.type == "Double_jump" then
 		player.double_jump = true
 		player.max_jumps = player.max_jumps + 1
+	elseif self.type == "Dash" then
+		player.can_dash = true
 	end
 end
 

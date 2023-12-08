@@ -2,7 +2,7 @@ local PlayerControllerSystem = tiny.processingSystem()
 PlayerControllerSystem.filter = tiny.requireAll("controllable")
 
 function PlayerControllerSystem:init()
-	self.released = { space = true }
+	self.released = { x = true, z = true }
 	PubSub.subscribe("keyrelease", function(k)
 		self.released[k] = true
 	end)
@@ -22,9 +22,15 @@ function PlayerControllerSystem:process(e, dt)
 	end
 
 	e.jump_requested = false
-	if love.keyboard.isDown("space") and self.released.space then
+	if love.keyboard.isDown("x") and self.released.x then
 		e.jump_requested = true
-		self.released.space = false
+		self.released.x = false
+	end
+
+	e.dash_requested = false
+	if love.keyboard.isDown("z") and self.released.z then
+		e.dash_requested = true
+		self.released.z = false
 	end
 end
 

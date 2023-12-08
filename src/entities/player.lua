@@ -1,8 +1,6 @@
 local Player = class("Player")
 
 function Player:init(props)
-	-- self.level_id = props.level_id
-
 	self.position = Vector.new(props.x, props.y)
 	self.spawn_point = self.position:clone()
 	self.velocity = Vector.new(0, 0)
@@ -17,7 +15,8 @@ function Player:init(props)
 	self.camera_follow = false
 
 	self.max_jumps = 1
-	self.gravity = 5
+	self.max_gravity = 5
+	self.gravity = self.max_gravity
 	self.acceleration = 10
 	self.top_speed = 100
 	self.jump_force = 265
@@ -26,9 +25,10 @@ function Player:init(props)
 	self.top_fall_speed = 1
 	self.friction = 0.95
 
-	self.falling = true
+	self.dash_force = 400
+	self.dash_time = 0.5
+
 	self.color = { 1, 0, 1, 1 }
-	self.grounded = true
 	self.hitbox = { width = 4, height = 8 }
 	self.platforming = true
 	self.can_collide = true
