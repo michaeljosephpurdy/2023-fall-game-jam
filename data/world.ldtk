@@ -1970,25 +1970,6 @@
 							}] }]
 						},
 						{
-							"__identifier": "Item",
-							"__grid": [11,126],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": { "tilesetUid": 17, "x": 32, "y": 128, "w": 16, "h": 16 },
-							"__smartColor": "#004949",
-							"__worldX": 176,
-							"__worldY": -816,
-							"iid": "6d6bc740-8990-11ee-942c-1fc7dfad5333",
-							"width": 16,
-							"height": 16,
-							"defUid": 71,
-							"px": [176,2016],
-							"fieldInstances": [{ "__identifier": "type", "__type": "LocalEnum.Item", "__value": "Dash", "__tile": null, "defUid": 73, "realEditorValues": [{
-								"id": "V_String",
-								"params": ["Dash"]
-							}] }]
-						},
-						{
 							"__identifier": "SpawnPoint",
 							"__grid": [26,132],
 							"__pivot": [0,0],
@@ -2006,18 +1987,18 @@
 						},
 						{
 							"__identifier": "Player",
-							"__grid": [18,123],
+							"__grid": [7,120],
 							"__pivot": [0,0],
 							"__tags": [],
 							"__tile": { "tilesetUid": 17, "x": 80, "y": 240, "w": 16, "h": 16 },
 							"__smartColor": "#000000",
-							"__worldX": 288,
-							"__worldY": -864,
+							"__worldX": 112,
+							"__worldY": -912,
 							"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
 							"width": 16,
 							"height": 16,
 							"defUid": 16,
-							"px": [288,1968],
+							"px": [112,1920],
 							"fieldInstances": []
 						}
 					]
@@ -4357,7 +4338,33 @@
 					"seed": 9694554,
 					"overrideTilesetUid": null,
 					"gridTiles": [],
-					"entityInstances": []
+					"entityInstances": [
+						{
+							"__identifier": "Narrator",
+							"__grid": [16,4],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#F1B2B2",
+							"__worldX": 32,
+							"__worldY": -3024,
+							"iid": "92511ae0-8990-11ee-942c-8591df8dfb6a",
+							"width": 304,
+							"height": 80,
+							"defUid": 44,
+							"px": [256,64],
+							"fieldInstances": [
+								{ "__identifier": "text", "__type": "String", "__value": "A new adventurer here for my\ntreasures?", "__tile": null, "defUid": 61, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["A new adventurer here for my\\ntreasures?"]
+								}] },
+								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 46, "realEditorValues": [] },
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 60, "realEditorValues": [] },
+								{ "__identifier": "timer", "__type": "Int", "__value": 3, "__tile": null, "defUid": 63, "realEditorValues": [] }
+							]
+						}
+					]
 				},
 				{
 					"__identifier": "SolidColliders",
@@ -4649,7 +4656,27 @@
 					"seed": 4569259,
 					"overrideTilesetUid": null,
 					"gridTiles": [],
-					"entityInstances": []
+					"entityInstances": [
+						{
+							"__identifier": "Item",
+							"__grid": [2,14],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": { "tilesetUid": 17, "x": 32, "y": 128, "w": 16, "h": 16 },
+							"__smartColor": "#004949",
+							"__worldX": 608,
+							"__worldY": -976,
+							"iid": "43a52e90-8990-11ee-942c-95ecd0be53b1",
+							"width": 16,
+							"height": 16,
+							"defUid": 71,
+							"px": [32,224],
+							"fieldInstances": [{ "__identifier": "type", "__type": "LocalEnum.Item", "__value": "Dash", "__tile": null, "defUid": 73, "realEditorValues": [{
+								"id": "V_String",
+								"params": ["Dash"]
+							}] }]
+						}
+					]
 				},
 				{
 					"__identifier": "SolidColliders",

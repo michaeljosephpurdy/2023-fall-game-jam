@@ -17,6 +17,7 @@ function PlatformingSystem:process(e, dt)
 		top_speed = e.top_speed * 2
 		if e.dashing < 0 then
 			e.gravity = e.max_gravity
+			-- e.velocity.y = e.old_velocity.y
 			e.dashing = nil
 		end
 	end
@@ -59,7 +60,9 @@ function PlatformingSystem:process(e, dt)
 
 	if e.can_dash and e.dash_requested and not e.dashed then
 		e.dashed = true
+		e.old_velocity = e.velocity:clone()
 		e.velocity.x = e.velocity.x + (e.direction.x * e.dash_force)
+		e.velocity.y = 0
 		e.dashing = e.dash_time
 	end
 end

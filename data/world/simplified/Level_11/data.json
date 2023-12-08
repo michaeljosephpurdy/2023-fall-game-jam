@@ -16,5 +16,25 @@
 	"layers": [
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "92511ae0-8990-11ee-942c-8591df8dfb6a",
+				"layer": "Entities",
+				"x": 256,
+				"y": 64,
+				"width": 304,
+				"height": 80,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "A new adventurer here for my\ntreasures?",
+					"timer": 3
+				}
+			}
+		]
+	}
 }

@@ -84,19 +84,6 @@
 				"customFields": {
 					"type": "Double_jump"
 				}
-			},
-			{
-				"id": "Item",
-				"iid": "6d6bc740-8990-11ee-942c-1fc7dfad5333",
-				"layer": "Entities",
-				"x": 176,
-				"y": 2016,
-				"width": 16,
-				"height": 16,
-				"color": 18761,
-				"customFields": {
-					"type": "Dash"
-				}
 			}
 		],
 		"SpawnPoint": [
@@ -117,8 +104,8 @@
 				"id": "Player",
 				"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
 				"layer": "Entities",
-				"x": 288,
-				"y": 1968,
+				"x": 112,
+				"y": 1920,
 				"width": 16,
 				"height": 16,
 				"color": 0,

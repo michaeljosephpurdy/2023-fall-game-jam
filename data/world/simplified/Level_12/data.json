@@ -24,5 +24,21 @@
 	"layers": [
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"Item": [
+			{
+				"id": "Item",
+				"iid": "43a52e90-8990-11ee-942c-95ecd0be53b1",
+				"layer": "Entities",
+				"x": 32,
+				"y": 224,
+				"width": 16,
+				"height": 16,
+				"color": 18761,
+				"customFields": {
+					"type": "Dash"
+				}
+			}
+		]
+	}
 }
