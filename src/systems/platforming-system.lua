@@ -6,7 +6,7 @@ function PlatformingSystem:onAddToWorld(world) end
 function PlatformingSystem:process(e, dt)
 	local friction = e.friction or 0.95
 	if e.on_ground then
-		e.jumped = false
+		e.jumps = e.max_jumps
 		e.coyote_timer = e.coyote_time
 	else
 		e.coyote_timer = e.coyote_timer - dt
@@ -25,10 +25,18 @@ function PlatformingSystem:process(e, dt)
 		end
 	end
 	e.velocity.x = e.velocity.x * friction
-	if e.jump_requested and not e.jumped and (e.on_ground or e.coyote_timer > 0) then
+	-- single jump
+	if e.jump_requested and e.jumps >= 1 and (e.on_ground or e.coyote_timer > 0) then
+		e.jumps = e.jumps - 1
 		e.velocity.y = -e.jump_force
 		e.on_ground = false
-		e.jumped = true
+	elseif e.jump_requested and e.jumps >= 1 and e.max_jumps == 2 then
+		e.jumps = e.jumps - 1
+		if e.coyote_timer <= 0 then
+			e.jumps = e.jumps - 1
+		end
+		e.velocity.y = -e.jump_force
+		e.on_ground = false
 	end
 end
 

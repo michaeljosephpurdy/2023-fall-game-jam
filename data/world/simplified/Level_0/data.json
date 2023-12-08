@@ -2,9 +2,9 @@
 	"identifier": "Level_0",
 	"uniqueIdentifer": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
 	"x": 0,
-	"y": -2016,
+	"y": -2832,
 	"width": 576,
-	"height": 1376,
+	"height": 2192,
 	"bgColor": "#696A79",
 	"neighbourLevels": [
 		{
@@ -18,6 +18,10 @@
 		{
 			"levelIid": "b907aaf0-8990-11ee-942c-1b5f9b6b41c0",
 			"dir": "w"
+		},
+		{
+			"levelIid": "b5e99010-8990-11ee-942c-edeec0bd8881",
+			"dir": "n"
 		}
 	],
 	"customFields" : {},
@@ -31,36 +35,64 @@
 				"iid": "ca834050-8990-11ee-942c-1583a96b286e",
 				"layer": "Entities",
 				"x": 368,
-				"y": 1184,
+				"y": 2000,
 				"width": 112,
 				"height": 128,
 				"color": 15839922,
 				"customFields": {
 					"conditions": [],
 					"one_shot": true,
-					"on_fulfilled": [
-						"yup"
-					],
-					"text": "Oh, another one..."
+					"on_fulfilled": [],
+					"text": "Oh, a new adventurer.",
+					"timer": 1
 				}
 			},
 			{
 				"id": "Narrator",
-				"iid": "f5a0c720-8990-11ee-942c-6baabf44f418",
+				"iid": "f591a2c0-8990-11ee-942c-31d19f93afb0",
 				"layer": "Entities",
-				"x": 496,
-				"y": 1264,
-				"width": 64,
-				"height": 48,
+				"x": 352,
+				"y": 1776,
+				"width": 144,
+				"height": 96,
 				"color": 15839922,
 				"customFields": {
 					"conditions": [
-						"yup"
+						"deaths"
 					],
 					"one_shot": true,
 					"on_fulfilled": [],
-					"text": "yup"
+					"text": "Yeah, this place is special.\nDying doesn't matter here.",
+					"timer": 4
 				}
+			}
+		],
+		"Item": [
+			{
+				"id": "Item",
+				"iid": "0c2f05d0-8990-11ee-942c-a18323f11bdd",
+				"layer": "Entities",
+				"x": 240,
+				"y": 2048,
+				"width": 16,
+				"height": 16,
+				"color": 18761,
+				"customFields": {
+					"type": "Double_jump"
+				}
+			}
+		],
+		"Player": [
+			{
+				"id": "Player",
+				"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
+				"layer": "Entities",
+				"x": 288,
+				"y": 1952,
+				"width": 16,
+				"height": 16,
+				"color": 0,
+				"customFields" : {}
 			}
 		]
 	}

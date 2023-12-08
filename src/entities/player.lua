@@ -4,6 +4,7 @@ function Player:init(props)
 	-- self.level_id = props.level_id
 
 	self.position = Vector.new(props.x, props.y)
+	self.spawn_point = self.position:clone()
 	self.velocity = Vector.new(0, 0)
 	self.direction = Vector.new(0, 0)
 	self.width = 4
@@ -15,6 +16,7 @@ function Player:init(props)
 	self.controllable = true
 	self.camera_follow = false
 
+	self.max_jumps = 1
 	self.gravity = 5
 	self.acceleration = 10
 	self.top_speed = 100
@@ -32,9 +34,7 @@ function Player:init(props)
 	self.can_collide = true
 end
 
-function Player:on_collide()
-	assert(nil)
-end
+function Player:on_collide() end
 
 function Player:tune_field(field_name, button)
 	love.graphics.print(field_name .. self[field_name], self.position.x, self.position.y + 8 * tonumber(button))
@@ -47,6 +47,17 @@ function Player:tune_field(field_name, button)
 	if love.keyboard.isDown("up") then
 		self[field_name] = self[field_name] + 5
 	end
+end
+
+function Player:respawn()
+	if self.position == self.spawn_point then
+		return
+	end
+	self.deaths = (self.deaths or 0) + 1
+	self.velocity = Vector.new(0, 0)
+	self.position = self.spawn_point:clone()
+	self.old_position = self.position
+	self.bump_world:update(self, self.spawn_point.x, self.spawn_point.y)
 end
 
 function Player:draw()

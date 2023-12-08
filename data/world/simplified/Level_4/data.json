@@ -25,19 +25,6 @@
 		"Tilemap.png"
 	],
 	"entities": {
-		"Player": [
-			{
-				"id": "Player",
-				"iid": "2f198370-8990-11ee-942c-118ce2528ea3",
-				"layer": "Entities",
-				"x": 64,
-				"y": 128,
-				"width": 16,
-				"height": 16,
-				"color": 0,
-				"customFields" : {}
-			}
-		],
 		"Trap": [
 			{
 				"id": "Trap",
@@ -68,6 +55,25 @@
 						"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
 						"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
 					}
+				}
+			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "1c1bdb80-8990-11ee-942c-7f4d067f1903",
+				"layer": "Entities",
+				"x": 96,
+				"y": 64,
+				"width": 64,
+				"height": 176,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "You're here for the\ntreasure?",
+					"timer": 3
 				}
 			}
 		]

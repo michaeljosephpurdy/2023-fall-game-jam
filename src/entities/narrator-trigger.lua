@@ -5,6 +5,9 @@ function NarratorTrigger:init(props)
 		for k, v in pairs(props.customFields) do
 			self[k] = v
 		end
+		if props.customFields["text2"] then
+			self.text = props.customFields["text2"]
+		end
 	end
 	self.is_narrator_trigger = true
 	self.position = Vector.new(props.x, props.y)
@@ -13,7 +16,6 @@ function NarratorTrigger:init(props)
 	self.triggered = false
 	self.progress = 1
 	self.never_triggered = false
-	self.timer = #self.text * 0.2
 end
 
 function NarratorTrigger:update(dt)
@@ -52,7 +54,7 @@ function NarratorTrigger:draw()
 	love.graphics.setColor(0, 0, 0)
 	love.graphics.rectangle("fill", 10, 10, GAME_WIDTH - 20, 40)
 	love.graphics.setColor(1, 1, 1)
-	love.graphics.print(self.current_text, 20, 20)
+	love.graphics.print(self.current_text, 15, 15)
 	-- pass
 end
 

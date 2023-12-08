@@ -2,24 +2,17 @@ local CollisionSystem = tiny.processingSystem()
 CollisionSystem.filter = tiny.requireAll("hitbox")
 
 function CollisionSystem:init()
-	self.bump_world = bump.newWorld(64)
+	self.bump_world = bump.newWorld(32)
 end
 
 function CollisionSystem:onAddToWorld(world) end
 
 local function collision_filter(e1, e2)
 	if e1.is_player then
-		if e2.is_narrator_trigger then
-			return "cross"
-		end
-		if e2.is_tile_map then
-			--e1.level_id = e2.level_id
-			--e2.should_draw = true
-			return "cross"
-		end
 		if e2.is_solid then
 			return "slide"
 		end
+		return "cross"
 	end
 	return nil
 end
@@ -83,6 +76,7 @@ end
 
 function CollisionSystem:onAdd(e)
 	self.bump_world:add(e, e.position.x, e.position.y, e.hitbox.width, e.hitbox.height)
+	e.bump_world = self.bump_world
 end
 
 function CollisionSystem:onRemove(e)

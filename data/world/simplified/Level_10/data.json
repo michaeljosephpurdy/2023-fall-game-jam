@@ -1,0 +1,24 @@
+{
+	"identifier": "Level_10",
+	"uniqueIdentifer": "86c2c150-8990-11ee-942c-a3d02f83e773",
+	"x": 1248,
+	"y": -832,
+	"width": 464,
+	"height": 256,
+	"bgColor": "#696A79",
+	"neighbourLevels": [
+		{
+			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
+			"dir": "n"
+		},
+		{
+			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Tilemap.png"
+	],
+	"entities" : {}
+}

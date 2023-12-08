@@ -2,9 +2,9 @@
 	"identifier": "Level_7",
 	"uniqueIdentifer": "de7920b0-8990-11ee-942c-9f61e6f9909e",
 	"x": 832,
-	"y": -944,
+	"y": -1248,
 	"width": 480,
-	"height": 112,
+	"height": 416,
 	"bgColor": "#696A79",
 	"neighbourLevels": [
 		{
@@ -14,30 +14,19 @@
 		{
 			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
 			"dir": "s"
+		},
+		{
+			"levelIid": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
+			"dir": "e"
+		},
+		{
+			"levelIid": "86c2c150-8990-11ee-942c-a3d02f83e773",
+			"dir": "s"
 		}
 	],
 	"customFields" : {},
 	"layers": [
 		"Tilemap.png"
 	],
-	"entities": {
-		"Narrator": [
-			{
-				"id": "Narrator",
-				"iid": "1d4b47f0-8990-11ee-942c-239aeb5c2c6e",
-				"layer": "Entities",
-				"x": 32,
-				"y": 48,
-				"width": 160,
-				"height": 48,
-				"color": 15839922,
-				"customFields": {
-					"conditions": [],
-					"one_shot": true,
-					"on_fulfilled": [],
-					"text": ""
-				}
-			}
-		]
-	}
+	"entities" : {}
 }
