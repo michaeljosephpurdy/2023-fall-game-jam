@@ -1,0 +1,63 @@
+{
+	"identifier": "Level_13",
+	"uniqueIdentifer": "4eb32300-8990-11ee-942c-2b05e8099202",
+	"x": 1776,
+	"y": -1200,
+	"width": 752,
+	"height": 256,
+	"bgColor": "#696A79",
+	"neighbourLevels": [
+		{
+			"levelIid": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
+			"dir": "w"
+		},
+		{
+			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
+			"dir": "n"
+		},
+		{
+			"levelIid": "188cf7e0-8990-11ee-942c-51061e9f4b2b",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Tilemap.png"
+	],
+	"entities": {
+		"KillZone": [
+			{
+				"id": "KillZone",
+				"iid": "64607400-8990-11ee-942c-a9df6e95a5d8",
+				"layer": "Entities",
+				"x": 208,
+				"y": 240,
+				"width": 544,
+				"height": 16,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
+			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "d76d9e90-8990-11ee-942c-8bc53e75e7fc",
+				"layer": "Entities",
+				"x": 256,
+				"y": 16,
+				"width": 48,
+				"height": 48,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "I'm surprised that you've\nmade it this far.",
+					"timer": 3
+				}
+			}
+		]
+	}
+}

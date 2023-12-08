@@ -59,7 +59,7 @@ function CameraSystem:process(e, dt)
 	elseif e.position.x + camera_offset <= level.left_boundary + GAME_WIDTH / 2 then
 		self.position.x = level.left_boundary
 	end
-	self.position.x = lerp(self.old_position.x, self.position.x, 5 * dt)
+	self.position.x = lerp(self.old_position.x, self.position.x, 4 * dt)
 	if e.position.y >= level.bot_boundary - GAME_HEIGHT / 2 then
 		self.position.y = level.bot_boundary - GAME_HEIGHT
 	elseif e.position.y <= level.top_boundary + GAME_HEIGHT / 2 then

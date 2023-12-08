@@ -7,6 +7,7 @@ function Player:init(props)
 	self.direction = Vector.new(0, 0)
 	self.width = 4
 	self.height = 8
+	self.deaths = 0
 
 	self.is_player = true
 
@@ -53,7 +54,7 @@ function Player:respawn()
 	if self.position == self.spawn_point then
 		return
 	end
-	self.deaths = (self.deaths or 0) + 1
+	self.deaths = self.deaths + 1
 	self.velocity = Vector.new(0, 0)
 	self.position = self.spawn_point:clone()
 	self.old_position = self.position

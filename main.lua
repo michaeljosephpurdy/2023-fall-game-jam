@@ -21,6 +21,7 @@ local SYSTEMS_IN_ORDER = {
 	require("src.systems.entity-spawning-system"),
 	require("src.systems.level-transition-system"),
 	require("src.systems.narrator-drawing-system"),
+	require("src.systems.game-data-system"),
 }
 
 function love.load(arg)

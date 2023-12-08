@@ -1,0 +1,24 @@
+{
+	"identifier": "Level_16",
+	"uniqueIdentifer": "f36985a0-8990-11ee-942c-0d43bcb935e5",
+	"x": 1776,
+	"y": -1712,
+	"width": 256,
+	"height": 256,
+	"bgColor": "#696A79",
+	"neighbourLevels": [
+		{
+			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
+			"dir": "s"
+		},
+		{
+			"levelIid": "a3437940-8990-11ee-942c-152bfc0728ec",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Tilemap.png"
+	],
+	"entities" : {}
+}

@@ -2,19 +2,64 @@
 	"identifier": "Level_9",
 	"uniqueIdentifer": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
 	"x": 1312,
-	"y": -1168,
-	"width": 256,
-	"height": 224,
+	"y": -1360,
+	"width": 464,
+	"height": 416,
 	"bgColor": "#696A79",
 	"neighbourLevels": [
 		{
 			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
 			"dir": "w"
+		},
+		{
+			"levelIid": "4eb32300-8990-11ee-942c-2b05e8099202",
+			"dir": "e"
+		},
+		{
+			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
+			"dir": "e"
+		},
+		{
+			"levelIid": "a3437940-8990-11ee-942c-152bfc0728ec",
+			"dir": "n"
 		}
 	],
 	"customFields" : {},
 	"layers": [
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"SpawnPoint": [
+			{
+				"id": "SpawnPoint",
+				"iid": "9ccadb10-8990-11ee-942c-d90be584468b",
+				"layer": "Entities",
+				"x": 304,
+				"y": 384,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
+			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "97854f90-8990-11ee-942c-6947ab003c75",
+				"layer": "Entities",
+				"x": 272,
+				"y": 352,
+				"width": 192,
+				"height": 48,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "No way back now.",
+					"timer": 3
+				}
+			}
+		]
+	}
 }

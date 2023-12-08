@@ -1,10 +1,10 @@
 {
 	"identifier": "Level_6",
 	"uniqueIdentifer": "b907aaf0-8990-11ee-942c-1b5f9b6b41c0",
-	"x": -400,
-	"y": -1024,
-	"width": 400,
-	"height": 320,
+	"x": -560,
+	"y": -1072,
+	"width": 560,
+	"height": 208,
 	"bgColor": "#696A79",
 	"neighbourLevels": [
 		{
@@ -17,18 +17,18 @@
 		"Tilemap.png"
 	],
 	"entities": {
-		"KillZone": [
+		"Trigger": [
 			{
-				"id": "KillZone",
-				"iid": "6b5e4b00-8990-11ee-942c-f9f28ac69206",
+				"id": "Trigger",
+				"iid": "9479fa70-8990-11ee-942c-9f2df938fc5d",
 				"layer": "Entities",
-				"x": 0,
-				"y": 192,
-				"width": 400,
-				"height": 128,
-				"color": 9568256,
+				"x": 480,
+				"y": 128,
+				"width": 16,
+				"height": 16,
+				"color": 6776679,
 				"customFields": {
-					"on_fulfilled": []
+					"Entity_ref": null
 				}
 			}
 		]

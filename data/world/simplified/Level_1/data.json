@@ -1,15 +1,49 @@
 {
 	"identifier": "Level_1",
 	"uniqueIdentifer": "bda369f0-8990-11ee-942c-f36b8d2f1ad6",
-	"x": 832,
-	"y": 0,
+	"x": 608,
+	"y": -576,
 	"width": 272,
 	"height": 368,
 	"bgColor": "#696A79",
-	"neighbourLevels": [],
+	"neighbourLevels": [
+		{
+			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
+			"dir": "n"
+		}
+	],
 	"customFields" : {},
 	"layers": [
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"KillZone": [
+			{
+				"id": "KillZone",
+				"iid": "d5b7e600-8990-11ee-942c-a92a2eb9a387",
+				"layer": "Entities",
+				"x": 256,
+				"y": 320,
+				"width": 16,
+				"height": 48,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
+			},
+			{
+				"id": "KillZone",
+				"iid": "d7cf0630-8990-11ee-942c-f970327157ab",
+				"layer": "Entities",
+				"x": 0,
+				"y": 352,
+				"width": 272,
+				"height": 16,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
+			}
+		]
+	}
 }
