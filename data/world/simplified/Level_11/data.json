@@ -35,6 +35,19 @@
 					"timer": 3
 				}
 			}
+		],
+		"Player": [
+			{
+				"id": "Player",
+				"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
+				"layer": "Entities",
+				"x": 96,
+				"y": 48,
+				"width": 16,
+				"height": 16,
+				"color": 0,
+				"customFields" : {}
+			}
 		]
 	}
 }

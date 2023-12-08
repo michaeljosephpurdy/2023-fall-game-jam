@@ -35,7 +35,9 @@
 				"width": 368,
 				"height": 32,
 				"color": 9568256,
-				"customFields" : {}
+				"customFields": {
+					"on_fulfilled": []
+				}
 			}
 		],
 		"Narrator": [

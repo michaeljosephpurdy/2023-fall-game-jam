@@ -24,9 +24,9 @@ function TileMap:on_collision(player)
 end
 
 function TileMap:draw_tilemap()
-	if not self.should_draw then
-		return
-	end
+	--if not self.should_draw then
+	-- return
+	-- end
 	love.graphics.draw(self.image, self.position.x, self.position.y)
 	self.should_draw = false
 end

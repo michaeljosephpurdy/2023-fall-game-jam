@@ -11,7 +11,7 @@
 	"iid": "6b4356a0-8990-11ee-8cf0-97de4f12c9ab",
 	"jsonVersion": "1.4.1",
 	"appBuildId": 471015,
-	"nextUid": 75,
+	"nextUid": 77,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -1328,7 +1328,43 @@
 			"limitBehavior": "MoveLastOne",
 			"pivotX": 0,
 			"pivotY": 0,
-			"fieldDefs": []
+			"fieldDefs": [
+				{
+					"identifier": "on_fulfilled",
+					"doc": "properties to set on player when fulfilled",
+					"__type": "Array<String>",
+					"uid": 75,
+					"type": "F_String",
+					"isArray": true,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayScale": 1,
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "StraightArrow",
+					"editorDisplayColor": null,
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefsEntityUid": null,
+					"allowedRefTags": [],
+					"tilesetUid": null
+				}
+			]
 		},
 		{
 			"identifier": "Item",
@@ -1983,22 +2019,6 @@
 							"height": 16,
 							"defUid": 55,
 							"px": [416,2112],
-							"fieldInstances": []
-						},
-						{
-							"__identifier": "Player",
-							"__grid": [7,120],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": { "tilesetUid": 17, "x": 80, "y": 240, "w": 16, "h": 16 },
-							"__smartColor": "#000000",
-							"__worldX": 112,
-							"__worldY": -912,
-							"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
-							"width": 16,
-							"height": 16,
-							"defUid": 16,
-							"px": [112,1920],
 							"fieldInstances": []
 						}
 					]
@@ -3077,7 +3097,7 @@
 							"height": 128,
 							"defUid": 62,
 							"px": [0,192],
-							"fieldInstances": []
+							"fieldInstances": [{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 75, "realEditorValues": [] }]
 						}
 					]
 				},
@@ -3442,7 +3462,7 @@
 							"height": 32,
 							"defUid": 62,
 							"px": [48,224],
-							"fieldInstances": []
+							"fieldInstances": [{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 75, "realEditorValues": [] }]
 						},
 						{
 							"__identifier": "Narrator",
@@ -3746,26 +3766,6 @@
 					"optionalRules": [],
 					"intGridCsv": [],
 					"autoLayerTiles": [
-						{ "px": [336,240], "src": [0,16], "f": 0, "t": 20, "d": [38,456], "a": 1 },
-						{ "px": [336,32], "src": [16,32], "f": 0, "t": 41, "d": [37,79], "a": 1 },
-						{ "px": [352,240], "src": [16,0], "f": 0, "t": 1, "d": [35,457], "a": 1 },
-						{ "px": [368,240], "src": [16,0], "f": 0, "t": 1, "d": [35,458], "a": 1 },
-						{ "px": [384,240], "src": [16,0], "f": 0, "t": 1, "d": [35,459], "a": 1 },
-						{ "px": [400,240], "src": [16,0], "f": 0, "t": 1, "d": [35,460], "a": 1 },
-						{ "px": [416,240], "src": [16,0], "f": 0, "t": 1, "d": [35,461], "a": 1 },
-						{ "px": [432,240], "src": [16,0], "f": 0, "t": 1, "d": [35,462], "a": 1 },
-						{ "px": [448,240], "src": [16,0], "f": 0, "t": 1, "d": [35,463], "a": 1 },
-						{ "px": [336,0], "src": [64,32], "f": 0, "t": 44, "d": [30,21], "a": 1 },
-						{ "px": [336,16], "src": [64,32], "f": 0, "t": 44, "d": [30,50], "a": 1 },
-						{ "px": [240,32], "src": [64,0], "f": 0, "t": 4, "d": [27,73], "a": 1 },
-						{ "px": [256,32], "src": [64,0], "f": 0, "t": 4, "d": [27,74], "a": 1 },
-						{ "px": [272,32], "src": [64,0], "f": 0, "t": 4, "d": [27,75], "a": 1 },
-						{ "px": [288,32], "src": [64,0], "f": 0, "t": 4, "d": [27,76], "a": 1 },
-						{ "px": [304,32], "src": [64,0], "f": 0, "t": 4, "d": [27,77], "a": 1 },
-						{ "px": [320,32], "src": [64,0], "f": 0, "t": 4, "d": [27,78], "a": 1 },
-						{ "px": [352,32], "src": [64,0], "f": 0, "t": 4, "d": [27,80], "a": 1 },
-						{ "px": [368,32], "src": [64,0], "f": 0, "t": 4, "d": [27,81], "a": 1 },
-						{ "px": [384,32], "src": [64,0], "f": 0, "t": 4, "d": [27,82], "a": 1 },
 						{ "px": [0,128], "src": [64,0], "f": 0, "t": 4, "d": [27,232], "a": 1 },
 						{ "px": [16,128], "src": [64,0], "f": 0, "t": 4, "d": [27,233], "a": 1 },
 						{ "px": [32,128], "src": [64,0], "f": 0, "t": 4, "d": [27,234], "a": 1 },
@@ -3775,12 +3775,7 @@
 						{ "px": [96,128], "src": [64,0], "f": 0, "t": 4, "d": [27,238], "a": 1 },
 						{ "px": [112,128], "src": [64,0], "f": 0, "t": 4, "d": [27,239], "a": 1 },
 						{ "px": [128,128], "src": [64,0], "f": 0, "t": 4, "d": [27,240], "a": 1 },
-						{ "px": [144,128], "src": [64,0], "f": 0, "t": 4, "d": [27,241], "a": 1 },
-						{ "px": [160,128], "src": [64,0], "f": 0, "t": 4, "d": [27,242], "a": 1 },
-						{ "px": [176,128], "src": [64,0], "f": 0, "t": 4, "d": [27,243], "a": 1 },
-						{ "px": [192,128], "src": [64,0], "f": 0, "t": 4, "d": [27,244], "a": 1 },
-						{ "px": [208,128], "src": [64,0], "f": 0, "t": 4, "d": [27,245], "a": 1 },
-						{ "px": [224,128], "src": [64,0], "f": 0, "t": 4, "d": [27,246], "a": 1 },
+						{ "px": [320,128], "src": [64,0], "f": 0, "t": 4, "d": [27,252], "a": 1 },
 						{ "px": [336,128], "src": [64,0], "f": 0, "t": 4, "d": [27,253], "a": 1 },
 						{ "px": [352,128], "src": [64,0], "f": 0, "t": 4, "d": [27,254], "a": 1 },
 						{ "px": [368,128], "src": [64,0], "f": 0, "t": 4, "d": [27,255], "a": 1 },
@@ -3789,22 +3784,8 @@
 						{ "px": [416,128], "src": [64,0], "f": 0, "t": 4, "d": [27,258], "a": 1 },
 						{ "px": [432,128], "src": [64,0], "f": 0, "t": 4, "d": [27,259], "a": 1 },
 						{ "px": [448,128], "src": [64,0], "f": 0, "t": 4, "d": [27,260], "a": 1 },
-						{ "px": [400,32], "src": [80,0], "f": 0, "t": 5, "d": [26,83], "a": 1 },
-						{ "px": [224,32], "src": [48,0], "f": 0, "t": 3, "d": [25,72], "a": 1 },
-						{ "px": [320,128], "src": [48,0], "f": 0, "t": 3, "d": [25,252], "a": 1 },
-						{ "px": [240,144], "src": [32,64], "f": 0, "t": 82, "d": [24,276], "a": 1 },
-						{ "px": [256,160], "src": [32,64], "f": 0, "t": 82, "d": [24,306], "a": 1 },
-						{ "px": [272,176], "src": [32,64], "f": 0, "t": 82, "d": [24,336], "a": 1 },
-						{ "px": [288,192], "src": [32,64], "f": 0, "t": 82, "d": [24,366], "a": 1 },
-						{ "px": [304,208], "src": [32,64], "f": 0, "t": 82, "d": [24,396], "a": 1 },
-						{ "px": [320,224], "src": [32,64], "f": 0, "t": 82, "d": [24,426], "a": 1 },
-						{ "px": [240,128], "src": [48,48], "f": 0, "t": 63, "d": [22,247], "a": 1 },
-						{ "px": [256,144], "src": [48,48], "f": 0, "t": 63, "d": [22,277], "a": 1 },
-						{ "px": [272,160], "src": [48,48], "f": 0, "t": 63, "d": [22,307], "a": 1 },
-						{ "px": [288,176], "src": [48,48], "f": 0, "t": 63, "d": [22,337], "a": 1 },
-						{ "px": [304,192], "src": [48,48], "f": 0, "t": 63, "d": [22,367], "a": 1 },
-						{ "px": [320,208], "src": [48,48], "f": 0, "t": 63, "d": [22,397], "a": 1 },
-						{ "px": [336,224], "src": [48,48], "f": 0, "t": 63, "d": [22,427], "a": 1 }
+						{ "px": [144,128], "src": [80,0], "f": 0, "t": 5, "d": [26,241], "a": 1 },
+						{ "px": [304,128], "src": [48,0], "f": 0, "t": 3, "d": [25,251], "a": 1 }
 					],
 					"seed": 2316537,
 					"overrideTilesetUid": null,
@@ -3834,7 +3815,118 @@
 					"seed": 8491684,
 					"overrideTilesetUid": null,
 					"gridTiles": [],
-					"entityInstances": []
+					"entityInstances": [
+						{
+							"__identifier": "SpawnPoint",
+							"__grid": [5,7],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#252525",
+							"__worldX": 1328,
+							"__worldY": -720,
+							"iid": "106385c0-8990-11ee-942c-6525dc104e8b",
+							"width": 16,
+							"height": 16,
+							"defUid": 55,
+							"px": [80,112],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Narrator",
+							"__grid": [6,3],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#F1B2B2",
+							"__worldX": 1344,
+							"__worldY": -784,
+							"iid": "25855fa0-8990-11ee-942c-65e7abd606c8",
+							"width": 64,
+							"height": 80,
+							"defUid": 44,
+							"px": [96,48],
+							"fieldInstances": [
+								{ "__identifier": "text", "__type": "String", "__value": "Same with this one...", "__tile": null, "defUid": 61, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Same with this one..."]
+								}] },
+								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 46, "realEditorValues": [] },
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": ["goaded_to_impossible_jump"], "__tile": null, "defUid": 60, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["goaded_to_impossible_jump"]
+								}] },
+								{ "__identifier": "timer", "__type": "Int", "__value": 3, "__tile": null, "defUid": 63, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Narrator",
+							"__grid": [4,3],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#F1B2B2",
+							"__worldX": 1312,
+							"__worldY": -784,
+							"iid": "34158db0-8990-11ee-942c-8dc11dbb5a5c",
+							"width": 48,
+							"height": 80,
+							"defUid": 44,
+							"px": [64,48],
+							"fieldInstances": [
+								{ "__identifier": "text", "__type": "String", "__value": "he he he he he", "__tile": null, "defUid": 61, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["he he he he he"]
+								}] },
+								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [ "goaded_to_impossible_jump", "died_from_impossible_jump" ], "__tile": null, "defUid": 46, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["goaded_to_impossible_jump"]
+								}, {
+									"id": "V_String",
+									"params": ["died_from_impossible_jump"]
+								} ] },
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 60, "realEditorValues": [] },
+								{ "__identifier": "timer", "__type": "Int", "__value": 3, "__tile": null, "defUid": 63, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "KillZone",
+							"__grid": [0,13],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#920000",
+							"__worldX": 1248,
+							"__worldY": -624,
+							"iid": "3ff2a9b0-8990-11ee-942c-950027144be2",
+							"width": 464,
+							"height": 48,
+							"defUid": 62,
+							"px": [0,208],
+							"fieldInstances": [{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": ["died_from_impossible_jump"], "__tile": null, "defUid": 75, "realEditorValues": [{
+								"id": "V_String",
+								"params": ["died_from_impossible_jump"]
+							}] }]
+						},
+						{
+							"__identifier": "SpawnPoint",
+							"__grid": [5,7],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#252525",
+							"__worldX": 1328,
+							"__worldY": -720,
+							"iid": "980bea80-8990-11ee-942c-cf74130b540c",
+							"width": 16,
+							"height": 16,
+							"defUid": 55,
+							"px": [80,112],
+							"fieldInstances": []
+						}
+					]
 				},
 				{
 					"__identifier": "SolidColliders",
@@ -3855,20 +3947,20 @@
 					"visible": true,
 					"optionalRules": [],
 					"intGridCsv": [
-						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,
-						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-						0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,
-						1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,
-						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,
-						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
-						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-						0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-						0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-						0,1,1,1,1,1,1,1,1
+						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,
+						0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+						0,0,0,0,0,0,0,0,0
 					],
 					"autoLayerTiles": [],
 					"seed": 8366946,
@@ -4363,6 +4455,22 @@
 								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 60, "realEditorValues": [] },
 								{ "__identifier": "timer", "__type": "Int", "__value": 3, "__tile": null, "defUid": 63, "realEditorValues": [] }
 							]
+						},
+						{
+							"__identifier": "Player",
+							"__grid": [6,3],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": { "tilesetUid": 17, "x": 80, "y": 240, "w": 16, "h": 16 },
+							"__smartColor": "#000000",
+							"__worldX": -128,
+							"__worldY": -3040,
+							"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
+							"width": 16,
+							"height": 16,
+							"defUid": 16,
+							"px": [96,48],
+							"fieldInstances": []
 						}
 					]
 				},

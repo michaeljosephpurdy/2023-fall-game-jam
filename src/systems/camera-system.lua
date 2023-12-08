@@ -1,14 +1,20 @@
 local CameraSystem = tiny.processingSystem()
 CameraSystem.filter = tiny.requireAll("camera_follow")
 
+function lerp(a, b, t)
+	return a + (b - a) * t
+end
+
 local function clamp(low, n, high)
 	return math.min(math.max(n, low), high)
 end
 
 function CameraSystem:init()
 	self.levels = {}
+	self.focal_point = 0
 	self.push = require("plugins.push")
 	self.position = Vector.new(0, 0)
+	self.old_position = Vector.new(0, 0)
 	self.offset_position = Vector.new(-GAME_WIDTH / 2, -GAME_HEIGHT / 2)
 	local windowWidth, windowHeight = 512, 512
 	self.push:setupScreen(GAME_WIDTH, GAME_HEIGHT, windowWidth, windowHeight, { fullscreen = false, resizable = true })
@@ -44,17 +50,22 @@ function CameraSystem:process(e, dt)
 		return
 	end
 	local level = self.levels[e.level_id]
+	self.old_position = self.position
 	self.position = e.position + self.offset_position
-	if e.position.x + GAME_WIDTH / 2 >= level.right_boundary then
+	local camera_offset = e.direction.x * 50
+	self.position.x = self.position.x + camera_offset
+	if e.position.x + camera_offset >= level.right_boundary - GAME_WIDTH / 2 then
 		self.position.x = level.right_boundary - GAME_WIDTH
-	elseif e.position.x - GAME_WIDTH / 2 <= level.left_boundary then
+	elseif e.position.x + camera_offset <= level.left_boundary + GAME_WIDTH / 2 then
 		self.position.x = level.left_boundary
 	end
+	self.position.x = lerp(self.old_position.x, self.position.x, 5 * dt)
 	if e.position.y >= level.bot_boundary - GAME_HEIGHT / 2 then
 		self.position.y = level.bot_boundary - GAME_HEIGHT
-	elseif e.position.y - GAME_HEIGHT / 2 <= level.top_boundary then
+	elseif e.position.y <= level.top_boundary + GAME_HEIGHT / 2 then
 		self.position.y = level.top_boundary
 	end
+	self.position.y = lerp(self.old_position.y, self.position.y, 25 * dt)
 	love.graphics.translate(-self.position.x, -self.position.y)
 	-- crazy logging to help build camera, keeping this in for now...
 	-- local y = e.position.y - GAME_HEIGHT / 2

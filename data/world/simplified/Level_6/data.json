@@ -27,7 +27,9 @@
 				"width": 400,
 				"height": 128,
 				"color": 9568256,
-				"customFields" : {}
+				"customFields": {
+					"on_fulfilled": []
+				}
 			}
 		]
 	}

@@ -20,5 +20,88 @@
 	"layers": [
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"SpawnPoint": [
+			{
+				"id": "SpawnPoint",
+				"iid": "106385c0-8990-11ee-942c-6525dc104e8b",
+				"layer": "Entities",
+				"x": 80,
+				"y": 112,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
+			},
+			{
+				"id": "SpawnPoint",
+				"iid": "980bea80-8990-11ee-942c-cf74130b540c",
+				"layer": "Entities",
+				"x": 80,
+				"y": 112,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
+			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "25855fa0-8990-11ee-942c-65e7abd606c8",
+				"layer": "Entities",
+				"x": 96,
+				"y": 48,
+				"width": 64,
+				"height": 80,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [
+						"goaded_to_impossible_jump"
+					],
+					"text": "Same with this one...",
+					"timer": 3
+				}
+			},
+			{
+				"id": "Narrator",
+				"iid": "34158db0-8990-11ee-942c-8dc11dbb5a5c",
+				"layer": "Entities",
+				"x": 64,
+				"y": 48,
+				"width": 48,
+				"height": 80,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [
+						"goaded_to_impossible_jump",
+						"died_from_impossible_jump"
+					],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "he he he he he",
+					"timer": 3
+				}
+			}
+		],
+		"KillZone": [
+			{
+				"id": "KillZone",
+				"iid": "3ff2a9b0-8990-11ee-942c-950027144be2",
+				"layer": "Entities",
+				"x": 0,
+				"y": 208,
+				"width": 464,
+				"height": 48,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": [
+						"died_from_impossible_jump"
+					]
+				}
+			}
+		]
+	}
 }
