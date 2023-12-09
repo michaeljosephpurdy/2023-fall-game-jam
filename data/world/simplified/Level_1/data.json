@@ -14,6 +14,7 @@
 	],
 	"customFields" : {},
 	"layers": [
+		"Level_Flair.png",
 		"Tilemap.png"
 	],
 	"entities": {

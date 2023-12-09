@@ -1,105 +1,62 @@
 {
 	"identifier": "Level_10",
-	"uniqueIdentifer": "86c2c150-8990-11ee-942c-a3d02f83e773",
-	"x": 1248,
-	"y": -832,
-	"width": 464,
+	"uniqueIdentifer": "5ee552a0-8990-11ee-942c-f17c0e82600c",
+	"x": 576,
+	"y": -1200,
+	"width": 256,
 	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
-			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
-			"dir": "n"
+			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
+			"dir": "w"
 		},
 		{
-			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
-			"dir": "w"
+			"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
+			"dir": "s"
+		},
+		{
+			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
+			"dir": "e"
 		}
 	],
 	"customFields" : {},
 	"layers": [
+		"Level_Flair.png",
 		"Tilemap.png"
 	],
 	"entities": {
-		"SpawnPoint": [
+		"Item": [
 			{
-				"id": "SpawnPoint",
-				"iid": "106385c0-8990-11ee-942c-6525dc104e8b",
+				"id": "Item",
+				"iid": "43a52e90-8990-11ee-942c-95ecd0be53b1",
 				"layer": "Entities",
-				"x": 80,
-				"y": 112,
+				"x": 32,
+				"y": 224,
 				"width": 16,
 				"height": 16,
-				"color": 2434341,
-				"customFields" : {}
-			},
-			{
-				"id": "SpawnPoint",
-				"iid": "980bea80-8990-11ee-942c-cf74130b540c",
-				"layer": "Entities",
-				"x": 80,
-				"y": 112,
-				"width": 16,
-				"height": 16,
-				"color": 2434341,
-				"customFields" : {}
+				"color": 18761,
+				"customFields": {
+					"type": "Dash"
+				}
 			}
 		],
 		"Narrator": [
 			{
 				"id": "Narrator",
-				"iid": "25855fa0-8990-11ee-942c-65e7abd606c8",
+				"iid": "43701560-8990-11ee-942c-1964e766a680",
 				"layer": "Entities",
-				"x": 96,
-				"y": 48,
-				"width": 64,
-				"height": 80,
+				"x": 144,
+				"y": 64,
+				"width": 96,
+				"height": 64,
 				"color": 15839922,
 				"customFields": {
 					"conditions": [],
 					"one_shot": true,
-					"on_fulfilled": [
-						"goaded_to_impossible_jump"
-					],
-					"text": "Same with this one...",
-					"timer": 3
-				}
-			},
-			{
-				"id": "Narrator",
-				"iid": "34158db0-8990-11ee-942c-8dc11dbb5a5c",
-				"layer": "Entities",
-				"x": 64,
-				"y": 48,
-				"width": 48,
-				"height": 80,
-				"color": 15839922,
-				"customFields": {
-					"conditions": [
-						"goaded_to_impossible_jump",
-						"died_from_impossible_jump"
-					],
-					"one_shot": true,
 					"on_fulfilled": [],
-					"text": "he he he he he",
+					"text": "Did you think something would\nbe hidden here? Ha!",
 					"timer": 3
-				}
-			}
-		],
-		"KillZone": [
-			{
-				"id": "KillZone",
-				"iid": "3ff2a9b0-8990-11ee-942c-950027144be2",
-				"layer": "Entities",
-				"x": 0,
-				"y": 208,
-				"width": 464,
-				"height": 48,
-				"color": 9568256,
-				"customFields": {
-					"on_fulfilled": [
-						"died_from_impossible_jump"
-					]
 				}
 			}
 		]

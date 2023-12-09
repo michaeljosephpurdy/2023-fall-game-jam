@@ -1,27 +1,20 @@
 {
 	"identifier": "Level_15",
-	"uniqueIdentifer": "a3437940-8990-11ee-942c-152bfc0728ec",
-	"x": 1520,
-	"y": -1616,
+	"uniqueIdentifer": "188cf7e0-8990-11ee-942c-51061e9f4b2b",
+	"x": 2528,
+	"y": -1200,
 	"width": 256,
 	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
-			"levelIid": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
-			"dir": "s"
-		},
-		{
-			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
-			"dir": "e"
-		},
-		{
-			"levelIid": "f36985a0-8990-11ee-942c-0d43bcb935e5",
-			"dir": "e"
+			"levelIid": "4eb32300-8990-11ee-942c-2b05e8099202",
+			"dir": "w"
 		}
 	],
 	"customFields" : {},
 	"layers": [
+		"Level_Flair.png",
 		"Tilemap.png"
 	],
 	"entities" : {}

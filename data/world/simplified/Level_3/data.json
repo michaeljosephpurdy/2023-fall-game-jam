@@ -1,19 +1,20 @@
 {
 	"identifier": "Level_3",
-	"uniqueIdentifer": "907436c0-8990-11ee-942c-4dee73c23dcb",
-	"x": -256,
-	"y": 128,
-	"width": 256,
-	"height": 256,
+	"uniqueIdentifer": "5735bbf0-8990-11ee-942c-b9022d215f92",
+	"x": -688,
+	"y": -2256,
+	"width": 688,
+	"height": 512,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
-			"levelIid": "8cf7e140-8990-11ee-942c-cb00bc33782c",
-			"dir": "n"
+			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
+			"dir": "e"
 		}
 	],
 	"customFields" : {},
 	"layers": [
+		"Level_Flair.png",
 		"Tilemap.png"
 	],
 	"entities" : {}

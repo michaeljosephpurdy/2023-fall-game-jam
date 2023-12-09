@@ -9,7 +9,6 @@ function Item:init(props)
 	self.spritesheet = props.spritesheet
 	self.closed_img = love.graphics.newQuad(6 * 16, 0, 16, 16, self.spritesheet)
 	self.open_image = love.graphics.newQuad(7 * 16, 0, 16, 16, self.spritesheet)
-	-- pass
 end
 
 function Item:on_collision(player)

@@ -25,9 +25,9 @@ function PlatformingSystem:process(e, dt)
 	if e.on_ground then
 		e.dashed = false
 		e.jumps = e.max_jumps
-		e.coyote_timer = e.coyote_time
+		e.coyote_timer = e.coyote_time or 0
 	else
-		e.coyote_timer = e.coyote_timer - dt
+		e.coyote_timer = (e.coyote_timer or 0) - dt
 	end
 	if e.moving then
 		if e.direction.x == 1 then

@@ -1,63 +1,33 @@
 {
 	"identifier": "Level_12",
-	"uniqueIdentifer": "5ee552a0-8990-11ee-942c-f17c0e82600c",
-	"x": 576,
-	"y": -1200,
+	"uniqueIdentifer": "2a1151f0-8990-11ee-942c-671b2a0c8171",
+	"x": 1776,
+	"y": -1456,
 	"width": 256,
 	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
-			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
+			"levelIid": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
 			"dir": "w"
 		},
 		{
-			"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
+			"levelIid": "4eb32300-8990-11ee-942c-2b05e8099202",
 			"dir": "s"
 		},
 		{
-			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
-			"dir": "e"
+			"levelIid": "a3437940-8990-11ee-942c-152bfc0728ec",
+			"dir": "w"
+		},
+		{
+			"levelIid": "f36985a0-8990-11ee-942c-0d43bcb935e5",
+			"dir": "n"
 		}
 	],
 	"customFields" : {},
 	"layers": [
+		"Level_Flair.png",
 		"Tilemap.png"
 	],
-	"entities": {
-		"Item": [
-			{
-				"id": "Item",
-				"iid": "43a52e90-8990-11ee-942c-95ecd0be53b1",
-				"layer": "Entities",
-				"x": 32,
-				"y": 224,
-				"width": 16,
-				"height": 16,
-				"color": 18761,
-				"customFields": {
-					"type": "Dash"
-				}
-			}
-		],
-		"Narrator": [
-			{
-				"id": "Narrator",
-				"iid": "43701560-8990-11ee-942c-1964e766a680",
-				"layer": "Entities",
-				"x": 144,
-				"y": 64,
-				"width": 96,
-				"height": 64,
-				"color": 15839922,
-				"customFields": {
-					"conditions": [],
-					"one_shot": true,
-					"on_fulfilled": [],
-					"text": "Did you think something would\nbe hidden here? Ha!",
-					"timer": 3
-				}
-			}
-		]
-	}
+	"entities" : {}
 }

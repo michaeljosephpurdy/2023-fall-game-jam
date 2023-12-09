@@ -6,6 +6,8 @@ local NarratorTrigger = require("src.entities.narrator-trigger")
 local KillZone = require("src.entities.kill-zone")
 local Item = require("src.entities.item")
 local SpawnPoint = require("src.entities.spawn-point")
+local Trap = require("src.entities.trap")
+local TrapTrigger = require("src.entities.trap-trigger")
 
 function EntitySpawningSystem:init()
 	local spritesheet = love.graphics.newImage("data/spritesheet.png")
@@ -36,6 +38,12 @@ function EntitySpawningSystem:init()
 		elseif props.id == "SpawnPoint" then
 			local spawn_point_entity = SpawnPoint:new(props)
 			world:addEntity(spawn_point_entity)
+		elseif props.id == "TrapTrigger" then
+			local trap_trigger_entity = TrapTrigger:new(props)
+			world:addEntity(trap_trigger_entity)
+		elseif props.id == "Trap" then
+			local trap_entity = Trap:new(props)
+			world:addEntity(trap_entity)
 		end
 	end)
 end

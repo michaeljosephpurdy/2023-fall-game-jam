@@ -34,6 +34,7 @@
 	],
 	"customFields" : {},
 	"layers": [
+		"Level_Flair.png",
 		"Tilemap.png"
 	],
 	"entities": {
@@ -114,19 +115,6 @@
 				"customFields": {
 					"type": "Double_jump"
 				}
-			}
-		],
-		"Player": [
-			{
-				"id": "Player",
-				"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
-				"layer": "Entities",
-				"x": 16,
-				"y": 1904,
-				"width": 16,
-				"height": 16,
-				"color": 0,
-				"customFields" : {}
 			}
 		]
 	}

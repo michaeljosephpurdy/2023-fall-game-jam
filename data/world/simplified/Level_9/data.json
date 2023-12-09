@@ -1,62 +1,50 @@
 {
 	"identifier": "Level_9",
-	"uniqueIdentifer": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
-	"x": 1312,
-	"y": -1360,
-	"width": 464,
-	"height": 416,
+	"uniqueIdentifer": "b5e99010-8990-11ee-942c-edeec0bd8881",
+	"x": -224,
+	"y": -3088,
+	"width": 704,
+	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
-			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
+			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
+			"dir": "s"
+		},
+		{
+			"levelIid": "c589bb30-8990-11ee-942c-539b2696fb25",
+			"dir": "s"
+		},
+		{
+			"levelIid": "d674c930-8990-11ee-942c-a53392394db9",
 			"dir": "w"
 		},
 		{
-			"levelIid": "4eb32300-8990-11ee-942c-2b05e8099202",
-			"dir": "e"
-		},
-		{
-			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
-			"dir": "e"
-		},
-		{
-			"levelIid": "a3437940-8990-11ee-942c-152bfc0728ec",
+			"levelIid": "ea7e0720-8990-11ee-942c-6f06a12d4723",
 			"dir": "n"
 		}
 	],
 	"customFields" : {},
 	"layers": [
+		"Level_Flair.png",
 		"Tilemap.png"
 	],
 	"entities": {
-		"SpawnPoint": [
-			{
-				"id": "SpawnPoint",
-				"iid": "9ccadb10-8990-11ee-942c-d90be584468b",
-				"layer": "Entities",
-				"x": 304,
-				"y": 384,
-				"width": 16,
-				"height": 16,
-				"color": 2434341,
-				"customFields" : {}
-			}
-		],
 		"Narrator": [
 			{
 				"id": "Narrator",
-				"iid": "97854f90-8990-11ee-942c-6947ab003c75",
+				"iid": "92511ae0-8990-11ee-942c-8591df8dfb6a",
 				"layer": "Entities",
-				"x": 272,
-				"y": 352,
-				"width": 192,
-				"height": 48,
+				"x": 256,
+				"y": 64,
+				"width": 304,
+				"height": 80,
 				"color": 15839922,
 				"customFields": {
 					"conditions": [],
 					"one_shot": true,
 					"on_fulfilled": [],
-					"text": "No way back now.",
+					"text": "A new adventurer here for my\ntreasures?",
 					"timer": 3
 				}
 			}

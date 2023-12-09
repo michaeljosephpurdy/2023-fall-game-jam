@@ -1,35 +1,112 @@
 {
 	"identifier": "Level_6",
-	"uniqueIdentifer": "b907aaf0-8990-11ee-942c-1b5f9b6b41c0",
-	"x": -560,
-	"y": -1216,
-	"width": 560,
-	"height": 528,
+	"uniqueIdentifer": "e0983020-8990-11ee-942c-a150814f0d8d",
+	"x": 832,
+	"y": -832,
+	"width": 416,
+	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
-			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
+			"levelIid": "bda369f0-8990-11ee-942c-f36b8d2f1ad6",
+			"dir": "s"
+		},
+		{
+			"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
+			"dir": "w"
+		},
+		{
+			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
+			"dir": "n"
+		},
+		{
+			"levelIid": "86c2c150-8990-11ee-942c-a3d02f83e773",
 			"dir": "e"
 		}
 	],
 	"customFields" : {},
 	"layers": [
+		"Level_Flair.png",
 		"Tilemap.png"
 	],
 	"entities": {
-		"Trigger": [
+		"KillZone": [
 			{
-				"id": "Trigger",
-				"iid": "9479fa70-8990-11ee-942c-9f2df938fc5d",
+				"id": "KillZone",
+				"iid": "a01614e0-8990-11ee-942c-71baa1d5825a",
 				"layer": "Entities",
-				"x": 480,
-				"y": 272,
+				"x": 48,
+				"y": 240,
+				"width": 368,
+				"height": 16,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
+			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "38680240-8990-11ee-942c-6959db74df9e",
+				"layer": "Entities",
+				"x": 160,
+				"y": 32,
+				"width": 64,
+				"height": 96,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [
+						"told_they_can_make_it"
+					],
+					"text": "You can definitely make it!",
+					"timer": 3
+				}
+			},
+			{
+				"id": "Narrator",
+				"iid": "bafcfd20-8990-11ee-942c-69e1e4f784ca",
+				"layer": "Entities",
+				"x": 320,
+				"y": 32,
+				"width": 64,
+				"height": 96,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [
+						"told_they_can_make_it"
+					],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "See? Told you.",
+					"timer": 3
+				}
+			}
+		],
+		"SpawnPoint": [
+			{
+				"id": "SpawnPoint",
+				"iid": "8cdd49e0-8990-11ee-942c-7f55eb47535a",
+				"layer": "Entities",
+				"x": 384,
+				"y": 112,
 				"width": 16,
 				"height": 16,
-				"color": 6776679,
-				"customFields": {
-					"Entity_ref": null
-				}
+				"color": 2434341,
+				"customFields" : {}
+			},
+			{
+				"id": "SpawnPoint",
+				"iid": "93c998d0-8990-11ee-942c-614e65d48d7a",
+				"layer": "Entities",
+				"x": 144,
+				"y": 112,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
 			}
 		]
 	}

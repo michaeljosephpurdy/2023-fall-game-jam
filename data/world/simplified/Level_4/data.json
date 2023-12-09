@@ -1,85 +1,21 @@
 {
 	"identifier": "Level_4",
-	"uniqueIdentifer": "2c29d630-8990-11ee-942c-b9c85e3bda57",
-	"x": 576,
-	"y": -944,
-	"width": 256,
-	"height": 304,
+	"uniqueIdentifer": "b907aaf0-8990-11ee-942c-1b5f9b6b41c0",
+	"x": -560,
+	"y": -1216,
+	"width": 560,
+	"height": 528,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
 			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
-			"dir": "w"
-		},
-		{
-			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
 			"dir": "e"
-		},
-		{
-			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
-			"dir": "e"
-		},
-		{
-			"levelIid": "5ee552a0-8990-11ee-942c-f17c0e82600c",
-			"dir": "n"
 		}
 	],
 	"customFields" : {},
 	"layers": [
+		"Level_Flair.png",
 		"Tilemap.png"
 	],
-	"entities": {
-		"Trap": [
-			{
-				"id": "Trap",
-				"iid": "09c50360-8990-11ee-942c-b5eaa18f0372",
-				"layer": "Entities",
-				"x": 160,
-				"y": 224,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			}
-		],
-		"Trigger": [
-			{
-				"id": "Trigger",
-				"iid": "15368c50-8990-11ee-942c-8f9d210320c2",
-				"layer": "Entities",
-				"x": 80,
-				"y": 224,
-				"width": 16,
-				"height": 16,
-				"color": 6776679,
-				"customFields": {
-					"Entity_ref": {
-						"entityIid": "09c50360-8990-11ee-942c-b5eaa18f0372",
-						"layerIid": "2c29d631-8990-11ee-942c-8dbb7d6ec1a9",
-						"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
-						"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
-					}
-				}
-			}
-		],
-		"Narrator": [
-			{
-				"id": "Narrator",
-				"iid": "1c1bdb80-8990-11ee-942c-7f4d067f1903",
-				"layer": "Entities",
-				"x": 96,
-				"y": 64,
-				"width": 64,
-				"height": 176,
-				"color": 15839922,
-				"customFields": {
-					"conditions": [],
-					"one_shot": true,
-					"on_fulfilled": [],
-					"text": "You're here for the\ntreasure?",
-					"timer": 3
-				}
-			}
-		]
-	}
+	"entities" : {}
 }

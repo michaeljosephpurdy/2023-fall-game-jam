@@ -2,7 +2,7 @@ local CollisionSystem = tiny.processingSystem()
 CollisionSystem.filter = tiny.requireAll("hitbox")
 
 function CollisionSystem:init()
-	self.bump_world = bump.newWorld(32)
+	self.bump_world = bump.newWorld(16)
 end
 
 function CollisionSystem:onAddToWorld(world) end

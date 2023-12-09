@@ -17,6 +17,7 @@ local SYSTEMS_IN_ORDER = {
 	require("src.systems.player-controller-system"),
 	require("src.systems.platforming-system"),
 	require("src.systems.collision-system"),
+	require("src.systems.trap-triggering-system"),
 	require("src.systems.entity-background-drawing-system"),
 	require("src.systems.entity-drawing-system"),
 	require("src.systems.entity-foreground-drawing-system"),
@@ -58,7 +59,7 @@ end
 function love.draw()
 	local dt = love.timer.getDelta()
 	world:update(dt)
-	-- love.graphics.print(string.format("FPS: %s", love.timer.getFPS()), 0, 20)
+	love.graphics.print(string.format("FPS: %s", love.timer.getFPS()), 0, 20)
 end
 
 function love.keypressed(k)
