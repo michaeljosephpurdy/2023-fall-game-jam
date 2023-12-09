@@ -49,11 +49,11 @@ function NarratorTrigger:on_collision(e)
 end
 
 function NarratorTrigger:draw()
-	love.graphics.setColor(1, 1, 1)
+	love.graphics.setColor(WHITE_COLOR)
 	love.graphics.rectangle("fill", 5, 5, GAME_WIDTH - 10, 50)
-	love.graphics.setColor(0, 0, 0)
+	love.graphics.setColor(BLACK_COLOR)
 	love.graphics.rectangle("fill", 10, 10, GAME_WIDTH - 20, 40)
-	love.graphics.setColor(1, 1, 1)
+	love.graphics.setColor(WHITE_COLOR)
 	love.graphics.print(self.current_text, 15, 15)
 	-- pass
 end

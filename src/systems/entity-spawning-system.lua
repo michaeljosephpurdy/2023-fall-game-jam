@@ -8,6 +8,7 @@ local Item = require("src.entities.item")
 local SpawnPoint = require("src.entities.spawn-point")
 
 function EntitySpawningSystem:init()
+	local spritesheet = love.graphics.newImage("data/spritesheet.png")
 	PubSub.subscribe("ldtk.image.create", function(props)
 		local tilemap = require("src.entities.tilemap"):new(props)
 		world:addEntity(tilemap)
@@ -19,6 +20,7 @@ function EntitySpawningSystem:init()
 		end
 	end)
 	PubSub.subscribe("ldtk.entity.create", function(props)
+		props.spritesheet = spritesheet
 		if props.id == "Player" then
 			local player_entity = Player:new(props)
 			world:addEntity(player_entity)

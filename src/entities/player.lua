@@ -66,7 +66,7 @@ function Player:draw()
 	-- self:tune_field("acceleration", "2")
 	-- self:tune_field("top_speed", "3")
 	-- self:tune_field("jump_force", "4")
-	love.graphics.setColor(1, 0, 1, 1)
+	love.graphics.setColor(WHITE_COLOR)
 	love.graphics.rectangle(
 		"fill",
 		self.position.x - self.width / 2,

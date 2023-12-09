@@ -18,6 +18,7 @@ function CameraSystem:init()
 	self.offset_position = Vector.new(-GAME_WIDTH / 2, -GAME_HEIGHT / 2)
 	local windowWidth, windowHeight = 512, 512
 	self.push:setupScreen(GAME_WIDTH, GAME_HEIGHT, windowWidth, windowHeight, { fullscreen = false, resizable = true })
+	self.push:setBorderColor(BLACK_COLOR)
 	PubSub.subscribe("ldtk.level.load", function(level)
 		self.levels[level.level_id] = {
 			left_boundary = level.x,

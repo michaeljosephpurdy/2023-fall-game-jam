@@ -2,10 +2,10 @@
 	"identifier": "Level_6",
 	"uniqueIdentifer": "b907aaf0-8990-11ee-942c-1b5f9b6b41c0",
 	"x": -560,
-	"y": -1072,
+	"y": -1216,
 	"width": 560,
-	"height": 208,
-	"bgColor": "#696A79",
+	"height": 528,
+	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
 			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
@@ -23,7 +23,7 @@
 				"iid": "9479fa70-8990-11ee-942c-9f2df938fc5d",
 				"layer": "Entities",
 				"x": 480,
-				"y": 128,
+				"y": 272,
 				"width": 16,
 				"height": 16,
 				"color": 6776679,

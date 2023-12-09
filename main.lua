@@ -17,12 +17,17 @@ local SYSTEMS_IN_ORDER = {
 	require("src.systems.player-controller-system"),
 	require("src.systems.platforming-system"),
 	require("src.systems.collision-system"),
+	require("src.systems.entity-background-drawing-system"),
 	require("src.systems.entity-drawing-system"),
+	require("src.systems.entity-foreground-drawing-system"),
 	require("src.systems.entity-spawning-system"),
 	require("src.systems.level-transition-system"),
 	require("src.systems.narrator-drawing-system"),
 	require("src.systems.game-data-system"),
 }
+
+BLACK_COLOR = { 35 / 255, 38 / 255, 53 / 255 }
+WHITE_COLOR = { 167 / 255, 172 / 255, 167 / 255 }
 
 function love.load(arg)
 	love.graphics.setDefaultFilter("nearest", "nearest")

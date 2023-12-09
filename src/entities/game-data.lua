@@ -22,6 +22,9 @@ function GameData:update_time(dt)
 end
 
 function GameData:draw()
+	if not ready then
+		return
+	end
 	love.graphics.print(string.format("%s:%s", self.minutes, self.seconds), 0, 0)
 	love.graphics.print(self.deaths, 0, 10)
 end

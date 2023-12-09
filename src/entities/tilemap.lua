@@ -6,12 +6,10 @@ local TileMap = class("TileMap")
 
 function TileMap:init(props)
 	self.image = love.graphics.newImage(props.image)
-
 	self.position = Vector.new(props.x, props.y)
 	self.width, self.height = self.image:getDimensions()
 	self.hitbox = { width = self.width, height = self.height }
 	self.velocity = Vector.new(0, 0)
-
 	self.level_id = props.level_id
 
 	self.is_tile_map = true
@@ -27,6 +25,7 @@ function TileMap:draw_tilemap()
 	--if not self.should_draw then
 	-- return
 	-- end
+	-- love.graphics
 	love.graphics.draw(self.image, self.position.x, self.position.y)
 	self.should_draw = false
 end
