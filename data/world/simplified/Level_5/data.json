@@ -145,6 +145,25 @@
 				"color": 16777215,
 				"customFields" : {}
 			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "05f25ba0-8990-11ee-942c-f7e9556832ed",
+				"layer": "Entities",
+				"x": 16,
+				"y": 320,
+				"width": 96,
+				"height": 80,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "The treasure is right\nup there...",
+					"timer": 3
+				}
+			}
 		]
 	}
 }

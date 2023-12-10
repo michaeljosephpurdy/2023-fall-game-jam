@@ -49,7 +49,6 @@ function LevelTransitionSystem:process(player, dt)
 		for _, old_entity in pairs(old_entities) do
 			self.update_world:removeEntity(old_entity)
 			coroutine.yield()
-			print("removed entity")
 		end
 	end)
 	coroutine.resume(self.level_balancing_coroutine)

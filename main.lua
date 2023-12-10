@@ -6,6 +6,8 @@ PubSub = require("plugins.pubsub")
 ldtk = require("plugins.super-simple-ldtk")
 bump = require("plugins.bump")
 
+SIXTY_FPS = 1 / 60
+THIRTY_FPS = 1 / 30
 GAME_WIDTH, GAME_HEIGHT = 256, 256
 
 -- load all systems and register them to the world
@@ -78,13 +80,13 @@ function love.load(arg)
 end
 
 function love.update(dt)
+	dt = math.min(dt, THIRTY_FPS)
 	update_world:update(dt)
 end
 
 function love.draw()
 	local dt = love.timer.getDelta()
 	draw_world:update(dt)
-	love.graphics.print(string.format("FPS: %s", love.timer.getFPS()), 0, 20)
 end
 
 function love.keypressed(k)

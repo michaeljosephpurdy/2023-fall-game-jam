@@ -3915,6 +3915,22 @@
 								"id": "V_String",
 								"params": ["09c50360-8990-11ee-942c-b5eaa18f0372"]
 							}] }]
+						},
+						{
+							"__identifier": "Player",
+							"__grid": [12,3],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": { "tilesetUid": 17, "x": 80, "y": 240, "w": 16, "h": 16 },
+							"__smartColor": "#000000",
+							"__worldX": 768,
+							"__worldY": -896,
+							"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
+							"width": 16,
+							"height": 16,
+							"defUid": 16,
+							"px": [192,48],
+							"fieldInstances": []
 						}
 					]
 				},
@@ -4779,7 +4795,33 @@
 					"seed": 4837574,
 					"overrideTilesetUid": null,
 					"gridTiles": [],
-					"entityInstances": []
+					"entityInstances": [
+						{
+							"__identifier": "Narrator",
+							"__grid": [1,20],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#F1B2B2",
+							"__worldX": 848,
+							"__worldY": -928,
+							"iid": "05f25ba0-8990-11ee-942c-f7e9556832ed",
+							"width": 96,
+							"height": 80,
+							"defUid": 44,
+							"px": [16,320],
+							"fieldInstances": [
+								{ "__identifier": "text", "__type": "String", "__value": "The treasure is right\nup there...", "__tile": null, "defUid": 61, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["The treasure is right\\nup there..."]
+								}] },
+								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 46, "realEditorValues": [] },
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 60, "realEditorValues": [] },
+								{ "__identifier": "timer", "__type": "Int", "__value": 3, "__tile": null, "defUid": 63, "realEditorValues": [] }
+							]
+						}
+					]
 				},
 				{
 					"__identifier": "SolidColliders",
@@ -8096,24 +8138,7 @@
 					"seed": 1855808,
 					"overrideTilesetUid": null,
 					"gridTiles": [],
-					"entityInstances": [
-						{
-							"__identifier": "Player",
-							"__grid": [6,13],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": { "tilesetUid": 17, "x": 80, "y": 240, "w": 16, "h": 16 },
-							"__smartColor": "#000000",
-							"__worldX": 1872,
-							"__worldY": -1248,
-							"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
-							"width": 16,
-							"height": 16,
-							"defUid": 16,
-							"px": [96,208],
-							"fieldInstances": []
-						}
-					]
+					"entityInstances": []
 				},
 				{
 					"__identifier": "SolidColliders",
