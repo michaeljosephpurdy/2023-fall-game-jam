@@ -46,7 +46,8 @@ function Trap:trip()
 			direction = self.direction,
 			spritesheet = self.spritesheet,
 		})
-		self.world:addEntity(arrow)
+		self.update_world:addEntity(arrow)
+		self.draw_world:addEntity(arrow)
 	end
 	self.tripped = true
 end

@@ -4,6 +4,8 @@ TrapTriggeringSystem.filter = tiny.requireAny("is_trap_trigger", "is_trap")
 function TrapTriggeringSystem:init(props)
 	self.triggers = {}
 	self.traps = {}
+	self.update_world = props.update_world
+	self.draw_world = props.draw_world
 end
 
 function TrapTriggeringSystem:onAdd(e)
@@ -11,7 +13,8 @@ function TrapTriggeringSystem:onAdd(e)
 		table.insert(self.triggers, e)
 	end
 	if e.is_trap then
-		e.world = self.world
+		e.update_world = self.update_world
+		e.draw_world = self.draw_world
 		table.insert(self.traps, e)
 	end
 end

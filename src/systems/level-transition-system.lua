@@ -3,7 +3,8 @@ local SolidTile = require("src.entities.solid-tile")
 local LevelTransitionSystem = tiny.processingSystem()
 LevelTransitionSystem.filter = tiny.requireAll("is_player")
 
-function LevelTransitionSystem:init()
+function LevelTransitionSystem:init(props)
+	self.update_world = props.update_world
 	self.level_balancing_coroutine = coroutine.create(function() end)
 	self.levels = {}
 	self.tiles_by_level = {}
@@ -31,19 +32,6 @@ function LevelTransitionSystem:init()
 	end)
 end
 
-function LevelTransitionSystem:old_process(e, dt)
-	if e.level_id == e.old_level_id then
-		return
-	end
-	for _, entity in pairs(self.tiles_by_level[e.level_id]) do
-		world:addEntity(entity)
-	end
-	for _, entity in pairs(self.tiles_by_level[e.old_level_id] or {}) do
-		world:removeEntity(entity)
-	end
-	e.old_level_id = e.level_id
-end
-
 function LevelTransitionSystem:process(player, dt)
 	coroutine.resume(self.level_balancing_coroutine)
 	if player.level_id == player.old_level_id then
@@ -55,12 +43,13 @@ function LevelTransitionSystem:process(player, dt)
 			table.insert(old_entities, entity)
 		end
 		for _, new_entity in pairs(self.tiles_by_level[player.level_id]) do
-			world:addEntity(new_entity)
+			self.update_world:addEntity(new_entity)
 		end
 		coroutine.yield()
 		for _, old_entity in pairs(old_entities) do
-			world:removeEntity(old_entity)
+			self.update_world:removeEntity(old_entity)
 			coroutine.yield()
+			print("removed entity")
 		end
 	end)
 	coroutine.resume(self.level_balancing_coroutine)

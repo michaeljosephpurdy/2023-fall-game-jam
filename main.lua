@@ -11,21 +11,22 @@ GAME_WIDTH, GAME_HEIGHT = 256, 256
 -- load all systems and register them to the world
 -- we need to ensure they are registered in a specific order
 -- so let's define them in that order here
-local SYSTEMS_IN_ORDER = {
-	require("src.systems.tile-flooding-system"),
-	require("src.systems.camera-system"),
-	require("src.systems.tilemap-system"),
+local UPDATE_SYSTEMS_IN_ORDER = {
 	require("src.systems.player-controller-system"),
 	require("src.systems.platforming-system"),
 	require("src.systems.collision-system"),
 	require("src.systems.trap-triggering-system"),
+	require("src.systems.entity-spawning-system"),
+	require("src.systems.level-transition-system"),
+	require("src.systems.game-data-system"),
+}
+local DRAW_SYSTEMS_IN_ORDER = {
+	require("src.systems.camera-system"),
+	require("src.systems.tilemap-system"),
 	require("src.systems.entity-background-drawing-system"),
 	require("src.systems.entity-drawing-system"),
 	require("src.systems.entity-foreground-drawing-system"),
-	require("src.systems.entity-spawning-system"),
-	require("src.systems.level-transition-system"),
 	require("src.systems.narrator-drawing-system"),
-	require("src.systems.game-data-system"),
 }
 
 BLACK_COLOR = { 35 / 255, 38 / 255, 53 / 255 }
@@ -40,18 +41,34 @@ function love.load(arg)
 		end
 		love.event.quit()
 	end)
-	world = tiny.world()
+	update_world = tiny.world()
+	draw_world = tiny.world()
 	local bump_world = bump.newWorld(16)
 
 	local a = Vector.new(2, 2)
-	for _, system in ipairs(SYSTEMS_IN_ORDER) do
+	for _, system in ipairs(UPDATE_SYSTEMS_IN_ORDER) do
 		if system.init then
 			system:init({
-				world = world,
+				update_world = update_world,
+				draw_world = draw_world,
 				bump_world = bump_world,
 			})
+			system.update_world = update_world
+			system.draw_world = draw_world
+			system.bump_world = bump_world
 		end
-		world:addSystem(system)
+		update_world:addSystem(system)
+	end
+	for _, system in ipairs(DRAW_SYSTEMS_IN_ORDER) do
+		if system.init then
+			system:init({
+				update_world = update_world,
+				draw_world = draw_world,
+			})
+			system.update_world = update_world
+			system.draw_world = draw_world
+		end
+		draw_world:addSystem(system)
 	end
 
 	ldtk:init("world")
@@ -60,9 +77,13 @@ function love.load(arg)
 	-- tiny.refresh(world)
 end
 
+function love.update(dt)
+	update_world:update(dt)
+end
+
 function love.draw()
 	local dt = love.timer.getDelta()
-	world:update(dt)
+	draw_world:update(dt)
 	love.graphics.print(string.format("FPS: %s", love.timer.getFPS()), 0, 20)
 end
 

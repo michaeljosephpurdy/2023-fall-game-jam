@@ -170,6 +170,21 @@
 				"color": 16777215,
 				"customFields" : {}
 			}
+		],
+		"Item": [
+			{
+				"id": "Item",
+				"iid": "791270c0-8990-11ee-942c-2d9949cf2194",
+				"layer": "Entities",
+				"x": 208,
+				"y": 128,
+				"width": 16,
+				"height": 16,
+				"color": 18761,
+				"customFields": {
+					"type": "Double_jump"
+				}
+			}
 		]
 	}
 }

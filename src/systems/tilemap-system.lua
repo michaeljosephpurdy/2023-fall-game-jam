@@ -8,10 +8,6 @@ function TilemapSystem:init()
 	end)
 end
 
-function TilemapSystem:onAddToWorld(world)
-	self.world = world
-end
-
 function TilemapSystem:process(e, dt)
 	e:draw_tilemap()
 end

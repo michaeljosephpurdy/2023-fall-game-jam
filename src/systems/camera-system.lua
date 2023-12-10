@@ -34,8 +34,6 @@ function CameraSystem:init()
 	end)
 end
 
-function CameraSystem:onAddToWorld(world) end
-
 function CameraSystem:preWrap(dt)
 	self.push:start()
 end
