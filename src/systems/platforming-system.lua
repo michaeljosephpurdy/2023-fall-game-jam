@@ -4,8 +4,9 @@ PlatformingSystem.filter = tiny.requireAll("platforming")
 function PlatformingSystem:onAddToWorld(world) end
 
 function PlatformingSystem:process(e, dt)
-	local friction = e.friction or 0.95
 	local top_speed = e.top_speed
+	local gravity = e.gravity or 0
+	local friction = e.friction or 0.95
 
 	if e.dashing then
 		-- dashing, we:
@@ -29,6 +30,7 @@ function PlatformingSystem:process(e, dt)
 	else
 		e.coyote_timer = (e.coyote_timer or 0) - dt
 	end
+
 	if e.moving then
 		if e.direction.x == 1 then
 			e.velocity.x = math.min(top_speed, e.velocity.x + e.acceleration)
@@ -65,6 +67,11 @@ function PlatformingSystem:process(e, dt)
 		e.velocity.y = 0
 		e.dashing = e.dash_time
 	end
+
+	if e.velocity.y > 0 then
+		gravity = gravity * friction
+	end
+	e.velocity.y = e.velocity.y + gravity
 end
 
 return PlatformingSystem

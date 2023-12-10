@@ -17,5 +17,63 @@
 		"Level_Flair.png",
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"Collider": [
+			{
+				"id": "Collider",
+				"iid": "b04760c0-8990-11ee-942c-1b205e08740b",
+				"layer": "BigColliders",
+				"x": 0,
+				"y": 160,
+				"width": 208,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "b2c5a730-8990-11ee-942c-b7aa5ac02eee",
+				"layer": "BigColliders",
+				"x": 0,
+				"y": 0,
+				"width": 16,
+				"height": 160,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "b571db70-8990-11ee-942c-4128e9c6cdfa",
+				"layer": "BigColliders",
+				"x": 16,
+				"y": 0,
+				"width": 240,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "ba299720-8990-11ee-942c-97d28959a5ff",
+				"layer": "BigColliders",
+				"x": 240,
+				"y": 16,
+				"width": 16,
+				"height": 224,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "bc849e20-8990-11ee-942c-af664538377c",
+				"layer": "BigColliders",
+				"x": 0,
+				"y": 240,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			}
+		]
+	}
 }

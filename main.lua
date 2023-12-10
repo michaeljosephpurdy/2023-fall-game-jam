@@ -12,6 +12,7 @@ GAME_WIDTH, GAME_HEIGHT = 256, 256
 -- we need to ensure they are registered in a specific order
 -- so let's define them in that order here
 local SYSTEMS_IN_ORDER = {
+	require("src.systems.tile-flooding-system"),
 	require("src.systems.camera-system"),
 	require("src.systems.tilemap-system"),
 	require("src.systems.player-controller-system"),
@@ -40,14 +41,17 @@ function love.load(arg)
 		love.event.quit()
 	end)
 	world = tiny.world()
+	local bump_world = bump.newWorld(16)
 
 	local a = Vector.new(2, 2)
 	for _, system in ipairs(SYSTEMS_IN_ORDER) do
 		if system.init then
-			system:init()
+			system:init({
+				world = world,
+				bump_world = bump_world,
+			})
 		end
 		world:addSystem(system)
-		system.world = world
 	end
 
 	ldtk:init("world")

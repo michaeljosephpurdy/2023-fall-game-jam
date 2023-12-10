@@ -17,8 +17,11 @@ function TileMap:init(props)
 end
 
 function TileMap:on_collision(player)
+	if player.level_id == self.level_id then
+		return
+	end
+	player.old_level_id = player.level_id
 	player.level_id = self.level_id
-	self.should_draw = true
 end
 
 function TileMap:draw_tilemap()

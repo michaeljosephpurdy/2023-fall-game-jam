@@ -15,12 +15,6 @@ function EntitySpawningSystem:init()
 		local tilemap = require("src.entities.tilemap"):new(props)
 		world:addEntity(tilemap)
 	end)
-	PubSub.subscribe("ldtk.tile.create", function(t)
-		if t.value == "1" then
-			local solid_tile = SolidTile:new(t)
-			world:addEntity(solid_tile)
-		end
-	end)
 	PubSub.subscribe("ldtk.entity.create", function(props)
 		props.spritesheet = spritesheet
 		if props.id == "Player" then

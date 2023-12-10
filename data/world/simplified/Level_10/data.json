@@ -26,6 +26,107 @@
 		"Tilemap.png"
 	],
 	"entities": {
+		"Collider": [
+			{
+				"id": "Collider",
+				"iid": "4d0c9320-8990-11ee-942c-0f798571bf11",
+				"layer": "BigColliders",
+				"x": 128,
+				"y": 128,
+				"width": 112,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "4e5789b0-8990-11ee-942c-4547357fc2cf",
+				"layer": "BigColliders",
+				"x": 240,
+				"y": 32,
+				"width": 16,
+				"height": 160,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "53d861c0-8990-11ee-942c-77470c401106",
+				"layer": "BigColliders",
+				"x": 224,
+				"y": 48,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "5460a490-8990-11ee-942c-9fe1ecc07911",
+				"layer": "BigColliders",
+				"x": 208,
+				"y": 32,
+				"width": 32,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "564df5a0-8990-11ee-942c-f380142bcb84",
+				"layer": "BigColliders",
+				"x": 16,
+				"y": 32,
+				"width": 32,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "580b8420-8990-11ee-942c-0bf7269bf99c",
+				"layer": "BigColliders",
+				"x": 16,
+				"y": 48,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "58bcabb0-8990-11ee-942c-0f0bcb09e903",
+				"layer": "BigColliders",
+				"x": 0,
+				"y": 48,
+				"width": 16,
+				"height": 208,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "5a672760-8990-11ee-942c-53b7b2b4e54f",
+				"layer": "BigColliders",
+				"x": 16,
+				"y": 240,
+				"width": 240,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "5c14d760-8990-11ee-942c-331bf135879a",
+				"layer": "BigColliders",
+				"x": 32,
+				"y": 16,
+				"width": 192,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			}
+		],
 		"Item": [
 			{
 				"id": "Item",

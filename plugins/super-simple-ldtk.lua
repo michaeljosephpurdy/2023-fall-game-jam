@@ -31,6 +31,7 @@ function SuperSimpleLdtk:init(world)
 		data.path = level_path
 		self.level_data[data.uniqueIdentifer] = data
 	end
+	PubSub.publish("ldtk.done")
 end
 
 function SuperSimpleLdtk:load_all()
@@ -43,14 +44,7 @@ end
 function SuperSimpleLdtk:load(level_id)
 	local data = self.level_data[level_id]
 	local level_path = data.path
-	-- first grab the data file to get:
-	--   the location and dimensions of the level
-	--   the entities in the level
-	--   the layer image file names
-	-- there is some other goodies in there, too:
-	--   the neighboring levels
-	--   the background color
-	PubSub.publish("ldtk.level.load", {
+	local level = {
 		x = data.x,
 		y = data.y,
 		xx = data.x + data.width,
@@ -60,7 +54,12 @@ function SuperSimpleLdtk:load(level_id)
 		tile_size = 16,
 		id = data.uniqueIdentifer,
 		level_id = level_id,
-	})
+		neighbors = {},
+	}
+	for _, neighbor in pairs(data.neighbourLevels) do
+		table.insert(level.neighbors, neighbor.levelIid)
+	end
+	PubSub.publish("ldtk.level.load", level)
 	for _, types in pairs(data.entities) do
 		for _, entity in pairs(types) do
 			entity.level_id = level_id

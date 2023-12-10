@@ -30,6 +30,85 @@
 		"Tilemap.png"
 	],
 	"entities": {
+		"Collider": [
+			{
+				"id": "Collider",
+				"iid": "2a344960-8990-11ee-942c-9b6a1f905d13",
+				"layer": "BigColliders",
+				"x": 0,
+				"y": 0,
+				"width": 256,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "2c6fe180-8990-11ee-942c-e37f0c06221a",
+				"layer": "BigColliders",
+				"x": 0,
+				"y": 16,
+				"width": 16,
+				"height": 192,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "2e096d40-8990-11ee-942c-efeff936aee7",
+				"layer": "BigColliders",
+				"x": 16,
+				"y": 192,
+				"width": 32,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "301a24d0-8990-11ee-942c-854449a63c0b",
+				"layer": "BigColliders",
+				"x": 0,
+				"y": 240,
+				"width": 256,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "31c98280-8990-11ee-942c-8d18d89d3873",
+				"layer": "BigColliders",
+				"x": 96,
+				"y": 144,
+				"width": 64,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "35a695a0-8990-11ee-942c-ff0045427be6",
+				"layer": "BigColliders",
+				"x": 192,
+				"y": 96,
+				"width": 64,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "36e5a550-8990-11ee-942c-cb92acc94126",
+				"layer": "BigColliders",
+				"x": 224,
+				"y": 112,
+				"width": 32,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			}
+		],
 		"Trap": [
 			{
 				"id": "Trap",
@@ -71,19 +150,6 @@
 						"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
 					}
 				}
-			}
-		],
-		"Player": [
-			{
-				"id": "Player",
-				"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
-				"layer": "Entities",
-				"x": 208,
-				"y": 80,
-				"width": 16,
-				"height": 16,
-				"color": 0,
-				"customFields" : {}
 			}
 		]
 	}

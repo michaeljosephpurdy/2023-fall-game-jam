@@ -25,5 +25,151 @@
 		"Level_Flair.png",
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"Collider": [
+			{
+				"id": "Collider",
+				"iid": "cd2d4bf0-8990-11ee-942c-157ca02d57c9",
+				"layer": "BigColliders",
+				"x": 0,
+				"y": 240,
+				"width": 256,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "d72183b0-8990-11ee-942c-07ec66c38477",
+				"layer": "BigColliders",
+				"x": 0,
+				"y": 112,
+				"width": 16,
+				"height": 128,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "d8207d20-8990-11ee-942c-27ac15a0775a",
+				"layer": "BigColliders",
+				"x": 16,
+				"y": 112,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "d8715c40-8990-11ee-942c-97f957b21d61",
+				"layer": "BigColliders",
+				"x": 32,
+				"y": 96,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "d9020380-8990-11ee-942c-fd65c37055a7",
+				"layer": "BigColliders",
+				"x": 48,
+				"y": 80,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "d96d2160-8990-11ee-942c-c50f7234195c",
+				"layer": "BigColliders",
+				"x": 64,
+				"y": 48,
+				"width": 160,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "d9dd6f60-8990-11ee-942c-11335a3c4c42",
+				"layer": "BigColliders",
+				"x": 64,
+				"y": 64,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "dbae5ed0-8990-11ee-942c-cbc9d26d83fa",
+				"layer": "BigColliders",
+				"x": 208,
+				"y": 64,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "dc32d110-8990-11ee-942c-3b5ee245696a",
+				"layer": "BigColliders",
+				"x": 224,
+				"y": 80,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "dcaf2d00-8990-11ee-942c-991a61d4c5a0",
+				"layer": "BigColliders",
+				"x": 240,
+				"y": 80,
+				"width": 16,
+				"height": 96,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "de1091c0-8990-11ee-942c-8d283fe3f731",
+				"layer": "BigColliders",
+				"x": 96,
+				"y": 160,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "de952b10-8990-11ee-942c-3337e21a9476",
+				"layer": "BigColliders",
+				"x": 32,
+				"y": 208,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			},
+			{
+				"id": "Collider",
+				"iid": "df0eeef0-8990-11ee-942c-690d2d3d7366",
+				"layer": "BigColliders",
+				"x": 112,
+				"y": 144,
+				"width": 128,
+				"height": 32,
+				"color": 16777215,
+				"customFields" : {}
+			}
+		]
+	}
 }

@@ -1,6 +1,8 @@
 local Player = class("Player")
 
 function Player:init(props)
+	self.old_level_id = nil
+	self.level_id = nil
 	self.position = Vector.new(props.x, props.y)
 	self.spawn_point = self.position:clone()
 	self.velocity = Vector.new(0, 0)
