@@ -10,8 +10,8 @@ function TrapTrigger:init(props)
 	self.linked_entity_iid = custom_fields.Entity_ref.entityIid
 	self.drawable_foreground = true
 
-	self.position = Vector.new(props.x, props.y)
-	self.velocity = Vector.new(0, 0)
+	self.position = { x = props.x, y = props.y }
+	self.velocity = { x = 0, y = 0 }
 	self.hitbox = { width = props.width, height = props.height }
 
 	self.spritesheet = props.spritesheet

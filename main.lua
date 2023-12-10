@@ -1,6 +1,5 @@
 tiny = require("plugins.tiny-ecs")
 require("plugins.table-additions")
-require("plugins.vectors")
 require("plugins.30log")
 PubSub = require("plugins.pubsub")
 ldtk = require("plugins.super-simple-ldtk")
@@ -47,7 +46,6 @@ function love.load(arg)
 	draw_world = tiny.world()
 	local bump_world = bump.newWorld(16)
 
-	local a = Vector.new(2, 2)
 	for _, system in ipairs(UPDATE_SYSTEMS_IN_ORDER) do
 		if system.init then
 			system:init({

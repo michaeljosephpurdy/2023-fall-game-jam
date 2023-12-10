@@ -9,7 +9,7 @@ function PlayerControllerSystem:init()
 end
 
 function PlayerControllerSystem:process(e, dt)
-	e.direction = Vector.new(0, 0)
+	e.direction = { x = 0, y = 0 }
 
 	local left = love.keyboard.isDown("left")
 	local right = love.keyboard.isDown("right")

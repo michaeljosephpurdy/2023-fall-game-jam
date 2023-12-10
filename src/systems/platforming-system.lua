@@ -62,7 +62,7 @@ function PlatformingSystem:process(e, dt)
 
 	if e.can_dash and e.dash_requested and not e.dashed then
 		e.dashed = true
-		e.old_velocity = e.velocity:clone()
+		e.old_velocity = { x = e.velocity.x, y = e.velocity.y }
 		e.velocity.x = e.velocity.x + (e.direction.x * e.dash_force)
 		e.velocity.y = 0
 		e.dashing = e.dash_time

@@ -19,9 +19,9 @@ end
 
 function CollisionSystem:process(e, dt)
 	local cols, len
-	local future_position = e.position + (e.velocity * dt)
-	e.position.x, e.position.y, cols, len =
-		self.bump_world:move(e, future_position.x, future_position.y, collision_filter)
+	local future_x = e.position.x + (e.velocity.x * dt)
+	local future_y = e.position.y + (e.velocity.y * dt)
+	e.position.x, e.position.y, cols, len = self.bump_world:move(e, future_x, future_y, collision_filter)
 	e.on_ground = false
 	for i = 1, len do
 		local col = cols[i]

@@ -3,10 +3,10 @@ local Player = class("Player")
 function Player:init(props)
 	self.old_level_id = nil
 	self.level_id = nil
-	self.position = Vector.new(props.x, props.y)
-	self.spawn_point = self.position:clone()
-	self.velocity = Vector.new(0, 0)
-	self.direction = Vector.new(0, 0)
+	self.position = { x = props.x, y = props.y }
+	self.spawn_point = { x = props.x, y = props.y }
+	self.velocity = { x = 0, y = 0 }
+	self.direction = { x = 0, y = 0 }
 	self.width = 4
 	self.height = 8
 	self.deaths = 0
@@ -57,9 +57,9 @@ function Player:respawn()
 		return
 	end
 	self.deaths = self.deaths + 1
-	self.velocity = Vector.new(0, 0)
-	self.position = self.spawn_point:clone()
-	self.old_position = self.position
+	self.velocity = { x = 0, y = 0 }
+	self.position = { x = self.spawn_point.x, y = self.spawn_point.y }
+	self.old_position = { x = self.spawn_point.x, y = self.spawn_point.y }
 	self.bump_world:update(self, self.spawn_point.x, self.spawn_point.y)
 end
 

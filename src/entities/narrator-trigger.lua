@@ -10,8 +10,8 @@ function NarratorTrigger:init(props)
 		end
 	end
 	self.is_narrator_trigger = true
-	self.position = Vector.new(props.x, props.y)
-	self.velocity = Vector.new(0, 0)
+	self.position = { x = props.x, y = props.y }
+	self.velocity = { x = 0, y = 0 }
 	self.hitbox = { width = props.width, height = props.height }
 	self.triggered = false
 	self.progress = 1

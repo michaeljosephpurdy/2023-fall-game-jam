@@ -3,9 +3,9 @@ local Trap = class("Trap")
 local Arrow = class("Arrow")
 function Arrow:init(props)
 	self.spritesheet = props.spritesheet
-	self.position = props.position:clone()
-	self.direction = props.direction:clone()
-	self.velocity = Vector.new(40, 0)
+	self.position = { x = props.position.x, y = props.position.y }
+	self.direction = { x = props.direction.x, y = props.position.y }
+	self.velocity = { x = 40, y = 0 }
 	self.friction = 1
 	self.position.y = self.position.y + 8
 	self.hitbox = { width = 16, height = 4 }
@@ -30,9 +30,9 @@ function Trap:init(props)
 
 	self.type = custom_fields.trap
 	self.linked_entity = custom_fields.Entity_ref.entityIid
-	self.position = Vector.new(props.x, props.y)
-	self.velocity = Vector.new(0, 0)
-	self.direction = Vector.new(custom_fields.direction_x, custom_fields.direction_y)
+	self.position = { x = props.x, y = props.y }
+	self.velocity = { x = 0, y = 0 }
+	self.direction = { x = custom_fields.direction_x, y = custom_fields.direction_y }
 	self.hitbox = { width = props.width, height = props.height }
 
 	self.spritesheet = props.spritesheet

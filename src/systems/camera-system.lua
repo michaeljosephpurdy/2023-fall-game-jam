@@ -13,9 +13,9 @@ function CameraSystem:init()
 	self.levels = {}
 	self.focal_point = 0
 	self.push = require("plugins.push")
-	self.position = Vector.new(0, 0)
-	self.old_position = Vector.new(0, 0)
-	self.offset_position = Vector.new(-GAME_WIDTH / 2, -GAME_HEIGHT / 2)
+	self.position = { x = 0, y = 0 }
+	self.old_position = { x = 0, y = 0 }
+	self.offset_position = { x = -GAME_WIDTH / 2, y = -GAME_HEIGHT / 2 }
 	local windowWidth, windowHeight = 512, 512
 	self.push:setupScreen(GAME_WIDTH, GAME_HEIGHT, windowWidth, windowHeight, { fullscreen = false, resizable = true })
 	self.push:setBorderColor(BLACK_COLOR)
@@ -49,8 +49,10 @@ function CameraSystem:process(e, dt)
 		return
 	end
 	local level = self.levels[e.level_id]
-	self.old_position = self.position
-	self.position = e.position + self.offset_position
+	self.old_position.x = self.position.x
+	self.old_position.y = self.position.y
+	self.position.x = e.position.x + self.offset_position.x
+	self.position.y = e.position.y + self.offset_position.y
 	local camera_offset = e.direction.x * 50
 	self.position.x = self.position.x + camera_offset
 	if e.position.x + camera_offset >= level.right_boundary - GAME_WIDTH / 2 then
