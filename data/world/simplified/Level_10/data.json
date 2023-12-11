@@ -127,36 +127,21 @@
 				"customFields" : {}
 			}
 		],
-		"Item": [
-			{
-				"id": "Item",
-				"iid": "43a52e90-8990-11ee-942c-95ecd0be53b1",
-				"layer": "Entities",
-				"x": 32,
-				"y": 224,
-				"width": 16,
-				"height": 16,
-				"color": 18761,
-				"customFields": {
-					"type": "Dash"
-				}
-			}
-		],
 		"Narrator": [
 			{
 				"id": "Narrator",
 				"iid": "43701560-8990-11ee-942c-1964e766a680",
 				"layer": "Entities",
-				"x": 144,
-				"y": 64,
+				"x": 80,
+				"y": 144,
 				"width": 96,
-				"height": 64,
+				"height": 96,
 				"color": 15839922,
 				"customFields": {
 					"conditions": [],
 					"one_shot": true,
 					"on_fulfilled": [],
-					"text": "Did you think something would\nbe hidden here? Ha!",
+					"text": "What made you think something\nwould be in here? Ha!",
 					"timer": 3
 				}
 			}

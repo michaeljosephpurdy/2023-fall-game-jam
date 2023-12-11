@@ -1,8 +1,6 @@
 local PlatformingSystem = tiny.processingSystem()
 PlatformingSystem.filter = tiny.requireAll("platforming")
 
-function PlatformingSystem:onAddToWorld(world) end
-
 function PlatformingSystem:process(e, dt)
 	local top_speed = e.top_speed
 	local gravity = e.gravity or 0
@@ -53,10 +51,12 @@ function PlatformingSystem:process(e, dt)
 
 	-- single jump
 	if e.jump_buffer > 0 and e.jumps >= 1 and (e.on_ground or e.coyote_timer > 0) then
+		e.jump_buffer = 0
 		e.jumps = e.jumps - 1
 		e.velocity.y = -e.jump_force
 		e.on_ground = false
 	elseif e.jump_buffer > 0 and e.jumps >= 1 and e.max_jumps == 2 then
+		e.jump_buffer = 0
 		e.jumps = e.jumps - 1
 		if e.coyote_timer <= 0 then
 			e.jumps = e.jumps - 1

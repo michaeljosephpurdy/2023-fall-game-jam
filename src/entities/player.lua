@@ -21,11 +21,11 @@ function Player:init(props)
 	self.max_jump_buffer = 0.1
 	self.jump_buffer = 0
 	self.max_jumps = 1
-	self.max_gravity = 5
+	self.max_gravity = 8.5
 	self.gravity = self.max_gravity
-	self.acceleration = 10
-	self.top_speed = 100
-	self.jump_force = 265
+	self.acceleration = 7
+	self.top_speed = 95.5
+	self.jump_force = 254
 	self.coyote_time = 0.2
 	self.coyote_timer = self.coyote_time
 	self.top_fall_speed = 1
@@ -48,10 +48,10 @@ function Player:tune_field(field_name, button)
 		return
 	end
 	if love.keyboard.isDown("down") then
-		self[field_name] = self[field_name] - 5
+		self[field_name] = self[field_name] - 0.5
 	end
 	if love.keyboard.isDown("up") then
-		self[field_name] = self[field_name] + 5
+		self[field_name] = self[field_name] + 0.5
 	end
 end
 
@@ -67,10 +67,10 @@ function Player:respawn()
 end
 
 function Player:draw()
-	-- self:tune_field("gravity", "1")
-	-- self:tune_field("acceleration", "2")
-	-- self:tune_field("top_speed", "3")
-	-- self:tune_field("jump_force", "4")
+	self:tune_field("gravity", "1")
+	self:tune_field("acceleration", "2")
+	self:tune_field("top_speed", "3")
+	self:tune_field("jump_force", "4")
 	love.graphics.setColor(WHITE_COLOR)
 	love.graphics.rectangle(
 		"fill",

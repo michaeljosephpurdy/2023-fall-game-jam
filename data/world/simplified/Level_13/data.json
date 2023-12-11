@@ -185,6 +185,27 @@
 					"type": "Double_jump"
 				}
 			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "cd03fae0-8990-11ee-942c-f75689bbb905",
+				"layer": "Entities",
+				"x": 80,
+				"y": 64,
+				"width": 96,
+				"height": 80,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [
+						"double_jump"
+					],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "Big whoop, you found the\n'double jump', who cares?",
+					"timer": 3
+				}
+			}
 		]
 	}
 }

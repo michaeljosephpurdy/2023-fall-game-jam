@@ -486,34 +486,6 @@
 				"color": 2434341,
 				"customFields" : {}
 			}
-		],
-		"Item": [
-			{
-				"id": "Item",
-				"iid": "8e35b810-8990-11ee-942c-011dbe7ebdff",
-				"layer": "Entities",
-				"x": 48,
-				"y": 1920,
-				"width": 16,
-				"height": 16,
-				"color": 18761,
-				"customFields": {
-					"type": "Dash"
-				}
-			},
-			{
-				"id": "Item",
-				"iid": "c6884070-8990-11ee-942c-81e56ed07d47",
-				"layer": "Entities",
-				"x": 80,
-				"y": 1920,
-				"width": 16,
-				"height": 16,
-				"color": 18761,
-				"customFields": {
-					"type": "Double_jump"
-				}
-			}
 		]
 	}
 }

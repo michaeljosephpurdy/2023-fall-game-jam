@@ -1,0 +1,21 @@
+{
+	"identifier": "Level_19",
+	"uniqueIdentifer": "f4a69df0-8990-11ee-942c-63875d1f2505",
+	"x": 1712,
+	"y": -832,
+	"width": 256,
+	"height": 256,
+	"bgColor": "#232635",
+	"neighbourLevels": [
+		{
+			"levelIid": "86c2c150-8990-11ee-942c-a3d02f83e773",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Level_Flair.png",
+		"Tilemap.png"
+	],
+	"entities" : {}
+}

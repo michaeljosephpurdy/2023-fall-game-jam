@@ -48,7 +48,7 @@ function love.load(arg)
 		love.event.quit()
 	end)
 	world = tiny.world()
-	local bump_world = bump.newWorld(16)
+	local bump_world = bump.newWorld(64)
 
 	for _, system in ipairs(SYSTEMS_IN_ORDER) do
 		if system.init then
@@ -63,11 +63,15 @@ function love.load(arg)
 	ldtk:load_all()
 	-- ldtk:load("6b437db0-8990-11ee-8cf0-2d05cb81e2c1")
 	-- tiny.refresh(world)
+	accumulator = 0
 end
 
 function love.update(dt)
-	dt = math.min(dt, SIXTY_FPS)
-	world:update(dt, UPDATE_SYSTEMS)
+	accumulator = accumulator + dt
+	if accumulator >= SIXTY_FPS then
+		world:update(SIXTY_FPS, UPDATE_SYSTEMS)
+		accumulator = accumulator - SIXTY_FPS
+	end
 end
 
 function love.draw()
@@ -76,6 +80,7 @@ function love.draw()
 	--max_collection = math.max((max_collection or 0), collectgarbage("count"))
 	--love.graphics.print(tostring(max_collection), 50, 80)
 	--love.graphics.print(tostring(collectgarbage("count")), 50, 50)
+	love.graphics.print(tostring(love.timer.getFPS(), 50, 50))
 end
 
 function love.keypressed(k)

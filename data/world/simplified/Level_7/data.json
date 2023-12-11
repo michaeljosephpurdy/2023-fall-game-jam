@@ -194,9 +194,9 @@
 				"iid": "97854f90-8990-11ee-942c-6947ab003c75",
 				"layer": "Entities",
 				"x": 272,
-				"y": 352,
+				"y": 320,
 				"width": 192,
-				"height": 48,
+				"height": 80,
 				"color": 15839922,
 				"customFields": {
 					"conditions": [],
