@@ -97,7 +97,8 @@
 							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
 						}
 					],
-					"reactivation_delay": 2
+					"reactivation_delay": 2,
+					"one_time": true
 				}
 			}
 		],

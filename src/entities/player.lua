@@ -38,6 +38,7 @@ function Player:init(props)
 	self.hitbox = { width = 4, height = 8 }
 	self.platforming = true
 	self.can_collide = true
+	self.can_dash = true
 end
 
 function Player:on_collide() end
@@ -59,6 +60,7 @@ function Player:respawn()
 	if self.position == self.spawn_point then
 		return
 	end
+	PubSub.publish("player.respawn", 0)
 	self.deaths = self.deaths + 1
 	self.velocity = { x = 0, y = 0 }
 	self.position = { x = self.spawn_point.x, y = self.spawn_point.y }

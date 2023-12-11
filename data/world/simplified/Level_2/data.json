@@ -47,7 +47,8 @@
 					"Entity_ref": null,
 					"direction_x": 1,
 					"direction_y": 0,
-					"trap": "Arrow"
+					"trap": "Arrow",
+					"height": 1
 				}
 			},
 			{
@@ -63,7 +64,8 @@
 					"Entity_ref": null,
 					"direction_x": 1,
 					"direction_y": 0,
-					"trap": "Arrow"
+					"trap": "Arrow",
+					"height": 1
 				}
 			},
 			{
@@ -79,7 +81,8 @@
 					"Entity_ref": null,
 					"direction_x": 1,
 					"direction_y": 0,
-					"trap": "Arrow"
+					"trap": "Arrow",
+					"height": 1
 				}
 			},
 			{
@@ -95,7 +98,8 @@
 					"Entity_ref": null,
 					"direction_x": 1,
 					"direction_y": 0,
-					"trap": "Arrow"
+					"trap": "Arrow",
+					"height": 1
 				}
 			},
 			{
@@ -111,7 +115,8 @@
 					"Entity_ref": null,
 					"direction_x": 1,
 					"direction_y": 0,
-					"trap": "Arrow"
+					"trap": "Arrow",
+					"height": 1
 				}
 			},
 			{
@@ -127,7 +132,8 @@
 					"Entity_ref": null,
 					"direction_x": 1,
 					"direction_y": 0,
-					"trap": "Arrow"
+					"trap": "Arrow",
+					"height": 1
 				}
 			},
 			{
@@ -143,7 +149,8 @@
 					"Entity_ref": null,
 					"direction_x": 1,
 					"direction_y": 0,
-					"trap": "Arrow"
+					"trap": "Arrow",
+					"height": 1
 				}
 			},
 			{
@@ -159,7 +166,8 @@
 					"Entity_ref": null,
 					"direction_x": 1,
 					"direction_y": 0,
-					"trap": "Arrow"
+					"trap": "Arrow",
+					"height": 1
 				}
 			},
 			{
@@ -175,7 +183,8 @@
 					"Entity_ref": null,
 					"direction_x": 1,
 					"direction_y": 0,
-					"trap": "Arrow"
+					"trap": "Arrow",
+					"height": 1
 				}
 			}
 		]

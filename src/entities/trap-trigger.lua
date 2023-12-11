@@ -13,6 +13,7 @@ function TrapTrigger:init(props)
 	for _, entity in ipairs(custom_fields.entity_refs) do
 		table.insert(self.linked_entity_iids, entity.entityIid)
 	end
+	self.one_time = custom_fields.one_time
 
 	self.position = { x = props.x, y = props.y }
 	self.velocity = { x = 0, y = 0 }
@@ -26,6 +27,10 @@ end
 function TrapTrigger:draw(dt)
 	if self.is_triggered then
 		love.graphics.draw(self.spritesheet, self.triggered_img, self.position.x, self.position.y)
+		if not self.one_time then
+			self.is_done = false
+			self.is_triggered = false
+		end
 		return
 	end
 	love.graphics.draw(self.spritesheet, self.idle_img, self.position.x, self.position.y)

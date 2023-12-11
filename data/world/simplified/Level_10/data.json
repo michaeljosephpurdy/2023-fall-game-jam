@@ -44,22 +44,9 @@
 					"conditions": [],
 					"one_shot": true,
 					"on_fulfilled": [],
-					"text": "A new adventurer here for my\ntreasures?",
+					"text": "An adventurer.\nHere for my treasures?",
 					"timer": 3
 				}
-			}
-		],
-		"Player": [
-			{
-				"id": "Player",
-				"iid": "bbcccf40-8990-11ee-942c-cfb2db63fe1e",
-				"layer": "Entities",
-				"x": 64,
-				"y": 64,
-				"width": 16,
-				"height": 16,
-				"color": 0,
-				"customFields" : {}
 			}
 		]
 	}

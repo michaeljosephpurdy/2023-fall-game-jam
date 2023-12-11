@@ -1,9 +1,9 @@
 local EntityDrawingSystem = tiny.processingSystem()
-EntityDrawingSystem.is_draw_system = true
 EntityDrawingSystem.filter = tiny.requireAll("drawable", "draw")
+EntityDrawingSystem.is_draw_system = true
 
 function EntityDrawingSystem:process(e, dt)
-	e:draw()
+	e:draw(dt)
 end
 
 return EntityDrawingSystem

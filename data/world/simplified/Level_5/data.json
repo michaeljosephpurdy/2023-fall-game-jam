@@ -24,7 +24,7 @@
 				"iid": "6ec59440-8990-11ee-942c-c7ff1ba6d6c5",
 				"layer": "Entities",
 				"x": 240,
-				"y": 304,
+				"y": 256,
 				"width": 16,
 				"height": 16,
 				"color": 16777215,
@@ -37,7 +37,8 @@
 					},
 					"direction_x": 0,
 					"direction_y": 0,
-					"trap": "Arrow"
+					"trap": "FallingDoor",
+					"height": 4
 				}
 			}
 		],
@@ -60,8 +61,22 @@
 							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
 						}
 					],
-					"reactivation_delay": 2
+					"reactivation_delay": 2,
+					"one_time": false
 				}
+			}
+		],
+		"Player": [
+			{
+				"id": "Player",
+				"iid": "bbcccf40-8990-11ee-942c-cfb2db63fe1e",
+				"layer": "Entities",
+				"x": 720,
+				"y": 288,
+				"width": 16,
+				"height": 16,
+				"color": 0,
+				"customFields" : {}
 			}
 		]
 	}

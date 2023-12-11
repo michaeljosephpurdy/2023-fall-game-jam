@@ -4,6 +4,12 @@ TrapTriggeringSystem.filter = tiny.requireAny("is_trap_trigger", "is_trap")
 function TrapTriggeringSystem:init(props)
 	self.triggers = {}
 	self.traps = {}
+	PubSub.subscribe("player.respawn", function()
+		for _, trigger in pairs(self.triggers) do
+			trigger.is_triggered = false
+			trigger.is_done = false
+		end
+	end)
 end
 
 function TrapTriggeringSystem:onAdd(e)
@@ -26,7 +32,6 @@ function TrapTriggeringSystem:process(e, dt)
 		for _, linked_entity_iid in pairs(trigger.linked_entity_iids) do
 			for _, trap in pairs(self.traps) do
 				if linked_entity_iid == trap.iid then
-					print("match")
 					trap:trip()
 				end
 			end

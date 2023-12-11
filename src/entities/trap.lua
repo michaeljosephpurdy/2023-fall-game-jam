@@ -34,10 +34,19 @@ function Trap:init(props)
 	self.position = { x = props.x, y = props.y }
 	self.velocity = { x = 0, y = 0 }
 	self.direction = { x = custom_fields.direction_x, y = custom_fields.direction_y }
-	self.hitbox = { width = props.width, height = props.height }
-
+	self.hitbox = { width = props.width, height = custom_fields.height * 16 }
+	self.height = custom_fields.height
 	self.spritesheet = props.spritesheet
-	self.img = love.graphics.newQuad(8 * 16, 16, 16, 16, self.spritesheet)
+	if self.type == "Arrow" then
+		self.img = love.graphics.newQuad(8 * 16, 16, 16, 16, self.spritesheet)
+	elseif self.type == "FallingDoor" then
+		self.img = love.graphics.newQuad(10 * 16, 16, 16, 16, self.spritesheet)
+		self.is_solid = true
+		self.platforming = true
+		self.collision_actor = true
+		self.gravity = 0.3
+		self.is_moving_door = true
+	end
 end
 
 function Trap:trip()
@@ -48,12 +57,16 @@ function Trap:trip()
 			spritesheet = self.spritesheet,
 		})
 		self.world:addEntity(arrow)
+		self.tripped = true
+	elseif self.type == "FallingDoor" then
+		self.velocity.y = -100
 	end
-	self.tripped = true
 end
 
 function Trap:draw(dt)
-	love.graphics.draw(self.spritesheet, self.img, self.position.x, self.position.y)
+	for i = 0, self.height - 1 do
+		love.graphics.draw(self.spritesheet, self.img, self.position.x, self.position.y + i * 16)
+	end
 end
 
 return Trap

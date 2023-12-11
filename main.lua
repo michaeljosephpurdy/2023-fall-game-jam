@@ -80,7 +80,6 @@ function love.draw()
 	--max_collection = math.max((max_collection or 0), collectgarbage("count"))
 	--love.graphics.print(tostring(max_collection), 50, 80)
 	--love.graphics.print(tostring(collectgarbage("count")), 50, 50)
-	love.graphics.print(tostring(love.timer.getFPS(), 50, 50))
 end
 
 function love.keypressed(k)

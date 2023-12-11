@@ -11,11 +11,13 @@ function PlatformingSystem:process(e, dt)
 		--  * don't want any gravity to be applied when dashing
 		--  * need to stop dashing after a period of time
 		--  * give ourselves a higher top_speed
+		friction = 1
 		e.gravity = 0
 		e.dashing = e.dashing - dt
 		top_speed = e.top_speed * 2
 		if e.dashing < 0 then
 			e.gravity = e.max_gravity
+			friction = e.friction or 0.95
 			-- e.velocity.y = e.old_velocity.y
 			e.dashing = nil
 		end
