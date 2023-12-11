@@ -12,16 +12,15 @@ GAME_WIDTH, GAME_HEIGHT = 256, 256
 -- load all systems and register them to the world
 -- we need to ensure they are registered in a specific order
 -- so let's define them in that order here
-local UPDATE_SYSTEMS_IN_ORDER = {
+local SYSTEMS_IN_ORDER = {
 	require("src.systems.player-controller-system"),
 	require("src.systems.platforming-system"),
-	require("src.systems.collision-system"),
+	require("src.systems.collision-registration-system"),
+	require("src.systems.collision-detection-system"),
 	require("src.systems.trap-triggering-system"),
 	require("src.systems.entity-spawning-system"),
 	require("src.systems.level-transition-system"),
 	require("src.systems.game-data-system"),
-}
-local DRAW_SYSTEMS_IN_ORDER = {
 	require("src.systems.camera-system"),
 	require("src.systems.tilemap-system"),
 	require("src.systems.entity-background-drawing-system"),
@@ -29,6 +28,12 @@ local DRAW_SYSTEMS_IN_ORDER = {
 	require("src.systems.entity-foreground-drawing-system"),
 	require("src.systems.narrator-drawing-system"),
 }
+UPDATE_SYSTEMS = function(_, s)
+	return not s.is_draw_system
+end
+DRAW_SYSTEMS = function(_, s)
+	return s.is_draw_system
+end
 
 BLACK_COLOR = { 35 / 255, 38 / 255, 53 / 255 }
 WHITE_COLOR = { 167 / 255, 172 / 255, 167 / 255 }
@@ -42,33 +47,16 @@ function love.load(arg)
 		end
 		love.event.quit()
 	end)
-	update_world = tiny.world()
-	draw_world = tiny.world()
+	world = tiny.world()
 	local bump_world = bump.newWorld(16)
 
-	for _, system in ipairs(UPDATE_SYSTEMS_IN_ORDER) do
+	for _, system in ipairs(SYSTEMS_IN_ORDER) do
 		if system.init then
 			system:init({
-				update_world = update_world,
-				draw_world = draw_world,
 				bump_world = bump_world,
 			})
-			system.update_world = update_world
-			system.draw_world = draw_world
-			system.bump_world = bump_world
 		end
-		update_world:addSystem(system)
-	end
-	for _, system in ipairs(DRAW_SYSTEMS_IN_ORDER) do
-		if system.init then
-			system:init({
-				update_world = update_world,
-				draw_world = draw_world,
-			})
-			system.update_world = update_world
-			system.draw_world = draw_world
-		end
-		draw_world:addSystem(system)
+		world:addSystem(system)
 	end
 
 	ldtk:init("world")
@@ -78,13 +66,16 @@ function love.load(arg)
 end
 
 function love.update(dt)
-	dt = math.min(dt, THIRTY_FPS)
-	update_world:update(dt)
+	dt = math.min(dt, SIXTY_FPS)
+	world:update(dt, UPDATE_SYSTEMS)
 end
 
 function love.draw()
 	local dt = love.timer.getDelta()
-	draw_world:update(dt)
+	world:update(dt, DRAW_SYSTEMS)
+	--max_collection = math.max((max_collection or 0), collectgarbage("count"))
+	--love.graphics.print(tostring(max_collection), 50, 80)
+	--love.graphics.print(tostring(collectgarbage("count")), 50, 50)
 end
 
 function love.keypressed(k)

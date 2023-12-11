@@ -21,9 +21,8 @@ function PlayerControllerSystem:process(e, dt)
 		e.direction.x = -1
 	end
 
-	e.jump_requested = false
 	if love.keyboard.isDown("x") and self.released.x then
-		e.jump_requested = true
+		e.jump_buffer = e.max_jump_buffer
 		self.released.x = false
 	end
 

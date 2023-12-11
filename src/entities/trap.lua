@@ -2,10 +2,12 @@ local Trap = class("Trap")
 
 local Arrow = class("Arrow")
 function Arrow:init(props)
+	self.is_arrow = true
 	self.spritesheet = props.spritesheet
 	self.position = { x = props.position.x, y = props.position.y }
 	self.direction = { x = props.direction.x, y = props.position.y }
-	self.velocity = { x = 40, y = 0 }
+	self.velocity = { x = 80, y = 0 }
+	self.collision_actor = true
 	self.friction = 1
 	self.position.y = self.position.y + 8
 	self.hitbox = { width = 16, height = 4 }
@@ -13,6 +15,7 @@ function Arrow:init(props)
 	self.drawable = true
 	self.img = love.graphics.newQuad(9 * 16, 16, 16, 16, self.spritesheet)
 end
+
 function Arrow:draw(dt)
 	love.graphics.draw(self.spritesheet, self.img, self.position.x, self.position.y)
 end
@@ -46,8 +49,7 @@ function Trap:trip()
 			direction = self.direction,
 			spritesheet = self.spritesheet,
 		})
-		self.update_world:addEntity(arrow)
-		self.draw_world:addEntity(arrow)
+		self.world:addEntity(arrow)
 	end
 	self.tripped = true
 end

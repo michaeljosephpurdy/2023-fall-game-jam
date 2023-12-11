@@ -1,11 +1,9 @@
-local CollisionSystem = tiny.processingSystem()
-CollisionSystem.filter = tiny.requireAll("hitbox")
+local CollisionDetectionSystem = tiny.processingSystem()
+CollisionDetectionSystem.filter = tiny.requireAll("collision_actor")
 
-function CollisionSystem:init(props)
+function CollisionDetectionSystem:init(props)
 	self.bump_world = props.bump_world
 end
-
-function CollisionSystem:onAddToWorld(world) end
 
 local function collision_filter(e1, e2)
 	if e1.is_player then
@@ -14,10 +12,15 @@ local function collision_filter(e1, e2)
 		end
 		return "cross"
 	end
+	if e2.is_arrow then
+		if e2.is_solid then
+			return "touch"
+		end
+	end
 	return nil
 end
 
-function CollisionSystem:process(e, dt)
+function CollisionDetectionSystem:process(e, dt)
 	local cols, len
 	local future_x = e.position.x + (e.velocity.x * dt)
 	local future_y = e.position.y + (e.velocity.y * dt)
@@ -69,13 +72,4 @@ function CollisionSystem:process(e, dt)
 	end
 end
 
-function CollisionSystem:onAdd(e)
-	self.bump_world:add(e, e.position.x, e.position.y, e.hitbox.width, e.hitbox.height)
-	e.bump_world = self.bump_world
-end
-
-function CollisionSystem:onRemove(e)
-	self.bump_world:remove(e)
-end
-
-return CollisionSystem
+return CollisionDetectionSystem

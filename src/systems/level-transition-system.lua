@@ -4,13 +4,13 @@ local LevelTransitionSystem = tiny.processingSystem()
 LevelTransitionSystem.filter = tiny.requireAll("is_player")
 
 function LevelTransitionSystem:init(props)
-	self.update_world = props.update_world
 	self.level_balancing_coroutine = coroutine.create(function() end)
 	self.levels = {}
 	self.tiles_by_level = {}
 	self.neighbors_by_level = {}
 	self.active_level = nil
 	self.active_tiles = {}
+	self.tiles_to_remove = {}
 	PubSub.subscribe("ldtk.level.load", function(level)
 		table.insert(self.levels, level)
 		if not self.neighbors_by_level[level.level_id] then
@@ -38,17 +38,23 @@ function LevelTransitionSystem:process(player, dt)
 		return
 	end
 	self.level_balancing_coroutine = coroutine.create(function()
-		local old_entities = {}
-		for _, entity in pairs(self.tiles_by_level[player.old_level_id] or {}) do
-			table.insert(old_entities, entity)
-		end
+		-- immediately add all tiles for the new level
 		for _, new_entity in pairs(self.tiles_by_level[player.level_id]) do
-			self.update_world:addEntity(new_entity)
+			self.world:addEntity(new_entity)
+		end
+		-- gather all old tiles, and remove them over time
+		for _, entity in pairs(self.tiles_by_level[player.old_level_id] or {}) do
+			table.insert(self.tiles_to_remove, entity)
 		end
 		coroutine.yield()
-		for _, old_entity in pairs(old_entities) do
-			self.update_world:removeEntity(old_entity)
-			coroutine.yield()
+		for _, old_entity in pairs(self.tiles_to_remove) do
+			-- to advoid removing a tile for a level we are now in
+			-- check the level_id again to avoid unwanted removals
+			-- ie: player walks into new level, turns around, then falls through the floor
+			if player.level_id ~= old_entity.level_id then
+				self.world:removeEntity(old_entity)
+				coroutine.yield()
+			end
 		end
 	end)
 	coroutine.resume(self.level_balancing_coroutine)

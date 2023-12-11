@@ -11,12 +11,15 @@ function Player:init(props)
 	self.height = 8
 	self.deaths = 0
 
+	self.collision_actor = true
 	self.is_player = true
 
 	self.drawable = true
 	self.controllable = true
 	self.camera_follow = false
 
+	self.max_jump_buffer = 0.1
+	self.jump_buffer = 0
 	self.max_jumps = 1
 	self.max_gravity = 5
 	self.gravity = self.max_gravity

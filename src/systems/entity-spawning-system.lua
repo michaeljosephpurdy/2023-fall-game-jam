@@ -8,14 +8,11 @@ local SpawnPoint = require("src.entities.spawn-point")
 local Trap = require("src.entities.trap")
 local TrapTrigger = require("src.entities.trap-trigger")
 
-function EntitySpawningSystem:init(props)
-	self.update_world = props.update_world
-	self.draw_world = props.draw_world
+function EntitySpawningSystem:init()
 	local spritesheet = love.graphics.newImage("data/spritesheet.png")
 	PubSub.subscribe("ldtk.image.create", function(props)
 		local tilemap = require("src.entities.tilemap"):new(props)
-		self.update_world:addEntity(tilemap)
-		self.draw_world:addEntity(tilemap)
+		self.world:addEntity(tilemap)
 	end)
 	PubSub.subscribe("ldtk.entity.create", function(props)
 		props.spritesheet = spritesheet
@@ -35,8 +32,7 @@ function EntitySpawningSystem:init(props)
 		elseif props.id == "Trap" then
 			entity = Trap:new(props)
 		end
-		self.update_world:addEntity(entity)
-		self.draw_world:addEntity(entity)
+		self.world:addEntity(entity)
 	end)
 end
 

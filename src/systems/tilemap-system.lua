@@ -3,6 +3,7 @@ local TilemapSystem = tiny.processingSystem()
 TilemapSystem.filter = tiny.requireAll("draw_tilemap")
 
 function TilemapSystem:init()
+	self.is_draw_system = true
 	PubSub.subscribe("ldtk.level.load", function(level)
 		self.debug_rect = { level.x, level.y, level.xx, level.yy }
 	end)

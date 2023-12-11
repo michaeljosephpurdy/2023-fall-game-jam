@@ -1,4 +1,5 @@
 local EntityBackgroundDrawingSystem = tiny.processingSystem()
+EntityBackgroundDrawingSystem.is_draw_system = true
 EntityBackgroundDrawingSystem.filter = tiny.requireAll("drawable_background", "draw")
 
 function EntityBackgroundDrawingSystem:onAddToWorld(world) end

@@ -10,6 +10,7 @@ local function clamp(low, n, high)
 end
 
 function CameraSystem:init()
+	self.is_draw_system = true
 	self.levels = {}
 	self.focal_point = 0
 	self.push = require("plugins.push")
