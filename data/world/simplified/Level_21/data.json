@@ -1,0 +1,43 @@
+{
+	"identifier": "Level_21",
+	"uniqueIdentifer": "91dcbac0-8990-11ee-942c-bbf7202d3f03",
+	"x": 1600,
+	"y": -576,
+	"width": 368,
+	"height": 368,
+	"bgColor": "#232635",
+	"neighbourLevels": [
+		{
+			"levelIid": "bda369f0-8990-11ee-942c-f36b8d2f1ad6",
+			"dir": "w"
+		},
+		{
+			"levelIid": "86c2c150-8990-11ee-942c-a3d02f83e773",
+			"dir": "n"
+		},
+		{
+			"levelIid": "f4a69df0-8990-11ee-942c-63875d1f2505",
+			"dir": "n"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Level_Flair.png",
+		"Tilemap.png"
+	],
+	"entities": {
+		"SpawnPoint": [
+			{
+				"id": "SpawnPoint",
+				"iid": "237e8760-8990-11ee-942c-4902fee138d3",
+				"layer": "Entities",
+				"x": 288,
+				"y": 336,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
+			}
+		]
+	}
+}

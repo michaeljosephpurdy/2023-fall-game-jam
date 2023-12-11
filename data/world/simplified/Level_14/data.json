@@ -1,19 +1,23 @@
 {
 	"identifier": "Level_14",
-	"uniqueIdentifer": "f36985a0-8990-11ee-942c-0d43bcb935e5",
-	"x": 1776,
-	"y": -1712,
+	"uniqueIdentifer": "a3437940-8990-11ee-942c-152bfc0728ec",
+	"x": 1520,
+	"y": -1616,
 	"width": 256,
 	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
-			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
+			"levelIid": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
 			"dir": "s"
 		},
 		{
-			"levelIid": "a3437940-8990-11ee-942c-152bfc0728ec",
-			"dir": "w"
+			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
+			"dir": "e"
+		},
+		{
+			"levelIid": "f36985a0-8990-11ee-942c-0d43bcb935e5",
+			"dir": "e"
 		}
 	],
 	"customFields" : {},
@@ -21,5 +25,42 @@
 		"Level_Flair.png",
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"Item": [
+			{
+				"id": "Item",
+				"iid": "791270c0-8990-11ee-942c-2d9949cf2194",
+				"layer": "Entities",
+				"x": 208,
+				"y": 128,
+				"width": 16,
+				"height": 16,
+				"color": 18761,
+				"customFields": {
+					"type": "Double_jump"
+				}
+			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "cd03fae0-8990-11ee-942c-f75689bbb905",
+				"layer": "Entities",
+				"x": 80,
+				"y": 64,
+				"width": 96,
+				"height": 80,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [
+						"double_jump"
+					],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "Big whoop, you found the\n'double jump', who cares?",
+					"timer": 3
+				}
+			}
+		]
+	}
 }

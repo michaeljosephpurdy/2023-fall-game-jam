@@ -1,0 +1,25 @@
+{
+	"identifier": "Level_22",
+	"uniqueIdentifer": "1c2c1f70-8990-11ee-942c-5bb7c6026ff9",
+	"x": 2272,
+	"y": -1744,
+	"width": 512,
+	"height": 544,
+	"bgColor": "#232635",
+	"neighbourLevels": [
+		{
+			"levelIid": "4eb32300-8990-11ee-942c-2b05e8099202",
+			"dir": "s"
+		},
+		{
+			"levelIid": "188cf7e0-8990-11ee-942c-51061e9f4b2b",
+			"dir": "s"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Level_Flair.png",
+		"Tilemap.png"
+	],
+	"entities" : {}
+}

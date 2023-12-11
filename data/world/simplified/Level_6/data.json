@@ -1,27 +1,31 @@
 {
 	"identifier": "Level_6",
-	"uniqueIdentifer": "e0983020-8990-11ee-942c-a150814f0d8d",
+	"uniqueIdentifer": "de7920b0-8990-11ee-942c-9f61e6f9909e",
 	"x": 832,
-	"y": -832,
-	"width": 416,
-	"height": 256,
+	"y": -1248,
+	"width": 480,
+	"height": 416,
 	"bgColor": "#232635",
 	"neighbourLevels": [
-		{
-			"levelIid": "bda369f0-8990-11ee-942c-f36b8d2f1ad6",
-			"dir": "s"
-		},
 		{
 			"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
 			"dir": "w"
 		},
 		{
-			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
-			"dir": "n"
+			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
+			"dir": "s"
+		},
+		{
+			"levelIid": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
+			"dir": "e"
 		},
 		{
 			"levelIid": "86c2c150-8990-11ee-942c-a3d02f83e773",
-			"dir": "e"
+			"dir": "s"
+		},
+		{
+			"levelIid": "5ee552a0-8990-11ee-942c-f17c0e82600c",
+			"dir": "w"
 		}
 	],
 	"customFields" : {},
@@ -30,83 +34,23 @@
 		"Tilemap.png"
 	],
 	"entities": {
-		"KillZone": [
-			{
-				"id": "KillZone",
-				"iid": "a01614e0-8990-11ee-942c-71baa1d5825a",
-				"layer": "Entities",
-				"x": 48,
-				"y": 240,
-				"width": 368,
-				"height": 16,
-				"color": 9568256,
-				"customFields": {
-					"on_fulfilled": []
-				}
-			}
-		],
 		"Narrator": [
 			{
 				"id": "Narrator",
-				"iid": "38680240-8990-11ee-942c-6959db74df9e",
+				"iid": "05f25ba0-8990-11ee-942c-f7e9556832ed",
 				"layer": "Entities",
-				"x": 160,
-				"y": 32,
-				"width": 64,
-				"height": 96,
+				"x": 16,
+				"y": 320,
+				"width": 96,
+				"height": 80,
 				"color": 15839922,
 				"customFields": {
 					"conditions": [],
 					"one_shot": true,
-					"on_fulfilled": [
-						"told_they_can_make_it"
-					],
-					"text": "You can definitely make it!",
-					"timer": 3
-				}
-			},
-			{
-				"id": "Narrator",
-				"iid": "bafcfd20-8990-11ee-942c-69e1e4f784ca",
-				"layer": "Entities",
-				"x": 320,
-				"y": 32,
-				"width": 64,
-				"height": 96,
-				"color": 15839922,
-				"customFields": {
-					"conditions": [
-						"told_they_can_make_it"
-					],
-					"one_shot": true,
 					"on_fulfilled": [],
-					"text": "See? Told you.",
+					"text": "The treasure is right\nup there...",
 					"timer": 3
 				}
-			}
-		],
-		"SpawnPoint": [
-			{
-				"id": "SpawnPoint",
-				"iid": "8cdd49e0-8990-11ee-942c-7f55eb47535a",
-				"layer": "Entities",
-				"x": 384,
-				"y": 112,
-				"width": 16,
-				"height": 16,
-				"color": 2434341,
-				"customFields" : {}
-			},
-			{
-				"id": "SpawnPoint",
-				"iid": "93c998d0-8990-11ee-942c-614e65d48d7a",
-				"layer": "Entities",
-				"x": 144,
-				"y": 112,
-				"width": 16,
-				"height": 16,
-				"color": 2434341,
-				"customFields" : {}
 			}
 		]
 	}

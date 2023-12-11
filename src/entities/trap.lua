@@ -6,10 +6,9 @@ function Arrow:init(props)
 	self.spritesheet = props.spritesheet
 	self.position = { x = props.position.x, y = props.position.y }
 	self.direction = { x = props.direction.x, y = props.position.y }
-	self.velocity = { x = 80, y = 0 }
+	self.velocity = { x = 160, y = 0 }
 	self.collision_actor = true
 	self.friction = 1
-	self.position.y = self.position.y + 8
 	self.hitbox = { width = 16, height = 4 }
 	self.platforming = true
 	self.drawable = true
@@ -27,12 +26,11 @@ function Trap:init(props)
 	local custom_fields = props.customFields
 
 	self.iid = props.iid
-	self.linked_entity_iid = custom_fields.Entity_ref.entityIid
+	-- self.linked_entity_iid = custom_fields.Entity_ref.entityIid
 	self.drawable_foreground = true
 	self.is_trap = true
 
 	self.type = custom_fields.trap
-	self.linked_entity = custom_fields.Entity_ref.entityIid
 	self.position = { x = props.x, y = props.y }
 	self.velocity = { x = 0, y = 0 }
 	self.direction = { x = custom_fields.direction_x, y = custom_fields.direction_y }
@@ -55,9 +53,6 @@ function Trap:trip()
 end
 
 function Trap:draw(dt)
-	if self.tripped then
-		love.graphics.print("tripped!", self.position.x, self.position.y)
-	end
 	love.graphics.draw(self.spritesheet, self.img, self.position.x, self.position.y)
 end
 

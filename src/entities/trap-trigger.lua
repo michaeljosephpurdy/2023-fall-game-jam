@@ -7,8 +7,12 @@ function TrapTrigger:init(props)
 	self.is_triggered = false
 
 	self.iid = props.iid
-	self.linked_entity_iid = custom_fields.Entity_ref.entityIid
 	self.drawable_foreground = true
+
+	self.linked_entity_iids = {}
+	for _, entity in ipairs(custom_fields.entity_refs) do
+		table.insert(self.linked_entity_iids, entity.entityIid)
+	end
 
 	self.position = { x = props.x, y = props.y }
 	self.velocity = { x = 0, y = 0 }

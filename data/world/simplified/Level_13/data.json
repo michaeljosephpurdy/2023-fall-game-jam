@@ -1,23 +1,27 @@
 {
 	"identifier": "Level_13",
-	"uniqueIdentifer": "a3437940-8990-11ee-942c-152bfc0728ec",
-	"x": 1520,
-	"y": -1616,
+	"uniqueIdentifer": "2a1151f0-8990-11ee-942c-671b2a0c8171",
+	"x": 1776,
+	"y": -1456,
 	"width": 256,
 	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
 			"levelIid": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
+			"dir": "w"
+		},
+		{
+			"levelIid": "4eb32300-8990-11ee-942c-2b05e8099202",
 			"dir": "s"
 		},
 		{
-			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
-			"dir": "e"
+			"levelIid": "a3437940-8990-11ee-942c-152bfc0728ec",
+			"dir": "w"
 		},
 		{
 			"levelIid": "f36985a0-8990-11ee-942c-0d43bcb935e5",
-			"dir": "e"
+			"dir": "n"
 		}
 	],
 	"customFields" : {},
@@ -26,184 +30,22 @@
 		"Tilemap.png"
 	],
 	"entities": {
-		"Collider": [
-			{
-				"id": "Collider",
-				"iid": "cd2d4bf0-8990-11ee-942c-157ca02d57c9",
-				"layer": "BigColliders",
-				"x": 0,
-				"y": 240,
-				"width": 256,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "d72183b0-8990-11ee-942c-07ec66c38477",
-				"layer": "BigColliders",
-				"x": 0,
-				"y": 112,
-				"width": 16,
-				"height": 128,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "d8207d20-8990-11ee-942c-27ac15a0775a",
-				"layer": "BigColliders",
-				"x": 16,
-				"y": 112,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "d8715c40-8990-11ee-942c-97f957b21d61",
-				"layer": "BigColliders",
-				"x": 32,
-				"y": 96,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "d9020380-8990-11ee-942c-fd65c37055a7",
-				"layer": "BigColliders",
-				"x": 48,
-				"y": 80,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "d96d2160-8990-11ee-942c-c50f7234195c",
-				"layer": "BigColliders",
-				"x": 64,
-				"y": 48,
-				"width": 160,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "d9dd6f60-8990-11ee-942c-11335a3c4c42",
-				"layer": "BigColliders",
-				"x": 64,
-				"y": 64,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "dbae5ed0-8990-11ee-942c-cbc9d26d83fa",
-				"layer": "BigColliders",
-				"x": 208,
-				"y": 64,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "dc32d110-8990-11ee-942c-3b5ee245696a",
-				"layer": "BigColliders",
-				"x": 224,
-				"y": 80,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "dcaf2d00-8990-11ee-942c-991a61d4c5a0",
-				"layer": "BigColliders",
-				"x": 240,
-				"y": 80,
-				"width": 16,
-				"height": 96,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "de1091c0-8990-11ee-942c-8d283fe3f731",
-				"layer": "BigColliders",
-				"x": 96,
-				"y": 160,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "de952b10-8990-11ee-942c-3337e21a9476",
-				"layer": "BigColliders",
-				"x": 32,
-				"y": 208,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "df0eeef0-8990-11ee-942c-690d2d3d7366",
-				"layer": "BigColliders",
-				"x": 112,
-				"y": 144,
-				"width": 128,
-				"height": 32,
-				"color": 16777215,
-				"customFields" : {}
-			}
-		],
-		"Item": [
-			{
-				"id": "Item",
-				"iid": "791270c0-8990-11ee-942c-2d9949cf2194",
-				"layer": "Entities",
-				"x": 208,
-				"y": 128,
-				"width": 16,
-				"height": 16,
-				"color": 18761,
-				"customFields": {
-					"type": "Double_jump"
-				}
-			}
-		],
 		"Narrator": [
 			{
 				"id": "Narrator",
-				"iid": "cd03fae0-8990-11ee-942c-f75689bbb905",
+				"iid": "aa1d5940-8990-11ee-942c-3589a7653998",
 				"layer": "Entities",
-				"x": 80,
-				"y": 64,
-				"width": 96,
-				"height": 80,
+				"x": 112,
+				"y": 16,
+				"width": 32,
+				"height": 160,
 				"color": 15839922,
 				"customFields": {
-					"conditions": [
-						"double_jump"
-					],
+					"conditions": [],
 					"one_shot": true,
 					"on_fulfilled": [],
-					"text": "Big whoop, you found the\n'double jump', who cares?",
-					"timer": 3
+					"text": "You should just turn around,\nnothing up here for you.",
+					"timer": 2
 				}
 			}
 		]

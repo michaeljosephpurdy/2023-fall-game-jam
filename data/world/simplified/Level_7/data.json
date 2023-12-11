@@ -1,27 +1,27 @@
 {
 	"identifier": "Level_7",
-	"uniqueIdentifer": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
-	"x": 1312,
-	"y": -1360,
-	"width": 464,
-	"height": 416,
+	"uniqueIdentifer": "e0983020-8990-11ee-942c-a150814f0d8d",
+	"x": 832,
+	"y": -832,
+	"width": 416,
+	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
-			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
+			"levelIid": "bda369f0-8990-11ee-942c-f36b8d2f1ad6",
+			"dir": "s"
+		},
+		{
+			"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
 			"dir": "w"
 		},
 		{
-			"levelIid": "4eb32300-8990-11ee-942c-2b05e8099202",
-			"dir": "e"
-		},
-		{
-			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
-			"dir": "e"
-		},
-		{
-			"levelIid": "a3437940-8990-11ee-942c-152bfc0728ec",
+			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
 			"dir": "n"
+		},
+		{
+			"levelIid": "86c2c150-8990-11ee-942c-a3d02f83e773",
+			"dir": "e"
 		}
 	],
 	"customFields" : {},
@@ -30,181 +30,83 @@
 		"Tilemap.png"
 	],
 	"entities": {
-		"Collider": [
+		"KillZone": [
 			{
-				"id": "Collider",
-				"iid": "5eeeab50-8990-11ee-942c-717db19eb729",
-				"layer": "BigColliders",
-				"x": 0,
-				"y": 368,
-				"width": 48,
-				"height": 48,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "609f4180-8990-11ee-942c-a3e58234da0d",
-				"layer": "BigColliders",
-				"x": 48,
-				"y": 400,
-				"width": 192,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "68f02980-8990-11ee-942c-e1cf747f24a9",
-				"layer": "BigColliders",
-				"x": 240,
-				"y": 256,
-				"width": 32,
-				"height": 160,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "6b6c9b30-8990-11ee-942c-ff254c827e6a",
-				"layer": "BigColliders",
-				"x": 144,
-				"y": 288,
-				"width": 32,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "768dd9e0-8990-11ee-942c-2969107b833f",
-				"layer": "BigColliders",
-				"x": 272,
-				"y": 400,
-				"width": 192,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "781cb740-8990-11ee-942c-f30c4bdf5e5d",
-				"layer": "BigColliders",
-				"x": 448,
-				"y": 144,
-				"width": 16,
-				"height": 48,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "7a62d6b0-8990-11ee-942c-6117be5b6bc2",
-				"layer": "BigColliders",
-				"x": 432,
-				"y": 160,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "7bc091f0-8990-11ee-942c-f39d0d72d275",
-				"layer": "BigColliders",
-				"x": 416,
-				"y": 128,
-				"width": 16,
-				"height": 32,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "7d937d30-8990-11ee-942c-ff0713b7c84d",
-				"layer": "BigColliders",
-				"x": 400,
-				"y": 80,
-				"width": 16,
-				"height": 48,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "8007ffa0-8990-11ee-942c-1b150d357365",
-				"layer": "BigColliders",
-				"x": 352,
-				"y": 0,
-				"width": 32,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "817ff9a0-8990-11ee-942c-fdd405acef96",
-				"layer": "BigColliders",
-				"x": 368,
-				"y": 16,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "8246f320-8990-11ee-942c-63333e270a9b",
-				"layer": "BigColliders",
-				"x": 384,
-				"y": 16,
-				"width": 16,
-				"height": 64,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "b4287610-8990-11ee-942c-1be79916b66e",
-				"layer": "BigColliders",
-				"x": 80,
-				"y": 336,
-				"width": 32,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			}
-		],
-		"SpawnPoint": [
-			{
-				"id": "SpawnPoint",
-				"iid": "9ccadb10-8990-11ee-942c-d90be584468b",
+				"id": "KillZone",
+				"iid": "a01614e0-8990-11ee-942c-71baa1d5825a",
 				"layer": "Entities",
-				"x": 304,
-				"y": 384,
-				"width": 16,
+				"x": 48,
+				"y": 240,
+				"width": 368,
 				"height": 16,
-				"color": 2434341,
-				"customFields" : {}
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
 			}
 		],
 		"Narrator": [
 			{
 				"id": "Narrator",
-				"iid": "97854f90-8990-11ee-942c-6947ab003c75",
+				"iid": "38680240-8990-11ee-942c-6959db74df9e",
 				"layer": "Entities",
-				"x": 272,
-				"y": 320,
-				"width": 192,
-				"height": 80,
+				"x": 160,
+				"y": 32,
+				"width": 64,
+				"height": 96,
 				"color": 15839922,
 				"customFields": {
 					"conditions": [],
 					"one_shot": true,
-					"on_fulfilled": [],
-					"text": "No way back now.",
+					"on_fulfilled": [
+						"told_they_can_make_it"
+					],
+					"text": "You can definitely make it!",
 					"timer": 3
 				}
+			},
+			{
+				"id": "Narrator",
+				"iid": "bafcfd20-8990-11ee-942c-69e1e4f784ca",
+				"layer": "Entities",
+				"x": 320,
+				"y": 32,
+				"width": 64,
+				"height": 96,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [
+						"told_they_can_make_it"
+					],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "See? Told you.",
+					"timer": 3
+				}
+			}
+		],
+		"SpawnPoint": [
+			{
+				"id": "SpawnPoint",
+				"iid": "8cdd49e0-8990-11ee-942c-7f55eb47535a",
+				"layer": "Entities",
+				"x": 384,
+				"y": 112,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
+			},
+			{
+				"id": "SpawnPoint",
+				"iid": "93c998d0-8990-11ee-942c-614e65d48d7a",
+				"layer": "Entities",
+				"x": 144,
+				"y": 112,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
 			}
 		]
 	}

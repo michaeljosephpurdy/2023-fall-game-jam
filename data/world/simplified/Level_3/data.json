@@ -1,15 +1,27 @@
 {
 	"identifier": "Level_3",
-	"uniqueIdentifer": "5735bbf0-8990-11ee-942c-b9022d215f92",
-	"x": -688,
-	"y": -2256,
-	"width": 688,
-	"height": 512,
+	"uniqueIdentifer": "2c29d630-8990-11ee-942c-b9c85e3bda57",
+	"x": 576,
+	"y": -944,
+	"width": 256,
+	"height": 304,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
 			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
+			"dir": "w"
+		},
+		{
+			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
 			"dir": "e"
+		},
+		{
+			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
+			"dir": "e"
+		},
+		{
+			"levelIid": "5ee552a0-8990-11ee-942c-f17c0e82600c",
+			"dir": "n"
 		}
 	],
 	"customFields" : {},
@@ -17,5 +29,52 @@
 		"Level_Flair.png",
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"Trap": [
+			{
+				"id": "Trap",
+				"iid": "09c50360-8990-11ee-942c-b5eaa18f0372",
+				"layer": "Entities",
+				"x": 16,
+				"y": 80,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields": {
+					"Entity_ref": {
+						"entityIid": "15368c50-8990-11ee-942c-8f9d210320c2",
+						"layerIid": "2c29d631-8990-11ee-942c-8dbb7d6ec1a9",
+						"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
+						"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+					},
+					"direction_x": 1,
+					"direction_y": 0,
+					"trap": "Arrow"
+				}
+			}
+		],
+		"TrapTrigger": [
+			{
+				"id": "TrapTrigger",
+				"iid": "15368c50-8990-11ee-942c-8f9d210320c2",
+				"layer": "Entities",
+				"x": 128,
+				"y": 128,
+				"width": 16,
+				"height": 16,
+				"color": 6776679,
+				"customFields": {
+					"entity_refs": [
+						{
+							"entityIid": "09c50360-8990-11ee-942c-b5eaa18f0372",
+							"layerIid": "2c29d631-8990-11ee-942c-8dbb7d6ec1a9",
+							"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
+							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+						}
+					],
+					"reactivation_delay": 2
+				}
+			}
+		]
+	}
 }

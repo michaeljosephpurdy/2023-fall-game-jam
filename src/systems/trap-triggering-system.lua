@@ -17,20 +17,21 @@ function TrapTriggeringSystem:onAdd(e)
 end
 
 function TrapTriggeringSystem:process(e, dt)
-	if e.is_done then
+	if e.is_done and e.is_triggered then
 		return
 	end
 	if e.is_trap_trigger and e.is_triggered then
-		for _, trap in pairs(self.traps) do
-			if e.linked_entity_iid == trap.iid then
-				trap:trip()
-				e.is_done = true
+		e.is_done = true
+		local trigger = e
+		for _, linked_entity_iid in pairs(trigger.linked_entity_iids) do
+			for _, trap in pairs(self.traps) do
+				if linked_entity_iid == trap.iid then
+					print("match")
+					trap:trip()
+				end
 			end
 		end
 	end
-	if e.is_trap then
-	end
-	-- pass
 end
 
 return TrapTriggeringSystem

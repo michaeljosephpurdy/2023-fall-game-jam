@@ -1,14 +1,18 @@
 {
 	"identifier": "Level_15",
-	"uniqueIdentifer": "188cf7e0-8990-11ee-942c-51061e9f4b2b",
-	"x": 2528,
-	"y": -1200,
+	"uniqueIdentifer": "f36985a0-8990-11ee-942c-0d43bcb935e5",
+	"x": 1776,
+	"y": -1712,
 	"width": 256,
 	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
-			"levelIid": "4eb32300-8990-11ee-942c-2b05e8099202",
+			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
+			"dir": "s"
+		},
+		{
+			"levelIid": "a3437940-8990-11ee-942c-152bfc0728ec",
 			"dir": "w"
 		}
 	],
@@ -17,63 +21,5 @@
 		"Level_Flair.png",
 		"Tilemap.png"
 	],
-	"entities": {
-		"Collider": [
-			{
-				"id": "Collider",
-				"iid": "b04760c0-8990-11ee-942c-1b205e08740b",
-				"layer": "BigColliders",
-				"x": 0,
-				"y": 160,
-				"width": 208,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "b2c5a730-8990-11ee-942c-b7aa5ac02eee",
-				"layer": "BigColliders",
-				"x": 0,
-				"y": 0,
-				"width": 16,
-				"height": 160,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "b571db70-8990-11ee-942c-4128e9c6cdfa",
-				"layer": "BigColliders",
-				"x": 16,
-				"y": 0,
-				"width": 240,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "ba299720-8990-11ee-942c-97d28959a5ff",
-				"layer": "BigColliders",
-				"x": 240,
-				"y": 16,
-				"width": 16,
-				"height": 224,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "bc849e20-8990-11ee-942c-af664538377c",
-				"layer": "BigColliders",
-				"x": 0,
-				"y": 240,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			}
-		]
-	}
+	"entities" : {}
 }

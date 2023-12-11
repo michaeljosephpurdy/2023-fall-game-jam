@@ -1,27 +1,15 @@
 {
 	"identifier": "Level_2",
-	"uniqueIdentifer": "2c29d630-8990-11ee-942c-b9c85e3bda57",
-	"x": 576,
-	"y": -944,
-	"width": 256,
-	"height": 304,
+	"uniqueIdentifer": "5985ad40-8990-11ee-942c-9d8fed975007",
+	"x": 144,
+	"y": -576,
+	"width": 688,
+	"height": 368,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
-			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
-			"dir": "w"
-		},
-		{
-			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
+			"levelIid": "bda369f0-8990-11ee-942c-f36b8d2f1ad6",
 			"dir": "e"
-		},
-		{
-			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
-			"dir": "e"
-		},
-		{
-			"levelIid": "5ee552a0-8990-11ee-942c-f17c0e82600c",
-			"dir": "n"
 		}
 	],
 	"customFields" : {},
@@ -30,139 +18,165 @@
 		"Tilemap.png"
 	],
 	"entities": {
-		"Collider": [
+		"KillZone": [
 			{
-				"id": "Collider",
-				"iid": "2a344960-8990-11ee-942c-9b6a1f905d13",
-				"layer": "BigColliders",
-				"x": 0,
-				"y": 0,
-				"width": 256,
+				"id": "KillZone",
+				"iid": "5985ad44-8990-11ee-942c-57acf4b80c51",
+				"layer": "Entities",
+				"x": 448,
+				"y": 352,
+				"width": 672,
 				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "2c6fe180-8990-11ee-942c-e37f0c06221a",
-				"layer": "BigColliders",
-				"x": 0,
-				"y": 16,
-				"width": 16,
-				"height": 192,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "2e096d40-8990-11ee-942c-efeff936aee7",
-				"layer": "BigColliders",
-				"x": 16,
-				"y": 192,
-				"width": 32,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "301a24d0-8990-11ee-942c-854449a63c0b",
-				"layer": "BigColliders",
-				"x": 0,
-				"y": 240,
-				"width": 256,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "31c98280-8990-11ee-942c-8d18d89d3873",
-				"layer": "BigColliders",
-				"x": 96,
-				"y": 144,
-				"width": 64,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "35a695a0-8990-11ee-942c-ff0045427be6",
-				"layer": "BigColliders",
-				"x": 192,
-				"y": 96,
-				"width": 64,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "36e5a550-8990-11ee-942c-cb92acc94126",
-				"layer": "BigColliders",
-				"x": 224,
-				"y": 112,
-				"width": 32,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
 			}
 		],
 		"Trap": [
 			{
 				"id": "Trap",
-				"iid": "09c50360-8990-11ee-942c-b5eaa18f0372",
+				"iid": "5985ad45-8990-11ee-942c-0deba53feeac",
 				"layer": "Entities",
-				"x": 16,
-				"y": 144,
+				"x": 80,
+				"y": 304,
 				"width": 16,
 				"height": 16,
 				"color": 16777215,
 				"customFields": {
-					"Entity_ref": {
-						"entityIid": "15368c50-8990-11ee-942c-8f9d210320c2",
-						"layerIid": "2c29d631-8990-11ee-942c-8dbb7d6ec1a9",
-						"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
-						"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
-					},
+					"Entity_ref": null,
 					"direction_x": 1,
 					"direction_y": 0,
 					"trap": "Arrow"
 				}
-			}
-		],
-		"TrapTrigger": [
+			},
 			{
-				"id": "TrapTrigger",
-				"iid": "15368c50-8990-11ee-942c-8f9d210320c2",
+				"id": "Trap",
+				"iid": "5985ad46-8990-11ee-942c-31c39d84092c",
 				"layer": "Entities",
-				"x": 128,
-				"y": 128,
+				"x": 256,
+				"y": 304,
 				"width": 16,
 				"height": 16,
-				"color": 6776679,
+				"color": 16777215,
 				"customFields": {
-					"Entity_ref": {
-						"entityIid": "09c50360-8990-11ee-942c-b5eaa18f0372",
-						"layerIid": "2c29d631-8990-11ee-942c-8dbb7d6ec1a9",
-						"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
-						"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
-					}
+					"Entity_ref": null,
+					"direction_x": 1,
+					"direction_y": 0,
+					"trap": "Arrow"
 				}
-			}
-		],
-		"Player": [
+			},
 			{
-				"id": "Player",
-				"iid": "88a84a30-8990-11ee-942c-e7d3e10c48f4",
+				"id": "Trap",
+				"iid": "5985ad47-8990-11ee-942c-579205c58fe7",
 				"layer": "Entities",
-				"x": 208,
-				"y": 64,
+				"x": 272,
+				"y": 320,
 				"width": 16,
 				"height": 16,
-				"color": 0,
-				"customFields" : {}
+				"color": 16777215,
+				"customFields": {
+					"Entity_ref": null,
+					"direction_x": 1,
+					"direction_y": 0,
+					"trap": "Arrow"
+				}
+			},
+			{
+				"id": "Trap",
+				"iid": "5985ad48-8990-11ee-942c-bb052fce4333",
+				"layer": "Entities",
+				"x": 464,
+				"y": 336,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields": {
+					"Entity_ref": null,
+					"direction_x": 1,
+					"direction_y": 0,
+					"trap": "Arrow"
+				}
+			},
+			{
+				"id": "Trap",
+				"iid": "5985ad49-8990-11ee-942c-43848eed45e4",
+				"layer": "Entities",
+				"x": 480,
+				"y": 320,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields": {
+					"Entity_ref": null,
+					"direction_x": 1,
+					"direction_y": 0,
+					"trap": "Arrow"
+				}
+			},
+			{
+				"id": "Trap",
+				"iid": "5985ad4a-8990-11ee-942c-7d04972d5dbd",
+				"layer": "Entities",
+				"x": 288,
+				"y": 336,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields": {
+					"Entity_ref": null,
+					"direction_x": 1,
+					"direction_y": 0,
+					"trap": "Arrow"
+				}
+			},
+			{
+				"id": "Trap",
+				"iid": "5985ad4b-8990-11ee-942c-cb9767eff2dc",
+				"layer": "Entities",
+				"x": 80,
+				"y": 288,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields": {
+					"Entity_ref": null,
+					"direction_x": 1,
+					"direction_y": 0,
+					"trap": "Arrow"
+				}
+			},
+			{
+				"id": "Trap",
+				"iid": "5985ad4c-8990-11ee-942c-eb76b4ddbc5e",
+				"layer": "Entities",
+				"x": 496,
+				"y": 320,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields": {
+					"Entity_ref": null,
+					"direction_x": 1,
+					"direction_y": 0,
+					"trap": "Arrow"
+				}
+			},
+			{
+				"id": "Trap",
+				"iid": "5985ad4d-8990-11ee-942c-333a37bee831",
+				"layer": "Entities",
+				"x": 512,
+				"y": 336,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields": {
+					"Entity_ref": null,
+					"direction_x": 1,
+					"direction_y": 0,
+					"trap": "Arrow"
+				}
 			}
 		]
 	}

@@ -1,23 +1,23 @@
 {
 	"identifier": "Level_17",
-	"uniqueIdentifer": "d674c930-8990-11ee-942c-a53392394db9",
-	"x": -512,
-	"y": -3424,
-	"width": 288,
-	"height": 768,
+	"uniqueIdentifer": "c589bb30-8990-11ee-942c-539b2696fb25",
+	"x": -224,
+	"y": -2832,
+	"width": 224,
+	"height": 176,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
+			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
+			"dir": "e"
+		},
+		{
 			"levelIid": "b5e99010-8990-11ee-942c-edeec0bd8881",
-			"dir": "e"
+			"dir": "n"
 		},
 		{
-			"levelIid": "c589bb30-8990-11ee-942c-539b2696fb25",
-			"dir": "e"
-		},
-		{
-			"levelIid": "ea7e0720-8990-11ee-942c-6f06a12d4723",
-			"dir": "e"
+			"levelIid": "d674c930-8990-11ee-942c-a53392394db9",
+			"dir": "w"
 		}
 	],
 	"customFields" : {},
@@ -25,5 +25,19 @@
 		"Level_Flair.png",
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"SpawnPoint": [
+			{
+				"id": "SpawnPoint",
+				"iid": "700c3fe0-8990-11ee-942c-c9e71b8665d7",
+				"layer": "Entities",
+				"x": 32,
+				"y": 144,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
+			}
+		]
+	}
 }

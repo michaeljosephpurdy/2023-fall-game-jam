@@ -1,15 +1,27 @@
 {
 	"identifier": "Level_1",
 	"uniqueIdentifer": "bda369f0-8990-11ee-942c-f36b8d2f1ad6",
-	"x": 608,
+	"x": 832,
 	"y": -576,
-	"width": 272,
+	"width": 768,
 	"height": 368,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
+			"levelIid": "5985ad40-8990-11ee-942c-9d8fed975007",
+			"dir": "w"
+		},
+		{
 			"levelIid": "e0983020-8990-11ee-942c-a150814f0d8d",
 			"dir": "n"
+		},
+		{
+			"levelIid": "86c2c150-8990-11ee-942c-a3d02f83e773",
+			"dir": "n"
+		},
+		{
+			"levelIid": "91dcbac0-8990-11ee-942c-bbf7202d3f03",
+			"dir": "e"
 		}
 	],
 	"customFields" : {},
@@ -18,15 +30,122 @@
 		"Tilemap.png"
 	],
 	"entities": {
+		"TrapTrigger": [
+			{
+				"id": "TrapTrigger",
+				"iid": "3a462200-8990-11ee-942c-c927f08274eb",
+				"layer": "Entities",
+				"x": 752,
+				"y": 336,
+				"width": 16,
+				"height": 16,
+				"color": 6776679,
+				"customFields": {
+					"entity_refs": [
+						{
+							"entityIid": "5985ad4b-8990-11ee-942c-cb9767eff2dc",
+							"layerIid": "5985ad43-8990-11ee-942c-7f238406a1a7",
+							"levelIid": "5985ad40-8990-11ee-942c-9d8fed975007",
+							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+						},
+						{
+							"entityIid": "5985ad45-8990-11ee-942c-0deba53feeac",
+							"layerIid": "5985ad43-8990-11ee-942c-7f238406a1a7",
+							"levelIid": "5985ad40-8990-11ee-942c-9d8fed975007",
+							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+						},
+						{
+							"entityIid": "5985ad46-8990-11ee-942c-31c39d84092c",
+							"layerIid": "5985ad43-8990-11ee-942c-7f238406a1a7",
+							"levelIid": "5985ad40-8990-11ee-942c-9d8fed975007",
+							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+						},
+						{
+							"entityIid": "5985ad47-8990-11ee-942c-579205c58fe7",
+							"layerIid": "5985ad43-8990-11ee-942c-7f238406a1a7",
+							"levelIid": "5985ad40-8990-11ee-942c-9d8fed975007",
+							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+						},
+						{
+							"entityIid": "5985ad4a-8990-11ee-942c-7d04972d5dbd",
+							"layerIid": "5985ad43-8990-11ee-942c-7f238406a1a7",
+							"levelIid": "5985ad40-8990-11ee-942c-9d8fed975007",
+							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+						},
+						{
+							"entityIid": "5985ad48-8990-11ee-942c-bb052fce4333",
+							"layerIid": "5985ad43-8990-11ee-942c-7f238406a1a7",
+							"levelIid": "5985ad40-8990-11ee-942c-9d8fed975007",
+							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+						},
+						{
+							"entityIid": "5985ad49-8990-11ee-942c-43848eed45e4",
+							"layerIid": "5985ad43-8990-11ee-942c-7f238406a1a7",
+							"levelIid": "5985ad40-8990-11ee-942c-9d8fed975007",
+							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+						},
+						{
+							"entityIid": "5985ad4c-8990-11ee-942c-eb76b4ddbc5e",
+							"layerIid": "5985ad43-8990-11ee-942c-7f238406a1a7",
+							"levelIid": "5985ad40-8990-11ee-942c-9d8fed975007",
+							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+						},
+						{
+							"entityIid": "5985ad4d-8990-11ee-942c-333a37bee831",
+							"layerIid": "5985ad43-8990-11ee-942c-7f238406a1a7",
+							"levelIid": "5985ad40-8990-11ee-942c-9d8fed975007",
+							"worldIid": "6b4356a1-8990-11ee-8cf0-ab7dad056a70"
+						}
+					],
+					"reactivation_delay": 2
+				}
+			}
+		],
+		"Item": [
+			{
+				"id": "Item",
+				"iid": "ab700da0-8990-11ee-942c-6158031f194c",
+				"layer": "Entities",
+				"x": 720,
+				"y": 208,
+				"width": 16,
+				"height": 16,
+				"color": 18761,
+				"customFields": {
+					"type": "Dash"
+				}
+			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "b21e6930-8990-11ee-942c-f17598f1a67c",
+				"layer": "Entities",
+				"x": 592,
+				"y": 192,
+				"width": 128,
+				"height": 32,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [
+						"can_dash"
+					],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "Being able to dash when hitting\n\"z\" doesn't make you worthy...",
+					"timer": 3
+				}
+			}
+		],
 		"KillZone": [
 			{
 				"id": "KillZone",
-				"iid": "d5b7e600-8990-11ee-942c-a92a2eb9a387",
+				"iid": "7d1d44d0-8990-11ee-942c-d1e0556a7d4d",
 				"layer": "Entities",
-				"x": 256,
-				"y": 320,
+				"x": 464,
+				"y": 176,
 				"width": 16,
-				"height": 48,
+				"height": 16,
 				"color": 9568256,
 				"customFields": {
 					"on_fulfilled": []
@@ -34,16 +153,81 @@
 			},
 			{
 				"id": "KillZone",
-				"iid": "d7cf0630-8990-11ee-942c-f970327157ab",
+				"iid": "9b2f3770-8990-11ee-942c-b388c00a466b",
 				"layer": "Entities",
 				"x": 0,
 				"y": 352,
-				"width": 272,
+				"width": 288,
 				"height": 16,
 				"color": 9568256,
 				"customFields": {
 					"on_fulfilled": []
 				}
+			},
+			{
+				"id": "KillZone",
+				"iid": "9cabf6f0-8990-11ee-942c-e3edd5fc8146",
+				"layer": "Entities",
+				"x": 368,
+				"y": 176,
+				"width": 64,
+				"height": 16,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
+			},
+			{
+				"id": "KillZone",
+				"iid": "9e957770-8990-11ee-942c-a78d348e3dca",
+				"layer": "Entities",
+				"x": 336,
+				"y": 192,
+				"width": 32,
+				"height": 16,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
+			},
+			{
+				"id": "KillZone",
+				"iid": "a10b3260-8990-11ee-942c-ab5e498ce30d",
+				"layer": "Entities",
+				"x": 288,
+				"y": 224,
+				"width": 16,
+				"height": 16,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
+			},
+			{
+				"id": "KillZone",
+				"iid": "a1c27470-8990-11ee-942c-3d8fb196dffe",
+				"layer": "Entities",
+				"x": 304,
+				"y": 208,
+				"width": 32,
+				"height": 16,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
+			}
+		],
+		"SpawnPoint": [
+			{
+				"id": "SpawnPoint",
+				"iid": "c679d3e0-8990-11ee-942c-8d4b4727c805",
+				"layer": "Entities",
+				"x": 16,
+				"y": 16,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
 			}
 		]
 	}

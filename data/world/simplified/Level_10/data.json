@@ -1,23 +1,27 @@
 {
 	"identifier": "Level_10",
-	"uniqueIdentifer": "5ee552a0-8990-11ee-942c-f17c0e82600c",
-	"x": 576,
-	"y": -1200,
-	"width": 256,
+	"uniqueIdentifer": "b5e99010-8990-11ee-942c-edeec0bd8881",
+	"x": -224,
+	"y": -3088,
+	"width": 704,
 	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
 			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
-			"dir": "w"
-		},
-		{
-			"levelIid": "2c29d630-8990-11ee-942c-b9c85e3bda57",
 			"dir": "s"
 		},
 		{
-			"levelIid": "de7920b0-8990-11ee-942c-9f61e6f9909e",
-			"dir": "e"
+			"levelIid": "c589bb30-8990-11ee-942c-539b2696fb25",
+			"dir": "s"
+		},
+		{
+			"levelIid": "d674c930-8990-11ee-942c-a53392394db9",
+			"dir": "w"
+		},
+		{
+			"levelIid": "ea7e0720-8990-11ee-942c-6f06a12d4723",
+			"dir": "n"
 		}
 	],
 	"customFields" : {},
@@ -26,124 +30,36 @@
 		"Tilemap.png"
 	],
 	"entities": {
-		"Collider": [
-			{
-				"id": "Collider",
-				"iid": "4d0c9320-8990-11ee-942c-0f798571bf11",
-				"layer": "BigColliders",
-				"x": 128,
-				"y": 128,
-				"width": 112,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "4e5789b0-8990-11ee-942c-4547357fc2cf",
-				"layer": "BigColliders",
-				"x": 240,
-				"y": 32,
-				"width": 16,
-				"height": 160,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "53d861c0-8990-11ee-942c-77470c401106",
-				"layer": "BigColliders",
-				"x": 224,
-				"y": 48,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "5460a490-8990-11ee-942c-9fe1ecc07911",
-				"layer": "BigColliders",
-				"x": 208,
-				"y": 32,
-				"width": 32,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "564df5a0-8990-11ee-942c-f380142bcb84",
-				"layer": "BigColliders",
-				"x": 16,
-				"y": 32,
-				"width": 32,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "580b8420-8990-11ee-942c-0bf7269bf99c",
-				"layer": "BigColliders",
-				"x": 16,
-				"y": 48,
-				"width": 16,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "58bcabb0-8990-11ee-942c-0f0bcb09e903",
-				"layer": "BigColliders",
-				"x": 0,
-				"y": 48,
-				"width": 16,
-				"height": 208,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "5a672760-8990-11ee-942c-53b7b2b4e54f",
-				"layer": "BigColliders",
-				"x": 16,
-				"y": 240,
-				"width": 240,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			},
-			{
-				"id": "Collider",
-				"iid": "5c14d760-8990-11ee-942c-331bf135879a",
-				"layer": "BigColliders",
-				"x": 32,
-				"y": 16,
-				"width": 192,
-				"height": 16,
-				"color": 16777215,
-				"customFields" : {}
-			}
-		],
 		"Narrator": [
 			{
 				"id": "Narrator",
-				"iid": "43701560-8990-11ee-942c-1964e766a680",
+				"iid": "92511ae0-8990-11ee-942c-8591df8dfb6a",
 				"layer": "Entities",
-				"x": 80,
-				"y": 144,
-				"width": 96,
-				"height": 96,
+				"x": 256,
+				"y": 64,
+				"width": 304,
+				"height": 80,
 				"color": 15839922,
 				"customFields": {
 					"conditions": [],
 					"one_shot": true,
 					"on_fulfilled": [],
-					"text": "What made you think something\nwould be in here? Ha!",
+					"text": "A new adventurer here for my\ntreasures?",
 					"timer": 3
 				}
+			}
+		],
+		"Player": [
+			{
+				"id": "Player",
+				"iid": "57edb2b0-8990-11ee-942c-69ba64bf62df",
+				"layer": "Entities",
+				"x": 64,
+				"y": 80,
+				"width": 16,
+				"height": 16,
+				"color": 0,
+				"customFields" : {}
 			}
 		]
 	}

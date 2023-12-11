@@ -7,6 +7,10 @@ function GameData:init(props)
 	self.seconds = 0
 	self.minutes = 0
 	self.deaths = 0
+	self.spawn_points = 0
+	PubSub.subscribe("spawnpoint.activated", function()
+		self.spawn_points = self.spawn_points + 1
+	end)
 end
 
 function GameData:update_time(dt)
