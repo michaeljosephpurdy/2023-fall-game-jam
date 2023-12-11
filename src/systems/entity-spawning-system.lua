@@ -33,6 +33,7 @@ function EntitySpawningSystem:init()
 			entity = Trap:new(props)
 		end
 		self.world:addEntity(entity)
+		entity.world = self.world
 	end)
 end
 

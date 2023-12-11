@@ -1,3 +1,4 @@
+local SpawnPointFx = require("src.entities.spawn-point-fx")
 local SpawnPoint = class("SpawnPoint")
 
 function SpawnPoint:init(props)
@@ -14,6 +15,12 @@ function SpawnPoint:on_collision(player)
 	if not self.active then
 		self.active = true
 		PubSub.publish("spawnpoint.activated")
+		local fx = SpawnPointFx:new({
+			x = self.position.x + self.hitbox.width / 2,
+			y = self.position.y + self.hitbox.height / 2,
+		})
+		self.world:addEntity(fx)
+		fx.world = self.world
 	end
 	player.spawn_point.x = self.position.x
 	player.spawn_point.y = self.position.y

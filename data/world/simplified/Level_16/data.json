@@ -2,9 +2,9 @@
 	"identifier": "Level_16",
 	"uniqueIdentifer": "188cf7e0-8990-11ee-942c-51061e9f4b2b",
 	"x": 2528,
-	"y": -1200,
+	"y": -1408,
 	"width": 256,
-	"height": 256,
+	"height": 464,
 	"bgColor": "#232635",
 	"neighbourLevels": [
 		{
@@ -28,7 +28,7 @@
 				"iid": "1c0aaa30-8990-11ee-942c-bf2d499c4216",
 				"layer": "Entities",
 				"x": 48,
-				"y": 144,
+				"y": 352,
 				"width": 16,
 				"height": 16,
 				"color": 2434341,

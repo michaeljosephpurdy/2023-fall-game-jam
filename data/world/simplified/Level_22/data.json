@@ -2,7 +2,7 @@
 	"identifier": "Level_22",
 	"uniqueIdentifer": "1c2c1f70-8990-11ee-942c-5bb7c6026ff9",
 	"x": 2272,
-	"y": -1744,
+	"y": -1952,
 	"width": 512,
 	"height": 544,
 	"bgColor": "#232635",
@@ -21,5 +21,25 @@
 		"Level_Flair.png",
 		"Tilemap.png"
 	],
-	"entities" : {}
+	"entities": {
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "72643cd0-8990-11ee-942c-61f35526b583",
+				"layer": "Entities",
+				"x": 256,
+				"y": 320,
+				"width": 48,
+				"height": 48,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "It watches over all.",
+					"timer": 3
+				}
+			}
+		]
+	}
 }

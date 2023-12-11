@@ -52,10 +52,10 @@
 		"Player": [
 			{
 				"id": "Player",
-				"iid": "57edb2b0-8990-11ee-942c-69ba64bf62df",
+				"iid": "bbcccf40-8990-11ee-942c-cfb2db63fe1e",
 				"layer": "Entities",
 				"x": 64,
-				"y": 80,
+				"y": 64,
 				"width": 16,
 				"height": 16,
 				"color": 0,

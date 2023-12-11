@@ -7,7 +7,7 @@ function EntityForegroundDrawingSystem:onAddToWorld(world) end
 function EntityForegroundDrawingSystem:preProcess(dt) end
 
 function EntityForegroundDrawingSystem:process(e, dt)
-	e:draw()
+	e:draw(dt)
 end
 
 function EntityForegroundDrawingSystem:postProcess(dt) end

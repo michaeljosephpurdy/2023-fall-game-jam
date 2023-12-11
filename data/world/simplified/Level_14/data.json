@@ -2,15 +2,11 @@
 	"identifier": "Level_14",
 	"uniqueIdentifer": "a3437940-8990-11ee-942c-152bfc0728ec",
 	"x": 1520,
-	"y": -1616,
+	"y": -1824,
 	"width": 256,
 	"height": 256,
 	"bgColor": "#232635",
 	"neighbourLevels": [
-		{
-			"levelIid": "1bde8ef0-8990-11ee-942c-ff58b4b99614",
-			"dir": "s"
-		},
 		{
 			"levelIid": "2a1151f0-8990-11ee-942c-671b2a0c8171",
 			"dir": "e"
