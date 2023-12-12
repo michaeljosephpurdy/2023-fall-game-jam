@@ -11,6 +11,7 @@ function SolidTile:init(props)
 	}
 	self.is_solid = true
 	self.level_id = props.level_id
+	self.permanant = props.permanant
 end
 
 return SolidTile

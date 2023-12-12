@@ -8,6 +8,7 @@ local SpawnPoint = require("src.entities.spawn-point")
 local Trap = require("src.entities.trap")
 local TrapTrigger = require("src.entities.trap-trigger")
 local GameData = require("src.entities.game-data")
+local SolidTile = require("src.entities.solid-tile")
 
 function EntitySpawningSystem:init()
 	local spritesheet = love.graphics.newImage("data/spritesheet.png")
@@ -34,6 +35,9 @@ function EntitySpawningSystem:init()
 			entity = Trap:new(props)
 		elseif props.id == "GameData" then
 			entity = GameData:new(props)
+		elseif props.id == "Collider" then
+			props.permanant = true
+			entity = SolidTile:new(props)
 		end
 		self.world:addEntity(entity)
 		entity.world = self.world

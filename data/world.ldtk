@@ -5084,6 +5084,22 @@
 									"params": ["can_dash"]
 								}] }
 							]
+						},
+						{
+							"__identifier": "Collider",
+							"__grid": [15,20],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#FFFFFF",
+							"__worldX": -704,
+							"__worldY": -896,
+							"iid": "a16877d0-8990-11ee-942c-21e86ba8055d",
+							"width": 16,
+							"height": 16,
+							"defUid": 103,
+							"px": [240,320],
+							"fieldInstances": []
 						}
 					]
 				},
