@@ -1,0 +1,29 @@
+{
+	"identifier": "Level_28",
+	"uniqueIdentifer": "9b6bae70-8990-11ee-942c-2b254262c9bf",
+	"x": -384,
+	"y": -1536,
+	"width": 384,
+	"height": 320,
+	"bgColor": "#232635",
+	"neighbourLevels": [
+		{
+			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
+			"dir": "e"
+		},
+		{
+			"levelIid": "5735bbf0-8990-11ee-942c-b9022d215f92",
+			"dir": "n"
+		},
+		{
+			"levelIid": "b907aaf0-8990-11ee-942c-1b5f9b6b41c0",
+			"dir": "s"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Level_Flair.png",
+		"Tilemap.png"
+	],
+	"entities" : {}
+}

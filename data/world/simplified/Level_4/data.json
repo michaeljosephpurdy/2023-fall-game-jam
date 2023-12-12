@@ -10,6 +10,10 @@
 		{
 			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
 			"dir": "e"
+		},
+		{
+			"levelIid": "9b6bae70-8990-11ee-942c-2b254262c9bf",
+			"dir": "s"
 		}
 	],
 	"customFields" : {},
@@ -37,8 +41,8 @@
 				"iid": "4621bc50-8990-11ee-942c-731463e31a33",
 				"layer": "Entities",
 				"x": 0,
-				"y": 640,
-				"width": 912,
+				"y": 704,
+				"width": 896,
 				"height": 16,
 				"color": 9568256,
 				"customFields": {
@@ -52,7 +56,7 @@
 				"x": 0,
 				"y": 0,
 				"width": 16,
-				"height": 640,
+				"height": 704,
 				"color": 9568256,
 				"customFields": {
 					"on_fulfilled": []
