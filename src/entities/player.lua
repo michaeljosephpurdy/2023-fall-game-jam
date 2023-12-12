@@ -38,7 +38,7 @@ function Player:init(props)
 	self.hitbox = { width = 4, height = 8 }
 	self.platforming = true
 	self.can_collide = true
-	self.can_dash = true
+	self.can_dash = false
 end
 
 function Player:on_collide() end

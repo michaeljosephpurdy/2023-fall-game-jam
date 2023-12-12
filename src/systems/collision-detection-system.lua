@@ -11,14 +11,18 @@ local function collision_filter(e1, e2)
 			return "slide"
 		end
 		return "cross"
-	elseif e1.is_moving_door then
+	end
+	if e1.is_moving_door then
 		if e2.is_solid then
 			return "slide"
 		end
-	elseif e1.is_arrow then
+		return nil
+	end
+	if e1.is_arrow then
 		if e2.is_solid then
 			return "touch"
 		end
+		return "cross"
 	end
 	return nil
 end

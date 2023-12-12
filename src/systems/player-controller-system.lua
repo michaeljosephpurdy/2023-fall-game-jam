@@ -9,6 +9,9 @@ function PlayerControllerSystem:init()
 end
 
 function PlayerControllerSystem:process(e, dt)
+	if e.is_game_over then
+		return
+	end
 	e.direction = { x = 0, y = 0 }
 
 	local left = love.keyboard.isDown("left")

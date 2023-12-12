@@ -7,6 +7,7 @@ local Item = require("src.entities.item")
 local SpawnPoint = require("src.entities.spawn-point")
 local Trap = require("src.entities.trap")
 local TrapTrigger = require("src.entities.trap-trigger")
+local GameData = require("src.entities.game-data")
 
 function EntitySpawningSystem:init()
 	local spritesheet = love.graphics.newImage("data/spritesheet.png")
@@ -31,6 +32,8 @@ function EntitySpawningSystem:init()
 			entity = TrapTrigger:new(props)
 		elseif props.id == "Trap" then
 			entity = Trap:new(props)
+		elseif props.id == "GameData" then
+			entity = GameData:new(props)
 		end
 		self.world:addEntity(entity)
 		entity.world = self.world

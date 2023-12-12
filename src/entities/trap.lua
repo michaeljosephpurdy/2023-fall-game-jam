@@ -1,27 +1,5 @@
 local Trap = class("Trap")
 
-local Arrow = class("Arrow")
-function Arrow:init(props)
-	self.is_arrow = true
-	self.spritesheet = props.spritesheet
-	self.position = { x = props.position.x, y = props.position.y }
-	self.direction = { x = props.direction.x, y = props.position.y }
-	self.velocity = { x = 160, y = 0 }
-	self.collision_actor = true
-	self.friction = 1
-	self.hitbox = { width = 16, height = 4 }
-	self.platforming = true
-	self.drawable = true
-	self.img = love.graphics.newQuad(9 * 16, 16, 16, 16, self.spritesheet)
-end
-
-function Arrow:draw(dt)
-	love.graphics.draw(self.spritesheet, self.img, self.position.x, self.position.y)
-end
-function Arrow:on_collision(player)
-	player:respawn()
-end
-
 function Trap:init(props)
 	local custom_fields = props.customFields
 

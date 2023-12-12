@@ -1,0 +1,25 @@
+{
+	"identifier": "Level_25",
+	"uniqueIdentifer": "3fcabcd0-8990-11ee-942c-8baf7c346450",
+	"x": -2384,
+	"y": -1104,
+	"width": 480,
+	"height": 256,
+	"bgColor": "#232635",
+	"neighbourLevels": [
+		{
+			"levelIid": "37470503-8990-11ee-942c-7bf83bfcc306",
+			"dir": "e"
+		},
+		{
+			"levelIid": "97604eb0-8990-11ee-942c-ad3385a9d701",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Level_Flair.png",
+		"Tilemap.png"
+	],
+	"entities" : {}
+}

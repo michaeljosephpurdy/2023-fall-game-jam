@@ -10,6 +10,10 @@
 		{
 			"levelIid": "6b437db0-8990-11ee-8cf0-2d05cb81e2c1",
 			"dir": "e"
+		},
+		{
+			"levelIid": "f8b430b0-8990-11ee-942c-d9c3ef54303f",
+			"dir": "w"
 		}
 	],
 	"customFields" : {},
@@ -66,17 +70,26 @@
 				}
 			}
 		],
-		"Player": [
+		"Narrator": [
 			{
-				"id": "Player",
-				"iid": "bbcccf40-8990-11ee-942c-cfb2db63fe1e",
+				"id": "Narrator",
+				"iid": "b81ea4d0-8990-11ee-942c-191594658e02",
 				"layer": "Entities",
-				"x": 720,
-				"y": 288,
-				"width": 16,
-				"height": 16,
-				"color": 0,
-				"customFields" : {}
+				"x": 256,
+				"y": 240,
+				"width": 32,
+				"height": 80,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "Going to have to be\nfaster than that...",
+					"timer": 2,
+					"ignore_conditions": [
+						"can_dash"
+					]
+				}
 			}
 		]
 	}

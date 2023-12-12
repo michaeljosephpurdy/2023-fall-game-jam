@@ -41,25 +41,22 @@
 					"one_shot": true,
 					"on_fulfilled": [],
 					"text": "What made you think something\nvaluable would be in here? Ha!",
-					"timer": 3
+					"timer": 3,
+					"ignore_conditions": []
 				}
-			},
+			}
+		],
+		"SpawnPoint": [
 			{
-				"id": "Narrator",
-				"iid": "2711d890-8990-11ee-942c-bfe5b6141324",
+				"id": "SpawnPoint",
+				"iid": "eb08d170-8990-11ee-942c-3dd9ddc843f9",
 				"layer": "Entities",
 				"x": 208,
 				"y": 112,
 				"width": 16,
 				"height": 16,
-				"color": 15839922,
-				"customFields": {
-					"conditions": [],
-					"one_shot": true,
-					"on_fulfilled": [],
-					"text": "",
-					"timer": 3
-				}
+				"color": 2434341,
+				"customFields" : {}
 			}
 		]
 	}

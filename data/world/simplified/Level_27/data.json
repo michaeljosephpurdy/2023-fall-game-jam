@@ -1,0 +1,57 @@
+{
+	"identifier": "Level_27",
+	"uniqueIdentifer": "0973cc70-8990-11ee-942c-0516b5a59d1b",
+	"x": -3760,
+	"y": -1104,
+	"width": 256,
+	"height": 256,
+	"bgColor": "#232635",
+	"neighbourLevels": [
+		{
+			"levelIid": "97604eb0-8990-11ee-942c-ad3385a9d701",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Level_Flair.png",
+		"Tilemap.png"
+	],
+	"entities": {
+		"GameData": [
+			{
+				"id": "GameData",
+				"iid": "6c5c1f30-8990-11ee-942c-4d663dec7133",
+				"layer": "Entities",
+				"x": 64,
+				"y": 64,
+				"width": 64,
+				"height": 144,
+				"color": 39321,
+				"customFields" : {}
+			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "714439b0-8990-11ee-942c-8724ca6167c2",
+				"layer": "Entities",
+				"x": 240,
+				"y": 144,
+				"width": 16,
+				"height": 64,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [
+						"is_game_over"
+					],
+					"text": "Turns out there is no treasure.\nSorry, I'm unreliable.",
+					"timer": 3,
+					"ignore_conditions": []
+				}
+			}
+		]
+	}
+}

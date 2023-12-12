@@ -1,0 +1,25 @@
+{
+	"identifier": "Level_24",
+	"uniqueIdentifer": "37470503-8990-11ee-942c-7bf83bfcc306",
+	"x": -1904,
+	"y": -1104,
+	"width": 480,
+	"height": 256,
+	"bgColor": "#232635",
+	"neighbourLevels": [
+		{
+			"levelIid": "f8b430b0-8990-11ee-942c-d9c3ef54303f",
+			"dir": "e"
+		},
+		{
+			"levelIid": "3fcabcd0-8990-11ee-942c-8baf7c346450",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Level_Flair.png",
+		"Tilemap.png"
+	],
+	"entities" : {}
+}

@@ -86,7 +86,8 @@
 						"goaded_to_impossible_jump"
 					],
 					"text": "Same with this one...",
-					"timer": 3
+					"timer": 3,
+					"ignore_conditions": []
 				}
 			},
 			{
@@ -106,7 +107,8 @@
 					"one_shot": true,
 					"on_fulfilled": [],
 					"text": "he he he he he",
-					"timer": 3
+					"timer": 3,
+					"ignore_conditions": []
 				}
 			}
 		],

@@ -41,7 +41,8 @@
 					"one_shot": true,
 					"on_fulfilled": [],
 					"text": "You should just turn around,\nnothing up here for you.",
-					"timer": 2
+					"timer": 2,
+					"ignore_conditions": []
 				}
 			}
 		]

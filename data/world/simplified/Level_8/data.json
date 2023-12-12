@@ -50,7 +50,8 @@
 					"one_shot": true,
 					"on_fulfilled": [],
 					"text": "No way back now.",
-					"timer": 3
+					"timer": 3,
+					"ignore_conditions": []
 				}
 			}
 		]

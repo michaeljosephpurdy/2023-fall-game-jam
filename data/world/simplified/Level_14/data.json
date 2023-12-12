@@ -54,7 +54,8 @@
 					"one_shot": true,
 					"on_fulfilled": [],
 					"text": "Big whoop, you found the\n'double jump', who cares?",
-					"timer": 3
+					"timer": 3,
+					"ignore_conditions": []
 				}
 			}
 		]

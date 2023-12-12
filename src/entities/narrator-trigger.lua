@@ -31,6 +31,13 @@ function NarratorTrigger:update(dt)
 end
 
 function NarratorTrigger:on_collision(e)
+	if self.ignore_conditions then
+		for _, ignore_condition in pairs(self.ignore_conditions) do
+			if e[ignore_condition] then
+				return
+			end
+		end
+	end
 	-- check if player has satisfied conditions to display this narration
 	if self.conditions then
 		for _, condition in ipairs(self.conditions) do

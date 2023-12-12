@@ -60,7 +60,8 @@
 					"one_shot": true,
 					"on_fulfilled": [],
 					"text": "I'm surprised that you've\nmade it this far.",
-					"timer": 3
+					"timer": 3,
+					"ignore_conditions": []
 				}
 			}
 		]

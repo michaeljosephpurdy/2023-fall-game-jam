@@ -2,18 +2,28 @@ local GameData = class("GameData")
 
 function GameData:init(props)
 	self.is_game_data = true
+	self.position = { x = props.x, y = props.y }
+	self.velocity = { x = 0, y = 0 }
+	self.hitbox = { width = props.width, height = props.height }
+	self.drawable_background = true
 	self.has_met_maker = false
 	self.milliseconds = 0
 	self.seconds = 0
 	self.minutes = 0
 	self.deaths = 0
+	self.total_spawn_points = 0
 	self.spawn_points = 0
-	PubSub.subscribe("spawnpoint.activated", function()
-		self.spawn_points = self.spawn_points + 1
-	end)
+end
+
+function GameData:on_collision(player)
+	player.friction = 0
+	self.is_done = true
 end
 
 function GameData:update_time(dt)
+	if self.is_done then
+		return
+	end
 	self.milliseconds = self.milliseconds + dt
 	if self.milliseconds >= 1 then
 		self.milliseconds = self.milliseconds - 1
@@ -26,11 +36,15 @@ function GameData:update_time(dt)
 end
 
 function GameData:draw()
-	if not ready then
-		return
+	local seconds = tostring(self.seconds)
+	if #seconds < 2 then
+		seconds = "0" .. tostring(seconds)
 	end
-	love.graphics.print(string.format("%s:%s", self.minutes, self.seconds), 0, 0)
-	love.graphics.print(self.deaths, 0, 10)
+	local x, y = self.position.x, self.position.y
+	love.graphics.print("Thanks for playing!", x, y + 10)
+	love.graphics.print(string.format("      time: %s:%s", self.minutes, seconds), x, y + 30)
+	love.graphics.print(string.format("  deaths: %s", self.deaths), x, y + 50)
+	love.graphics.print(string.format(" shrines: %s/%s", self.spawn_points, self.total_spawn_points), x, y + 70)
 end
 
 return GameData

@@ -62,7 +62,8 @@
 						"told_they_can_make_it"
 					],
 					"text": "You can definitely make it!",
-					"timer": 3
+					"timer": 3,
+					"ignore_conditions": []
 				}
 			},
 			{
@@ -81,7 +82,8 @@
 					"one_shot": true,
 					"on_fulfilled": [],
 					"text": "See? Told you.",
-					"timer": 3
+					"timer": 3,
+					"ignore_conditions": []
 				}
 			}
 		],

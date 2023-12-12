@@ -134,7 +134,8 @@
 					"one_shot": true,
 					"on_fulfilled": [],
 					"text": "Being able to dash when hitting\n\"z\" doesn't make you worthy...",
-					"timer": 3
+					"timer": 3,
+					"ignore_conditions": []
 				}
 			}
 		],
@@ -210,6 +211,32 @@
 				"layer": "Entities",
 				"x": 304,
 				"y": 208,
+				"width": 32,
+				"height": 16,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
+			},
+			{
+				"id": "KillZone",
+				"iid": "4d9935a0-8990-11ee-942c-7fba220e566b",
+				"layer": "Entities",
+				"x": 272,
+				"y": 240,
+				"width": 16,
+				"height": 16,
+				"color": 9568256,
+				"customFields": {
+					"on_fulfilled": []
+				}
+			},
+			{
+				"id": "KillZone",
+				"iid": "4e093580-8990-11ee-942c-45cee64934ac",
+				"layer": "Entities",
+				"x": 240,
+				"y": 256,
 				"width": 32,
 				"height": 16,
 				"color": 9568256,

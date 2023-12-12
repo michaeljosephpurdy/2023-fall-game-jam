@@ -9,9 +9,13 @@ function SpawnPoint:init(props)
 	self.spritesheet = props.spritesheet
 	self.idle_img = love.graphics.newQuad(13 * 16, 0, 16, 16, self.spritesheet)
 	self.active_img = love.graphics.newQuad(14 * 16, 0, 16, 16, self.spritesheet)
+	PubSub.publish("spawnpoint.spawned")
 end
 
-function SpawnPoint:on_collision(player)
+function SpawnPoint:on_collision(entity)
+	if not entity.is_player then
+		return
+	end
 	if not self.active then
 		self.active = true
 		PubSub.publish("spawnpoint.activated")
@@ -22,8 +26,8 @@ function SpawnPoint:on_collision(player)
 		self.world:addEntity(fx)
 		fx.world = self.world
 	end
-	player.spawn_point.x = self.position.x
-	player.spawn_point.y = self.position.y
+	entity.spawn_point.x = self.position.x
+	entity.spawn_point.y = self.position.y
 end
 
 function SpawnPoint:draw()

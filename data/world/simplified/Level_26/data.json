@@ -1,0 +1,46 @@
+{
+	"identifier": "Level_26",
+	"uniqueIdentifer": "97604eb0-8990-11ee-942c-ad3385a9d701",
+	"x": -3504,
+	"y": -1104,
+	"width": 1120,
+	"height": 256,
+	"bgColor": "#232635",
+	"neighbourLevels": [
+		{
+			"levelIid": "3fcabcd0-8990-11ee-942c-8baf7c346450",
+			"dir": "e"
+		},
+		{
+			"levelIid": "0973cc70-8990-11ee-942c-0516b5a59d1b",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Level_Flair.png",
+		"Tilemap.png"
+	],
+	"entities": {
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "c0fc77d0-8990-11ee-942c-89f9d9d0882d",
+				"layer": "Entities",
+				"x": 832,
+				"y": 144,
+				"width": 64,
+				"height": 64,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "Imagine if this just kept going.",
+					"timer": 3,
+					"ignore_conditions": []
+				}
+			}
+		]
+	}
+}

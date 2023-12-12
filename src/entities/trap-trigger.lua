@@ -1,3 +1,4 @@
+local Arrow = require("src.entities.arrow-trap")
 local TrapTrigger = class("TrapTrigger")
 
 function TrapTrigger:init(props)
@@ -25,19 +26,21 @@ function TrapTrigger:init(props)
 end
 
 function TrapTrigger:draw(dt)
-	if self.is_triggered then
-		love.graphics.draw(self.spritesheet, self.triggered_img, self.position.x, self.position.y)
-		if not self.one_time then
-			self.is_done = false
-			self.is_triggered = false
-		end
+	if not self.is_triggered then
+		love.graphics.draw(self.spritesheet, self.idle_img, self.position.x, self.position.y)
 		return
 	end
-	love.graphics.draw(self.spritesheet, self.idle_img, self.position.x, self.position.y)
+	love.graphics.draw(self.spritesheet, self.triggered_img, self.position.x, self.position.y)
+	if not self.one_time then
+		self.is_done = false
+		self.is_triggered = false
+	end
 end
 
-function TrapTrigger:on_collision(player)
-	self.is_triggered = true
+function TrapTrigger:on_collision(entity)
+	if entity.is_player then
+		self.is_triggered = true
+	end
 end
 
 return TrapTrigger
