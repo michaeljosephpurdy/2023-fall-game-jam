@@ -76,47 +76,6 @@
 				"color": 2434341,
 				"customFields" : {}
 			}
-		],
-		"Player": [
-			{
-				"id": "Player",
-				"iid": "6d3583b0-8990-11ee-942c-31905938370e",
-				"layer": "Entities",
-				"x": 96,
-				"y": 1920,
-				"width": 16,
-				"height": 16,
-				"color": 0,
-				"customFields" : {}
-			}
-		],
-		"Item": [
-			{
-				"id": "Item",
-				"iid": "0c4d7ae0-8990-11ee-942c-73f8e3b5aa2b",
-				"layer": "Entities",
-				"x": 48,
-				"y": 1920,
-				"width": 16,
-				"height": 16,
-				"color": 18761,
-				"customFields": {
-					"type": "Double_jump"
-				}
-			},
-			{
-				"id": "Item",
-				"iid": "0f117ce0-8990-11ee-942c-f57ba971306a",
-				"layer": "Entities",
-				"x": 64,
-				"y": 1920,
-				"width": 16,
-				"height": 16,
-				"color": 18761,
-				"customFields": {
-					"type": "Dash"
-				}
-			}
 		]
 	}
 }

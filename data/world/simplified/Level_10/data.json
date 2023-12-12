@@ -49,6 +49,19 @@
 					"ignore_conditions": []
 				}
 			}
+		],
+		"Player": [
+			{
+				"id": "Player",
+				"iid": "6d3583b0-8990-11ee-942c-31905938370e",
+				"layer": "Entities",
+				"x": 48,
+				"y": 80,
+				"width": 16,
+				"height": 16,
+				"color": 0,
+				"customFields" : {}
+			}
 		]
 	}
 }

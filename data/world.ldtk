@@ -2619,60 +2619,6 @@
 							"defUid": 55,
 							"px": [272,1184],
 							"fieldInstances": []
-						},
-						{
-							"__identifier": "Player",
-							"__grid": [6,120],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": { "tilesetUid": 17, "x": 80, "y": 240, "w": 16, "h": 16 },
-							"__smartColor": "#000000",
-							"__worldX": 96,
-							"__worldY": -912,
-							"iid": "6d3583b0-8990-11ee-942c-31905938370e",
-							"width": 16,
-							"height": 16,
-							"defUid": 16,
-							"px": [96,1920],
-							"fieldInstances": []
-						},
-						{
-							"__identifier": "Item",
-							"__grid": [3,120],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": { "tilesetUid": 17, "x": 32, "y": 128, "w": 16, "h": 16 },
-							"__smartColor": "#004949",
-							"__worldX": 48,
-							"__worldY": -912,
-							"iid": "0c4d7ae0-8990-11ee-942c-73f8e3b5aa2b",
-							"width": 16,
-							"height": 16,
-							"defUid": 71,
-							"px": [48,1920],
-							"fieldInstances": [{ "__identifier": "type", "__type": "LocalEnum.Item", "__value": "Double_jump", "__tile": null, "defUid": 73, "realEditorValues": [{
-								"id": "V_String",
-								"params": ["Double_jump"]
-							}] }]
-						},
-						{
-							"__identifier": "Item",
-							"__grid": [4,120],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": { "tilesetUid": 17, "x": 32, "y": 128, "w": 16, "h": 16 },
-							"__smartColor": "#004949",
-							"__worldX": 64,
-							"__worldY": -912,
-							"iid": "0f117ce0-8990-11ee-942c-f57ba971306a",
-							"width": 16,
-							"height": 16,
-							"defUid": 71,
-							"px": [64,1920],
-							"fieldInstances": [{ "__identifier": "type", "__type": "LocalEnum.Item", "__value": "Dash", "__tile": null, "defUid": 73, "realEditorValues": [{
-								"id": "V_String",
-								"params": ["Dash"]
-							}] }]
 						}
 					]
 				},
@@ -6881,6 +6827,22 @@
 								{ "__identifier": "timer", "__type": "Int", "__value": 3, "__tile": null, "defUid": 63, "realEditorValues": [] },
 								{ "__identifier": "ignore_conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 115, "realEditorValues": [] }
 							]
+						},
+						{
+							"__identifier": "Player",
+							"__grid": [3,5],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": { "tilesetUid": 17, "x": 80, "y": 240, "w": 16, "h": 16 },
+							"__smartColor": "#000000",
+							"__worldX": -176,
+							"__worldY": -3008,
+							"iid": "6d3583b0-8990-11ee-942c-31905938370e",
+							"width": 16,
+							"height": 16,
+							"defUid": 16,
+							"px": [48,80],
+							"fieldInstances": []
 						}
 					]
 				},
@@ -10673,7 +10635,34 @@
 					"seed": 3089398,
 					"overrideTilesetUid": null,
 					"gridTiles": [],
-					"entityInstances": []
+					"entityInstances": [
+						{
+							"__identifier": "Narrator",
+							"__grid": [2,9],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#F1B2B2",
+							"__worldX": -1872,
+							"__worldY": -960,
+							"iid": "6c987590-8990-11ee-942c-f5d33cd286a8",
+							"width": 64,
+							"height": 64,
+							"defUid": 44,
+							"px": [32,144],
+							"fieldInstances": [
+								{ "__identifier": "text", "__type": "String", "__value": "Its just a little further.", "__tile": null, "defUid": 61, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Its just a little further."]
+								}] },
+								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 46, "realEditorValues": [] },
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 60, "realEditorValues": [] },
+								{ "__identifier": "timer", "__type": "Int", "__value": 3, "__tile": null, "defUid": 63, "realEditorValues": [] },
+								{ "__identifier": "ignore_conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 115, "realEditorValues": [] }
+							]
+						}
+					]
 				},
 				{
 					"__identifier": "SolidColliders",

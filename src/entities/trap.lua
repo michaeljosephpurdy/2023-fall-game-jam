@@ -1,3 +1,4 @@
+local Arrow = require("src.entities.arrow-trap")
 local Trap = class("Trap")
 
 function Trap:init(props)
