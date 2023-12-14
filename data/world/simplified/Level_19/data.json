@@ -53,6 +53,37 @@
 					"timer": 3,
 					"ignore_conditions": []
 				}
+			},
+			{
+				"id": "Narrator",
+				"iid": "37e8e360-8990-11ee-942c-851ce67def39",
+				"layer": "Entities",
+				"x": 112,
+				"y": 352,
+				"width": 128,
+				"height": 64,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "A new adventurer?\nHere for my treasures?",
+					"timer": 3,
+					"ignore_conditions": []
+				}
+			}
+		],
+		"Player": [
+			{
+				"id": "Player",
+				"iid": "06f88ff0-8990-11ee-942c-2f4d90042f52",
+				"layer": "Entities",
+				"x": 192,
+				"y": 400,
+				"width": 16,
+				"height": 16,
+				"color": 0,
+				"customFields" : {}
 			}
 		]
 	}
