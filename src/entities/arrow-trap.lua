@@ -8,7 +8,7 @@ function Arrow:init(props)
 	self.drawable = true
 
 	self.spritesheet = props.spritesheet
-	self.position = { x = props.position.x, y = props.position.y }
+	self.position = { x = props.position.x, y = props.position.y + 6 }
 	self.direction = { x = props.direction.x, y = props.position.y }
 	self.velocity = { x = 160, y = 0 }
 	self.hitbox = { width = 16, height = 4 }
@@ -30,7 +30,7 @@ function Arrow:on_collision(entity)
 end
 
 function Arrow:draw(dt)
-	love.graphics.draw(self.spritesheet, self.img, self.position.x, self.position.y)
+	love.graphics.draw(self.spritesheet, self.img, self.position.x, self.position.y - 6)
 end
 
 return Arrow

@@ -103,9 +103,13 @@ function Player:draw(dt)
 		self.draw_frame = 1
 	end
 	if self.dashing then
+		-- dashing
 		self.draw_state = "DASH"
 		self.draw_frame = 1
-		-- dashing
+	elseif not self.on_ground and self.velocity.y <= 0 then
+		-- jumping
+		self.draw_state = "JUMP"
+		self.draw_frame = 1
 	elseif self.moving and self.velocity.y == 0 then
 		-- running
 		self.draw_state = "RUN"
@@ -113,10 +117,6 @@ function Player:draw(dt)
 		if self.draw_frame > #self.sprites.RUN then
 			self.draw_frame = 1
 		end
-	elseif self.velocity.y < 0 then
-		-- jumping
-		self.draw_state = "JUMP"
-		self.draw_frame = 1
 	elseif self.velocity.y > 0 then
 		-- falling
 		self.draw_state = "FALL"

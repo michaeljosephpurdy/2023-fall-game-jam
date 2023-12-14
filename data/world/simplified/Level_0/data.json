@@ -76,19 +76,6 @@
 				"color": 2434341,
 				"customFields" : {}
 			}
-		],
-		"Player": [
-			{
-				"id": "Player",
-				"iid": "6d3583b0-8990-11ee-942c-31905938370e",
-				"layer": "Entities",
-				"x": 208,
-				"y": 2112,
-				"width": 16,
-				"height": 16,
-				"color": 0,
-				"customFields" : {}
-			}
 		]
 	}
 }

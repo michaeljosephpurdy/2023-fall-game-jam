@@ -22,7 +22,7 @@ local function collision_filter(e1, e2)
 		if e2.is_solid then
 			return "touch"
 		end
-		return "cross"
+		return nil
 	end
 	return nil
 end

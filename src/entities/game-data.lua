@@ -17,6 +17,7 @@ end
 
 function GameData:on_collision(player)
 	player.friction = 0
+	player.moving = false
 	self.is_done = true
 end
 

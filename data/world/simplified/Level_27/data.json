@@ -47,10 +47,23 @@
 					"on_fulfilled": [
 						"is_game_over"
 					],
-					"text": "Turns out there is no treasure.\nSorry, I'm unreliable.",
+					"text": "Actually, there isn't any treasure.\nI've been told I am unreliable.",
 					"timer": 3,
 					"ignore_conditions": []
 				}
+			}
+		],
+		"Collider": [
+			{
+				"id": "Collider",
+				"iid": "8500a950-8990-11ee-942c-538b3065abcf",
+				"layer": "Entities",
+				"x": 96,
+				"y": 192,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
 			}
 		]
 	}

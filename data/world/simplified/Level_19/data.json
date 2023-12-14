@@ -34,6 +34,26 @@
 				"color": 2434341,
 				"customFields" : {}
 			}
+		],
+		"Narrator": [
+			{
+				"id": "Narrator",
+				"iid": "40250e80-8990-11ee-942c-1913b906dbc9",
+				"layer": "Entities",
+				"x": 144,
+				"y": 16,
+				"width": 16,
+				"height": 96,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "Not many folks have made the\njourney all the way up here. ",
+					"timer": 3,
+					"ignore_conditions": []
+				}
+			}
 		]
 	}
 }

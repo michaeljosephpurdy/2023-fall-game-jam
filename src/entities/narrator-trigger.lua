@@ -31,6 +31,9 @@ function NarratorTrigger:update(dt)
 end
 
 function NarratorTrigger:on_collision(e)
+	if not e.is_player then
+		return
+	end
 	if self.ignore_conditions then
 		for _, ignore_condition in pairs(self.ignore_conditions) do
 			if e[ignore_condition] then

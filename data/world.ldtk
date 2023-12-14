@@ -11,7 +11,7 @@
 	"iid": "6b4356a0-8990-11ee-8cf0-97de4f12c9ab",
 	"jsonVersion": "1.4.1",
 	"appBuildId": 471015,
-	"nextUid": 124,
+	"nextUid": 125,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -1838,8 +1838,8 @@
 			"customData": [],
 			"savedSelections": [],
 			"cachedPixelData": {
-				"opaqueTiles": "1111110000000000000011111000001000000000111110000000000000001111100000000000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000011000000000000",
-				"averageColors": "f555f445f555f666f556f6669777b77767772aaa1aaa399957773999399900000000000000000000f445f223f445f777f666000037772aaa57773999f7881aaa399959a9000000000000000000000000f555f445f555f334f556000000000000000000000000000000000000000000000000000000000000f233f233f556f556f666000000000000000000000000000000000000000000000000000000000000f233f233f556f55600000000000000000000000000000000000000000000000000000000000000000aaa1aaa1aaa0aaa1aaa1aaa1aaa0aaa2aaa3aaa2aaa4aaa1aaa2aaa1aaa1aaa00001aaa1aaa00004aaa5aaa3aaa5aaa2aaa3aaa5aaa4aaa3aaa3aaa3aaa4aaa3aaa49a93aaa699900004aaa699902230000000096776455a77733340000000000001223022300000777188802232777000000003788066600000000a6777666a777366600000000022312230000000000000000000000000000000000000000000023340000122312232334122312236444867795557666455500000000000000000000000000004556f7776444d7779556d777b666866686779777d67767777666000000000000000000000000000012236777245537772666366636665566022325552334255525550000000000000000000000000000022312231223122312230223122300000223122312231223122300000000000000000000000000006445e777d6779555d7776555f77733348666d666d677d6771444000000000000000000000000000044457777766655567677355577772445277746664556777724450000000000000000000000000000000000000000000000000000122312230000000000000223122300000000000000000000000000008566e666f6677455e7778555e666b55577880000e777b566e777a556b7778566b677c666c677766702236666377763343777644555666555778800007666855587777344877714556777266666667666000000000000000000003223767763447666355647885223622362233223322375556555555526660223e7774445b77796668666f888f7779777a7778888c666e666e556e445d5669666b666b7774566"
+				"opaqueTiles": "1111110000000000000011111000001000000000111110000000000000001111100000000000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000011000000000000",
+				"averageColors": "f555f445f555f666f556f6669777b77767772aaa1aaa399957773999399900000000000000000000f445f223f445f777f666000037772aaa57773999f7881aaa399959a9000000000000000000000000f555f445f555f334f556000000000000000000000000000000000000000000000000000000000000f233f233f556f556f666000000000000000000000000000000000000000000000000000000000000f233f233f556f5560000000000000000000000000000000000000000000000000000000000000000366647773677266657772666477715559777777797777777477757771aaa1aaa1aaa1aaa00000000777797777777977746666777877787777777477777774777677786773aaa69994aaa6999022300000000000000000000000000000000000000000000000000000000000002232777000037880666000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014440000000000000000000000000000000000000000355500000000000000000000000000004556566600000000000000000000000000000000000000005667000000000000000000000000000012232666000000000000000000000000000000000000000025550000000000000000000000000000022312231223122312230223122300000223122312231223122300000000000000000000000000006445e777d6779555d7776555f77733348666d666d677d6771444000000000000000000000000000044457777766655567677355577772445277746664556777724450000000000000000000000000000000000000000000000000000122312230000000000000223122300000000000000000000000000008566e666f6677455e7778555e666b55577880000e777b566e777a556b7778566b677c666c677766702236666377763343777644555666555778800007666855587777344877714556777266666667666000000000000000000003223767763447666355647885223622362233223322375556555555526660223e7774445b77796668666f888f7779777a7778888c666e666e556e445d5669666b666b7774566"
 			}
 		},
 		{
@@ -2618,22 +2618,6 @@
 							"height": 16,
 							"defUid": 55,
 							"px": [272,1184],
-							"fieldInstances": []
-						},
-						{
-							"__identifier": "Player",
-							"__grid": [13,132],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": { "tilesetUid": 17, "x": 80, "y": 240, "w": 16, "h": 16 },
-							"__smartColor": "#000000",
-							"__worldX": 208,
-							"__worldY": -720,
-							"iid": "6d3583b0-8990-11ee-942c-31905938370e",
-							"width": 16,
-							"height": 16,
-							"defUid": 16,
-							"px": [208,2112],
 							"fieldInstances": []
 						}
 					]
@@ -4519,6 +4503,32 @@
 							"defUid": 62,
 							"px": [0,0],
 							"fieldInstances": [{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 75, "realEditorValues": [] }]
+						},
+						{
+							"__identifier": "Narrator",
+							"__grid": [32,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#F1B2B2",
+							"__worldX": -416,
+							"__worldY": -2256,
+							"iid": "82cfdc10-8990-11ee-942c-1f3dd793f706",
+							"width": 32,
+							"height": 720,
+							"defUid": 44,
+							"px": [512,0],
+							"fieldInstances": [
+								{ "__identifier": "text", "__type": "String", "__value": "What are you doing all the\nway out here?", "__tile": null, "defUid": 61, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["What are you doing all the\\nway out here?"]
+								}] },
+								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 46, "realEditorValues": [] },
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 60, "realEditorValues": [] },
+								{ "__identifier": "timer", "__type": "Int", "__value": 3, "__tile": null, "defUid": 63, "realEditorValues": [] },
+								{ "__identifier": "ignore_conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 115, "realEditorValues": [] }
+							]
 						}
 					]
 				},
@@ -9301,6 +9311,32 @@
 							"defUid": 55,
 							"px": [144,96],
 							"fieldInstances": []
+						},
+						{
+							"__identifier": "Narrator",
+							"__grid": [9,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#F1B2B2",
+							"__worldX": -80,
+							"__worldY": -3568,
+							"iid": "40250e80-8990-11ee-942c-1913b906dbc9",
+							"width": 16,
+							"height": 96,
+							"defUid": 44,
+							"px": [144,16],
+							"fieldInstances": [
+								{ "__identifier": "text", "__type": "String", "__value": "Not many folks have made the\njourney all the way up here. ", "__tile": null, "defUid": 61, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Not many folks have made the\\njourney all the way up here. "]
+								}] },
+								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 46, "realEditorValues": [] },
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 60, "realEditorValues": [] },
+								{ "__identifier": "timer", "__type": "Int", "__value": 3, "__tile": null, "defUid": 63, "realEditorValues": [] },
+								{ "__identifier": "ignore_conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 115, "realEditorValues": [] }
+							]
 						}
 					]
 				},
@@ -10868,7 +10904,50 @@
 					"seed": 3089398,
 					"overrideTilesetUid": null,
 					"gridTiles": [],
-					"entityInstances": []
+					"entityInstances": [
+						{
+							"__identifier": "Narrator",
+							"__grid": [2,9],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#F1B2B2",
+							"__worldX": -2352,
+							"__worldY": -960,
+							"iid": "d60bfee0-8990-11ee-942c-470d40515e86",
+							"width": 32,
+							"height": 64,
+							"defUid": 44,
+							"px": [32,144],
+							"fieldInstances": [
+								{ "__identifier": "text", "__type": "String", "__value": "A little more.", "__tile": null, "defUid": 61, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["A little more."]
+								}] },
+								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 46, "realEditorValues": [] },
+								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
+								{ "__identifier": "on_fulfilled", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 60, "realEditorValues": [] },
+								{ "__identifier": "timer", "__type": "Int", "__value": 1, "__tile": null, "defUid": 63, "realEditorValues": [{ "id": "V_Int", "params": [1] }] },
+								{ "__identifier": "ignore_conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 115, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Player",
+							"__grid": [12,11],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": { "tilesetUid": 17, "x": 80, "y": 240, "w": 16, "h": 16 },
+							"__smartColor": "#000000",
+							"__worldX": -2192,
+							"__worldY": -928,
+							"iid": "06f88ff0-8990-11ee-942c-2f4d90042f52",
+							"width": 16,
+							"height": 16,
+							"defUid": 16,
+							"px": [192,176],
+							"fieldInstances": []
+						}
+					]
 				},
 				{
 					"__identifier": "SolidColliders",
@@ -11165,18 +11244,18 @@
 					"entityInstances": [
 						{
 							"__identifier": "Narrator",
-							"__grid": [52,9],
+							"__grid": [47,9],
 							"__pivot": [0,0],
 							"__tags": [],
 							"__tile": null,
 							"__smartColor": "#F1B2B2",
-							"__worldX": -2672,
+							"__worldX": -2752,
 							"__worldY": -960,
 							"iid": "c0fc77d0-8990-11ee-942c-89f9d9d0882d",
 							"width": 64,
 							"height": 64,
 							"defUid": 44,
-							"px": [832,144],
+							"px": [752,144],
 							"fieldInstances": [
 								{ "__identifier": "text", "__type": "String", "__value": "Imagine if this just kept going.", "__tile": null, "defUid": 61, "realEditorValues": [{
 									"id": "V_String",
@@ -11432,9 +11511,9 @@
 							"defUid": 44,
 							"px": [240,144],
 							"fieldInstances": [
-								{ "__identifier": "text", "__type": "String", "__value": "Turns out there is no treasure.\nSorry, I'm unreliable.", "__tile": null, "defUid": 61, "realEditorValues": [{
+								{ "__identifier": "text", "__type": "String", "__value": "Actually, there isn't any treasure.\nI've been told I am unreliable.", "__tile": null, "defUid": 61, "realEditorValues": [{
 									"id": "V_String",
-									"params": ["Turns out there is no treasure.\\nSorry, I'm unreliable."]
+									"params": ["Actually, there isn't any treasure.\\nI've been told I am unreliable."]
 								}] },
 								{ "__identifier": "conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 46, "realEditorValues": [] },
 								{ "__identifier": "one_shot", "__type": "Bool", "__value": true, "__tile": null, "defUid": 52, "realEditorValues": [] },
@@ -11445,6 +11524,22 @@
 								{ "__identifier": "timer", "__type": "Int", "__value": 3, "__tile": null, "defUid": 63, "realEditorValues": [] },
 								{ "__identifier": "ignore_conditions", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 115, "realEditorValues": [] }
 							]
+						},
+						{
+							"__identifier": "Collider",
+							"__grid": [6,12],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#FFFFFF",
+							"__worldX": -3664,
+							"__worldY": -912,
+							"iid": "8500a950-8990-11ee-942c-538b3065abcf",
+							"width": 16,
+							"height": 16,
+							"defUid": 103,
+							"px": [96,192],
+							"fieldInstances": []
 						}
 					]
 				},
