@@ -52,6 +52,24 @@
 					"timer": 3,
 					"ignore_conditions": []
 				}
+			},
+			{
+				"id": "Narrator",
+				"iid": "2f171720-8990-11ee-942c-a938669af597",
+				"layer": "Entities",
+				"x": 432,
+				"y": 384,
+				"width": 16,
+				"height": 16,
+				"color": 15839922,
+				"customFields": {
+					"conditions": [],
+					"one_shot": true,
+					"on_fulfilled": [],
+					"text": "One of the many who have\ncome before you.",
+					"timer": 3,
+					"ignore_conditions": []
+				}
 			}
 		]
 	}

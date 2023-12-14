@@ -51,7 +51,6 @@ function Player:init(props)
 	self.sprites = {}
 	for state, rects in pairs(self.sprite_rects) do
 		self.sprites[state] = {}
-		print(state)
 		for _, rect in pairs(rects) do
 			local sprite = love.graphics.newQuad(rect[1], rect[2], rect[3], rect[4], self.spritesheet)
 			table.insert(self.sprites[state], sprite)

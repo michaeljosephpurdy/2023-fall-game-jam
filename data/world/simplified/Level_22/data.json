@@ -41,6 +41,19 @@
 					"ignore_conditions": []
 				}
 			}
+		],
+		"SpawnPoint": [
+			{
+				"id": "SpawnPoint",
+				"iid": "48985e10-8990-11ee-942c-6560cc6f7ed6",
+				"layer": "Entities",
+				"x": 272,
+				"y": 352,
+				"width": 16,
+				"height": 16,
+				"color": 2434341,
+				"customFields" : {}
+			}
 		]
 	}
 }
