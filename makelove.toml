@@ -11,7 +11,7 @@ love_files = [
 
 [lovejs]
 title = "2023 Fall Game Jam Game by Mike Purdy"
-memory = "400000000"  # starting memory of the webpage (default is 20 MB)
+memory = "200000000"  # starting memory of the webpage (default is 20 MB)
 
 [macos]
 # optionally, you can include a mac-specific icon, if not mac will use the same icon as other targets
