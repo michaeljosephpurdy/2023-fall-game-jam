@@ -77,9 +77,10 @@ end
 function love.draw()
 	local dt = love.timer.getDelta()
 	world:update(dt, DRAW_SYSTEMS)
+	love.graphics.print(love.timer.getFPS(), 0, 0)
 	--max_collection = math.max((max_collection or 0), collectgarbage("count"))
-	--love.graphics.print(tostring(max_collection), 50, 80)
-	--love.graphics.print(tostring(collectgarbage("count")), 50, 50)
+	-- love.graphics.print(tostring(max_collection), 50, 80)
+	-- love.graphics.print(tostring(collectgarbage("count")), 50, 50)
 end
 
 function love.keypressed(k)
