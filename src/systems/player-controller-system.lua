@@ -20,8 +20,10 @@ function PlayerControllerSystem:process(e, dt)
 
 	if right then
 		e.direction.x = 1
+		e.flip_h = true
 	elseif left then
 		e.direction.x = -1
+		e.flip_h = false
 	end
 
 	if love.keyboard.isDown("x") and self.released.x then

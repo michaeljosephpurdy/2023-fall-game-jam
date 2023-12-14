@@ -39,6 +39,24 @@ function Player:init(props)
 	self.platforming = true
 	self.can_collide = true
 	self.can_dash = false
+
+	self.spritesheet = props.spritesheet
+	self.sprite_rects = {
+		IDLE = { { 0, 80, 32, 32 } },
+		RUN = { { 32, 80, 32, 32 }, { 64, 80, 32, 32 }, { 96, 80, 32, 32 }, { 64, 80, 32, 32 }, { 32, 80, 32, 32 } },
+		JUMP = { { 128, 80, 32, 32 } },
+		DASH = { { 192, 80, 32, 36 } },
+		FALL = { { 160, 80, 32, 32 } },
+	}
+	self.sprites = {}
+	for state, rects in pairs(self.sprite_rects) do
+		self.sprites[state] = {}
+		print(state)
+		for _, rect in pairs(rects) do
+			local sprite = love.graphics.newQuad(rect[1], rect[2], rect[3], rect[4], self.spritesheet)
+			table.insert(self.sprites[state], sprite)
+		end
+	end
 end
 
 function Player:on_collide() end
@@ -68,18 +86,54 @@ function Player:respawn()
 	self.bump_world:update(self, self.spawn_point.x, self.spawn_point.y)
 end
 
-function Player:draw()
+function Player:draw(dt)
 	-- self:tune_field("gravity", "1")
 	-- self:tune_field("acceleration", "2")
 	-- self:tune_field("top_speed", "3")
 	-- self:tune_field("jump_force", "4")
-	love.graphics.setColor(WHITE_COLOR)
-	love.graphics.rectangle(
-		"fill",
-		self.position.x - self.width / 2,
-		self.position.y - self.height,
-		self.width * 2,
-		self.height * 2
+	-- running sprite
+	self.old_draw_state = self.draw_state or "IDLE"
+	local flip = 1
+	local x_pos, y_pos = self.position.x - 16, self.position.y - 22
+	if self.flip_h then
+		flip = -1
+		x_pos = x_pos + 32
+	end
+	if self.draw_state ~= self.old_draw_state then
+		self.draw_frame = 1
+	end
+	if self.dashing then
+		self.draw_state = "DASH"
+		self.draw_frame = 1
+		-- dashing
+	elseif self.moving and self.velocity.y == 0 then
+		-- running
+		self.draw_state = "RUN"
+		self.draw_frame = self.draw_frame + dt * 4.5
+		if self.draw_frame > #self.sprites.RUN then
+			self.draw_frame = 1
+		end
+	elseif self.velocity.y < 0 then
+		-- jumping
+		self.draw_state = "JUMP"
+		self.draw_frame = 1
+	elseif self.velocity.y > 0 then
+		-- falling
+		self.draw_state = "FALL"
+		self.draw_frame = 1
+	else
+		-- idle
+		self.draw_state = "IDLE"
+		self.draw_frame = 1
+	end
+	love.graphics.draw(
+		self.spritesheet,
+		self.sprites[self.draw_state][math.floor(self.draw_frame)],
+		x_pos,
+		y_pos,
+		0,
+		flip,
+		1
 	)
 end
 

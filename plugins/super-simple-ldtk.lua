@@ -37,7 +37,6 @@ end
 function SuperSimpleLdtk:load_all()
 	for _, level in pairs(self.level_data) do
 		self:load(level.uniqueIdentifer)
-		print("loaded " .. level.uniqueIdentifer)
 	end
 end
 
