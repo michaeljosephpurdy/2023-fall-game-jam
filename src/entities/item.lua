@@ -15,6 +15,7 @@ function Item:on_collision(player)
 	if self.is_done then
 		return
 	end
+	PubSub.publish("sfx.play", "chest")
 	self.is_done = true
 	if self.type == "Double_jump" then
 		player.double_jump = true

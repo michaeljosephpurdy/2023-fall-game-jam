@@ -57,6 +57,7 @@ function PlatformingSystem:process(e, dt)
 		e.jumps = e.jumps - 1
 		e.velocity.y = -e.jump_force
 		e.on_ground = false
+		PubSub.publish("sfx.play", "jump")
 	elseif e.jump_buffer > 0 and e.jumps >= 1 and e.max_jumps == 2 then
 		e.jump_buffer = 0
 		e.jumps = e.jumps - 1
@@ -65,6 +66,7 @@ function PlatformingSystem:process(e, dt)
 		end
 		e.velocity.y = -e.jump_force
 		e.on_ground = false
+		PubSub.publish("sfx.play", "jump")
 	end
 
 	if e.can_dash and e.dash_requested and not e.dashed then
@@ -73,6 +75,7 @@ function PlatformingSystem:process(e, dt)
 		e.velocity.x = e.velocity.x + (e.direction.x * e.dash_force)
 		e.velocity.y = 0
 		e.dashing = e.dash_time
+		PubSub.publish("sfx.play", "dash")
 	end
 
 	if e.velocity.y > 0 then

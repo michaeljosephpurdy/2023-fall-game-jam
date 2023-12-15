@@ -42,9 +42,10 @@ function GameData:draw()
 		seconds = "0" .. tostring(seconds)
 	end
 	local x, y = self.position.x, self.position.y
-	love.graphics.print("Thanks for playing!", x, y + 10)
-	love.graphics.print(string.format("      time: %s:%s", self.minutes, seconds), x, y + 30)
-	love.graphics.print(string.format("  deaths: %s", self.deaths), x, y + 50)
+	love.graphics.print("Thanks for playing:", x, y + 10)
+	love.graphics.print('"the treasure is real, rare, and important"', x, y + 30)
+	love.graphics.print(string.format("      time: %s:%s", self.minutes, seconds), x, y + 50)
+	love.graphics.print(string.format("  deaths: %s", self.deaths), x, y + 70)
 	love.graphics.print(string.format(" shrines: %s/%s", self.spawn_points, self.total_spawn_points), x, y + 70)
 end
 

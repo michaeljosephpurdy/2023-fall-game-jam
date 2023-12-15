@@ -15,6 +15,7 @@ function Arrow:init(props)
 	self.friction = 1
 
 	self.img = love.graphics.newQuad(9 * 16, 16, 16, 16, self.spritesheet)
+	PubSub.publish("sfx.play", "shoot")
 end
 
 function Arrow:on_collision(entity)

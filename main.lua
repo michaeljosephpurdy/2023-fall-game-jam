@@ -27,7 +27,9 @@ local SYSTEMS_IN_ORDER = {
 	require("src.systems.entity-drawing-system"),
 	require("src.systems.entity-foreground-drawing-system"),
 	require("src.systems.narrator-drawing-system"),
+	require("src.systems.audio-system"),
 }
+
 UPDATE_SYSTEMS = function(_, s)
 	return not s.is_draw_system
 end

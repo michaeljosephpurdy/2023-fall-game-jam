@@ -83,6 +83,7 @@ function Player:respawn()
 	self.position = { x = self.spawn_point.x, y = self.spawn_point.y }
 	self.old_position = { x = self.spawn_point.x, y = self.spawn_point.y }
 	self.bump_world:update(self, self.spawn_point.x, self.spawn_point.y)
+	PubSub.publish("sfx.play", "death")
 end
 
 function Player:draw(dt)

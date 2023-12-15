@@ -19,6 +19,7 @@ function SpawnPoint:on_collision(entity)
 	if not self.active then
 		self.active = true
 		PubSub.publish("spawnpoint.activated")
+		PubSub.publish("sfx.play", "shrine")
 		local fx = SpawnPointFx:new({
 			x = self.position.x + self.hitbox.width / 2,
 			y = self.position.y + self.hitbox.height / 2,
