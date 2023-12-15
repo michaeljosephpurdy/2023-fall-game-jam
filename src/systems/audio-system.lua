@@ -1,4 +1,5 @@
 local Sfx = require("src.entities.sfx")
+local Bg = require("src.entities.background-music")
 
 local AudioSystem = tiny.processingSystem()
 AudioSystem.filter = tiny.requireAll("is_audio")
@@ -14,17 +15,22 @@ AudioSystem.SOUNDS = {
 }
 
 function AudioSystem:init(props)
-	self.sounds = {}
 	PubSub.subscribe("sfx.play", function(name)
 		local sfx = Sfx:new({ source = self.SOUNDS[name] })
 		self.world:addEntity(sfx)
 	end)
 end
 
+function AudioSystem:onAddToWorld(world)
+	local bg = Bg:new({ source = love.audio.newSource("data/audio/BACKGROUND.wav", "stream") })
+	world:addEntity(bg)
+end
+
 function AudioSystem:process(e, dt)
 	e:play()
 	if e.one_shot then
 		self.world:removeEntity(e)
+	else
 	end
 end
 

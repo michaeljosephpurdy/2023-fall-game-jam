@@ -77,7 +77,7 @@ function love.update(dt)
 end
 
 function love.draw()
-	local dt = love.timer.getDelta()
+	local dt = math.min(love.timer.getDelta(), SIXTY_FPS)
 	world:update(dt, DRAW_SYSTEMS)
 	-- love.graphics.print(love.timer.getFPS(), 0, 0)
 	--max_collection = math.max((max_collection or 0), collectgarbage("count"))

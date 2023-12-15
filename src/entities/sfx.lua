@@ -11,8 +11,4 @@ function Sfx:play()
 	love.audio.play(self.source)
 end
 
-function Sfx:is_done()
-	return true
-end
-
 return Sfx
