@@ -68,7 +68,7 @@ end
 
 function love.update(dt)
 	accumulator = accumulator + dt
-	if accumulator >= SIXTY_FPS then
+	while accumulator >= SIXTY_FPS do
 		world:update(SIXTY_FPS, UPDATE_SYSTEMS)
 		accumulator = accumulator - SIXTY_FPS
 	end
@@ -77,7 +77,7 @@ end
 function love.draw()
 	local dt = love.timer.getDelta()
 	world:update(dt, DRAW_SYSTEMS)
-	love.graphics.print(love.timer.getFPS(), 0, 0)
+	-- love.graphics.print(love.timer.getFPS(), 0, 0)
 	--max_collection = math.max((max_collection or 0), collectgarbage("count"))
 	-- love.graphics.print(tostring(max_collection), 50, 80)
 	-- love.graphics.print(tostring(collectgarbage("count")), 50, 50)

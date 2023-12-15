@@ -1,4 +1,4 @@
-name = "2023-fall-game-jam"
+name = "the treasure is real, rare, and important"
 default_targets = ["macos", "appimage", "win64", "lovejs"]
 build_directory = "makelove-build"
 
@@ -10,7 +10,7 @@ love_files = [
 ]
 
 [lovejs]
-title = "2023 Fall Game Jam Game by Mike Purdy"
+title = "the treasure is real, rare, and important"
 memory = "200000000"  # starting memory of the webpage (default is 20 MB)
 
 [macos]
@@ -18,16 +18,16 @@ memory = "200000000"  # starting memory of the webpage (default is 20 MB)
 #icon_file = "macIcon.png"  # or macIcon.icns
 
 [macos.app_metadata]
-CFBundleName = "2023 Fall Game Jam"
+CFBundleName = "the treasure is real, rare, and important"
 CFBundleIdentifier = "dev.mikepurdy.2023fallgamejam"
 NSHumanReadableCopyright = "Copyright © 2023 Mike Purdy"
 CFBundleShortVersionString = "0.0.1"
 
 [windows.exe_metadata]
-FileDescription = "{name} - {version}" # "LÖVE {löve version}"
+FileDescription = "the treasure is real, rare, and important"
 FileVersion = "{version}" # "{löve version}"
 CompanyName = "Mike Purdy" # "LÖVE World Domination Inc."
 LegalCopyright = "Copyright © 2023 Mike Purdy"
-ProductName = "{name}" # "LÖVE"
+ProductName = "the treasure is real, rare, and important"
 ProductVersion = "<same as FileVersion>"
 OriginalFilename = "purdy-fall-2023.exe" # "love.exe"

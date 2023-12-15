@@ -1,0 +1,77 @@
+{
+	"identifier": "Level_29",
+	"uniqueIdentifer": "8d843d30-8990-11ee-942c-8169df05e83a",
+	"x": 1248,
+	"y": -3200,
+	"width": 736,
+	"height": 256,
+	"bgColor": "#232635",
+	"neighbourLevels": [],
+	"customFields" : {},
+	"layers": [
+		"Level_Flair.png",
+		"Tilemap.png"
+	],
+	"entities": {
+		"Item": [
+			{
+				"id": "Item",
+				"iid": "9dbd6050-8990-11ee-942c-6398145da0f1",
+				"layer": "Entities",
+				"x": 592,
+				"y": 224,
+				"width": 16,
+				"height": 16,
+				"color": 18761,
+				"customFields": {
+					"type": "Dash"
+				}
+			},
+			{
+				"id": "Item",
+				"iid": "9fb4c380-8990-11ee-942c-57cd6fc0af70",
+				"layer": "Entities",
+				"x": 304,
+				"y": 160,
+				"width": 16,
+				"height": 16,
+				"color": 18761,
+				"customFields": {
+					"type": "Double_jump"
+				}
+			}
+		],
+		"Collider": [
+			{
+				"id": "Collider",
+				"iid": "ceacefe0-8990-11ee-942c-b599923051c3",
+				"layer": "Entities",
+				"x": 352,
+				"y": 240,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields" : {}
+			}
+		],
+		"Trap": [
+			{
+				"id": "Trap",
+				"iid": "d2201da0-8990-11ee-942c-bb9af93dbcb3",
+				"layer": "Entities",
+				"x": 352,
+				"y": 80,
+				"width": 16,
+				"height": 16,
+				"color": 16777215,
+				"customFields": {
+					"Entity_ref": null,
+					"direction_x": 0,
+					"direction_y": 0,
+					"trap": "FallingDoor",
+					"height": 3
+				}
+			}
+		]
+	}
+}
