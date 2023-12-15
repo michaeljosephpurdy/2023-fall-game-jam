@@ -56,21 +56,6 @@
 					"reactivation_delay": 2,
 					"one_time": true
 				}
-			},
-			{
-				"id": "TrapTrigger",
-				"iid": "bfad54e0-8990-11ee-942c-23a3074320b8",
-				"layer": "Entities",
-				"x": 240,
-				"y": 64,
-				"width": 16,
-				"height": 16,
-				"color": 6776679,
-				"customFields": {
-					"entity_refs": [],
-					"reactivation_delay": 2,
-					"one_time": true
-				}
 			}
 		],
 		"Trap": [

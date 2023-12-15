@@ -9870,26 +9870,6 @@
 								}] },
 								{ "__identifier": "height", "__type": "Int", "__value": 1, "__tile": null, "defUid": 112, "realEditorValues": [] }
 							]
-						},
-						{
-							"__identifier": "TrapTrigger",
-							"__grid": [15,4],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": { "tilesetUid": 17, "x": 432, "y": 16, "w": 16, "h": 16 },
-							"__smartColor": "#676767",
-							"__worldX": 1952,
-							"__worldY": -768,
-							"iid": "bfad54e0-8990-11ee-942c-23a3074320b8",
-							"width": 16,
-							"height": 16,
-							"defUid": 56,
-							"px": [240,64],
-							"fieldInstances": [
-								{ "__identifier": "entity_refs", "__type": "Array<EntityRef>", "__value": [], "__tile": null, "defUid": 57, "realEditorValues": [] },
-								{ "__identifier": "reactivation_delay", "__type": "Float", "__value": 2, "__tile": null, "defUid": 107, "realEditorValues": [] },
-								{ "__identifier": "one_time", "__type": "Bool", "__value": true, "__tile": null, "defUid": 113, "realEditorValues": [] }
-							]
 						}
 					]
 				},
