@@ -44,7 +44,7 @@ function love.load(arg)
 	love.graphics.setDefaultFilter("nearest", "nearest")
 
 	PubSub.subscribe("keypress", function(k)
-		if k ~= "escape" and k ~= "q" then
+		if k ~= "escape" then
 			return
 		end
 		love.event.quit()
