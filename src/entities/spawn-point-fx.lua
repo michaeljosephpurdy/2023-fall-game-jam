@@ -14,8 +14,6 @@ function SpawnPointFx:draw(dt)
 	self.radius = self.radius + self.speed * dt
 	love.graphics.setColor(WHITE_COLOR)
 	love.graphics.circle("line", self.position.x, self.position.y, self.radius)
-	love.graphics.setColor(BLACK_COLOR)
-	love.graphics.circle("line", self.position.x, self.position.y, self.radius + 8)
 	love.graphics.setColor(WHITE_COLOR)
 	love.graphics.circle("line", self.position.x, self.position.y, self.radius + 16)
 end
