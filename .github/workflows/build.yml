@@ -3,11 +3,11 @@ on: [push]
 env:
   GAME_NAME: 2023-fall-game-jam
   # unfortunately we need to also hardcode game name here in env since definitions in env can't reference eachother
-  ARTIFACT_PATH_LOVE: main/makelove-build/love/the\ treasure\ is\ real,\ rare,\ and\ important.love
-  ARTIFACT_PATH_APPIMAGE: main/makelove-build/appimage/the\ treasure\ is\ real,\ rare,\ and\ important.AppImage
-  ARTIFACT_PATH_WIN64: main/makelove-build/win64/the\ treasure\ is\ real,\ rare,\ and\ important-win64.zip
-  ARTIFACT_PATH_MACOS: main/makelove-build/macos/the\ treasure\ is\ real,\ rare,\ and\ important-macos.zip
-  ARTIFACT_PATH_LOVEJS: main/makelove-build/lovejs/the\ treasure\ is\ real,\ rare,\ and\ important-lovejs.zip
+  ARTIFACT_PATH_LOVE: main/makelove-build/love/2023-fall-game-jam.love
+  ARTIFACT_PATH_APPIMAGE: main/makelove-build/appimage/2023-fall-game-jam.AppImage
+  ARTIFACT_PATH_WIN64: main/makelove-build/win64/2023-fall-game-jam-win64.zip
+  ARTIFACT_PATH_MACOS: main/makelove-build/macos/2023-fall-game-jam-macos.zip
+  ARTIFACT_PATH_LOVEJS: main/makelove-build/lovejs/2023-fall-game-jam-lovejs.zip
   ITCH_USER: purdy
   ITCH_GAME: 2023-fall-game-jam
 
